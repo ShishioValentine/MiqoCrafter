@@ -666,6 +666,13 @@
 XCOPY "$(SolutionDir)CacheGrid" "$(TargetDir)\CacheGrid\" /S /Y
 XCOPY "$(SolutionDir)CacheRotations" "$(TargetDir)\CacheRotations\" /S /Y
 XCOPY "$(SolutionDir)CacheSolverPresets" "$(TargetDir)\CacheSolverPresets\" /S /Y
-XCOPY "$(SolutionDir)CustomTeleport" "$(TargetDir)\CustomTeleport\" /S /Y</PostBuildEvent>
+XCOPY "$(SolutionDir)CustomTeleport" "$(TargetDir)\CustomTeleport\" /S /Y
+
+XCOPY "$(SolutionDir)CacheGatheringPreset" "$(SolutionDir)\MiqoCraftTestUnit\CacheGatheringPreset\" /S /Y
+XCOPY "$(SolutionDir)CacheGrid" "$(SolutionDir)\MiqoCraftTestUnit\CacheGrid\" /S /Y
+XCOPY "$(SolutionDir)CacheRotations" "$(SolutionDir)\MiqoCraftTestUnit\CacheRotations\" /S /Y
+XCOPY "$(SolutionDir)CacheSolverPresets" "$(SolutionDir)\MiqoCraftTestUnit\CacheSolverPresets\" /S /Y
+XCOPY "$(SolutionDir)CustomTeleport" "$(SolutionDir)\MiqoCraftTestUnit\CustomTeleport\" /S /Y
+</PostBuildEvent>
   </PropertyGroup>
 </Project>

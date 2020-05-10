@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoCraft", "MiqoCraft.csproj", "{8D1967D6-8A82-4D08-9432-B23DC9900961}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoCraftTestUnit", "MiqoCraftTestUnit\MiqoCraftTestUnit.csproj", "{680ABE3B-8697-4C62-80A6-F37C095D0454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8D1967D6-8A82-4D08-9432-B23DC9900961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D1967D6-8A82-4D08-9432-B23DC9900961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D1967D6-8A82-4D08-9432-B23DC9900961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

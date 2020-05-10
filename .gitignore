@@ -5,3 +5,11 @@
 /.vs
 /bin
 /obj
+/MiqoCraftTestUnit/bin
+/MiqoCraftTestUnit/obj
+/MiqoCraftTestUnit/CustomTeleport
+/MiqoCraftTestUnit/CacheRotations
+/MiqoCraftTestUnit/CacheGrid
+/MiqoCraftTestUnit/Searchlog.log
+/MiqoCraftTestUnit/Node.log
+/MiqoCraftTestUnit/GeneralDataBase.log
