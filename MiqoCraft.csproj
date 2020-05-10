@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D1967D6-8A82-4D08-9432-B23DC9900961}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MiqoCraft</RootNamespace>
+    <AssemblyName>MiqoCraft</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MiqoCrafterSerious.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.45.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.45.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.45.0.1922, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Drive.v3.1.45.0.1922\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.45.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.23.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.11.23\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VPL.Application.Data">
+      <HintPath>Dependencies\VPL.Application.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Common.Data">
+      <HintPath>Dependencies\VPL.Common.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Threading.Modeler">
+      <HintPath>Dependencies\VPL.Threading.Modeler.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Windows.Data">
+      <HintPath>Dependencies\VPL.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Windows.Modeler">
+      <HintPath>Dependencies\VPL.Windows.Modeler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FFXIVCraftedItem.cs" />
+    <Compile Include="FFXIVCrafting.cs" />
+    <Compile Include="FFXIVCraftingListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FFXIVCraftingListItem.Designer.cs">
+      <DependentUpon>FFXIVCraftingListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFXIVCraftingOptions.cs" />
+    <Compile Include="FFXIVCraftingOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFXIVCraftingOptionsForm.Designer.cs">
+      <DependentUpon>FFXIVCraftingOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFXIVCraftingSearchItem.cs" />
+    <Compile Include="FFXIVGatheredItem.cs" />
+    <Compile Include="FFXIVItem.cs" />
+    <Compile Include="FFXIVReducedItem.cs" />
+    <Compile Include="FXIVGarlandTool.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUserControlV1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainUserControlV1.Designer.cs">
+      <DependentUpon>MainUserControlV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUserControlV2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainUserControlV2.Designer.cs">
+      <DependentUpon>MainUserControlV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miqobot.cs" />
+    <Compile Include="MiqoCraftOptions.cs" />
+    <Compile Include="MiqoItemPage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScenarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScenarioForm.Designer.cs">
+      <DependentUpon>ScenarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Misc.cs" />
+    <Compile Include="ShinyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShinyControl.Designer.cs">
+      <DependentUpon>ShinyControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FFXIVCraftingListItem.resx">
+      <DependentUpon>FFXIVCraftingListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFXIVCraftingOptionsForm.resx">
+      <DependentUpon>FFXIVCraftingOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUserControlV1.resx">
+      <DependentUpon>MainUserControlV1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUserControlV2.resx">
+      <DependentUpon>MainUserControlV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScenarioForm.resx">
+      <DependentUpon>ScenarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShinyControl.resx">
+      <DependentUpon>ShinyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CacheGrid\Abalathian Mistletoe Grid.txt" />
+    <Content Include="CacheGrid\Abalathian Rock Salt Grid.txt" />
+    <Content Include="CacheGrid\Abalathian Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Adamantoise Shell Grid.txt" />
+    <Content Include="CacheGrid\Airship Fitting Components Grid.txt" />
+    <Content Include="CacheGrid\Ala Mhigan Mustard Grid.txt" />
+    <Content Include="CacheGrid\Ala Mhigan Salt Crystal Grid.txt" />
+    <Content Include="CacheGrid\Allagan Snail Grid.txt" />
+    <Content Include="CacheGrid\Alligator Pear Grid.txt" />
+    <Content Include="CacheGrid\Almandine Grid.txt" />
+    <Content Include="CacheGrid\Almonds Grid.txt" />
+    <Content Include="CacheGrid\Aloe Grid.txt" />
+    <Content Include="CacheGrid\Alpine Parsnip Grid.txt" />
+    <Content Include="CacheGrid\Alumen Grid.txt" />
+    <Content Include="CacheGrid\Amber Cloves Grid.txt" />
+    <Content Include="CacheGrid\Amh Araeng Seasonings Grid.txt" />
+    <Content Include="CacheGrid\Animal Droppings Grid.txt" />
+    <Content Include="CacheGrid\Animal Trace Grid.txt" />
+    <Content Include="CacheGrid\Antumbral Rock Grid.txt" />
+    <Content Include="CacheGrid\Apricot Grid.txt" />
+    <Content Include="CacheGrid\Astral Moraine Grid.txt" />
+    <Content Include="CacheGrid\Astral Rock Grid.txt" />
+    <Content Include="CacheGrid\Aurum Regis Sand Grid.txt" />
+    <Content Include="CacheGrid\Azim Cotton Boll Grid.txt" />
+    <Content Include="CacheGrid\Azim Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Bamboo Shoot Grid.txt" />
+    <Content Include="CacheGrid\Basilisk Egg Grid.txt" />
+    <Content Include="CacheGrid\Beastkin Horn Grid.txt" />
+    <Content Include="CacheGrid\Beech Branch Grid.txt" />
+    <Content Include="CacheGrid\Beech Log Grid.txt" />
+    <Content Include="CacheGrid\Birch Branch Grid.txt" />
+    <Content Include="CacheGrid\Birch Log Grid.txt" />
+    <Content Include="CacheGrid\Birch Sap Grid.txt" />
+    <Content Include="CacheGrid\Black Alumen Grid.txt" />
+    <Content Include="CacheGrid\Black Limestone Grid.txt" />
+    <Content Include="CacheGrid\Black Pepper Grid.txt" />
+    <Content Include="CacheGrid\Black Pepper Seeds Grid.txt" />
+    <Content Include="CacheGrid\Black Scorpion Grid.txt" />
+    <Content Include="CacheGrid\Black Willow Log Grid.txt" />
+    <Content Include="CacheGrid\Bladeleaf Grid.txt" />
+    <Content Include="CacheGrid\Blood Currant Seeds Grid.txt" />
+    <Content Include="CacheGrid\Blood Currants Grid.txt" />
+    <Content Include="CacheGrid\Blood Tomato Grid.txt" />
+    <Content Include="CacheGrid\Bloodgrass Grid.txt" />
+    <Content Include="CacheGrid\Bluespirit Ore Grid.txt" />
+    <Content Include="CacheGrid\Bomb Ash Grid.txt" />
+    <Content Include="CacheGrid\Bomba Rice Grid.txt" />
+    <Content Include="CacheGrid\Bone Chip Grid.txt" />
+    <Content Include="CacheGrid\Bright Flax Grid.txt" />
+    <Content Include="CacheGrid\Bright Lightning Rock Grid.txt" />
+    <Content Include="CacheGrid\Brimstone Grid.txt" />
+    <Content Include="CacheGrid\Broad Beans Grid.txt" />
+    <Content Include="CacheGrid\Brown Pigment Grid.txt" />
+    <Content Include="CacheGrid\Buckwheat Kernels Grid.txt" />
+    <Content Include="CacheGrid\Button Mushroom Grid.txt" />
+    <Content Include="CacheGrid\Cedar Branch Grid.txt" />
+    <Content Include="CacheGrid\Cedar Log Grid.txt" />
+    <Content Include="CacheGrid\Chalcocite Grid.txt" />
+    <Content Include="CacheGrid\Chalcolite Grid.txt" />
+    <Content Include="CacheGrid\Chickweed Grid.txt" />
+    <Content Include="CacheGrid\Chives Grid.txt" />
+    <Content Include="CacheGrid\Chocobo Feather Grid.txt" />
+    <Content Include="CacheGrid\Chromite Ore Grid.txt" />
+    <Content Include="CacheGrid\Cinnabar Grid.txt" />
+    <Content Include="CacheGrid\Cloud Banana Grid.txt" />
+    <Content Include="CacheGrid\Cloud Mica Grid.txt" />
+    <Content Include="CacheGrid\Cloud Mushroom Grid.txt" />
+    <Content Include="CacheGrid\Coarse Saltpeter Grid.txt" />
+    <Content Include="CacheGrid\Cobalt Ore Grid.txt" />
+    <Content Include="CacheGrid\Cobalt OreGrid.txt" />
+    <Content Include="CacheGrid\Coerthan Carrot Grid.txt" />
+    <Content Include="CacheGrid\Coerthan Carrot Seeds Grid.txt" />
+    <Content Include="CacheGrid\Coerthan Tea Leaves Grid.txt" />
+    <Content Include="CacheGrid\Coerthan Tea Seeds Grid.txt" />
+    <Content Include="CacheGrid\Coffee Beans Grid.txt" />
+    <Content Include="CacheGrid\Coneflower Grid.txt" />
+    <Content Include="CacheGrid\Copper Ore Grid.txt" />
+    <Content Include="CacheGrid\Copper Sand Grid.txt" />
+    <Content Include="CacheGrid\Creamtop Mushroom Grid.txt" />
+    <Content Include="CacheGrid\Crescent Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Cuprite Grid.txt" />
+    <Content Include="CacheGrid\Curly Parsley Grid.txt" />
+    <Content Include="CacheGrid\Cyclops Onion Grid.txt" />
+    <Content Include="CacheGrid\Daikon Radish Grid.txt" />
+    <Content Include="CacheGrid\Dark Chestnut Branch Grid.txt" />
+    <Content Include="CacheGrid\Dark Chestnut Grid.txt" />
+    <Content Include="CacheGrid\Dark Chestnut Log Grid.txt" />
+    <Content Include="CacheGrid\Dark Matter Cluster Grid.txt" />
+    <Content Include="CacheGrid\Darksteel Ore Grid.txt" />
+    <Content Include="CacheGrid\Dart Frog Grid.txt" />
+    <Content Include="CacheGrid\Desert Saffron Grid.txt" />
+    <Content Include="CacheGrid\Diatomite Grid.txt" />
+    <Content Include="CacheGrid\Dimythrite Ore Grid.txt" />
+    <Content Include="CacheGrid\Dimythrite Sand Grid.txt" />
+    <Content Include="CacheGrid\Doman Eggplant Grid.txt" />
+    <Content Include="CacheGrid\Doman Iron Ore Grid.txt" />
+    <Content Include="CacheGrid\Doman Iron Sand Grid.txt" />
+    <Content Include="CacheGrid\Doman Yellow Grid.txt" />
+    <Content Include="CacheGrid\Dragon Obsidian Grid.txt" />
+    <Content Include="CacheGrid\Dravanian Mistletoe Grid.txt" />
+    <Content Include="CacheGrid\Dravanian Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Durium Sand Grid.txt" />
+    <Content Include="CacheGrid\Duskfall Moss Grid.txt" />
+    <Content Include="CacheGrid\Dwarven Cotton Boll Grid.txt" />
+    <Content Include="CacheGrid\Dwarven Cotton Grid.txt" />
+    <Content Include="CacheGrid\Dzemael Tomato Grid.txt" />
+    <Content Include="CacheGrid\Dzemael Tomato Seeds Grid.txt" />
+    <Content Include="CacheGrid\Earth Cluster Grid.txt" />
+    <Content Include="CacheGrid\Earth Crystal Grid.txt" />
+    <Content Include="CacheGrid\Earth Rock Grid.txt" />
+    <Content Include="CacheGrid\Earth Shard Grid.txt" />
+    <Content Include="CacheGrid\Effervescent Water Grid.txt" />
+    <Content Include="CacheGrid\Electrum Ore Grid.txt" />
+    <Content Include="CacheGrid\Electrum Sand Grid.txt" />
+    <Content Include="CacheGrid\Elm Log Grid.txt" />
+    <Content Include="CacheGrid\Eventide Jade Grid.txt" />
+    <Content Include="CacheGrid\Evergleam Ore Grid.txt" />
+    <Content Include="CacheGrid\Extra Effervescent Water Grid.txt" />
+    <Content Include="CacheGrid\Fennel Grid.txt" />
+    <Content Include="CacheGrid\Ferberite Grid.txt" />
+    <Content Include="CacheGrid\Fernleaf Lavender Grid.txt" />
+    <Content Include="CacheGrid\Fine Sand Grid.txt" />
+    <Content Include="CacheGrid\Fire Cluster Grid.txt" />
+    <Content Include="CacheGrid\Fire Crystal Grid.txt" />
+    <Content Include="CacheGrid\Fire Rock Grid.txt" />
+    <Content Include="CacheGrid\Fire Shard Grid.txt" />
+    <Content Include="CacheGrid\Flax Grid.txt" />
+    <Content Include="CacheGrid\Fossilized Dragon Bone Grid.txt" />
+    <Content Include="CacheGrid\Frantoio Grid.txt" />
+    <Content Include="CacheGrid\Garden Beet Grid.txt" />
+    <Content Include="CacheGrid\Gianthive Chip Grid.txt" />
+    <Content Include="CacheGrid\Glass Eye Grid.txt" />
+    <Content Include="CacheGrid\Gold Ore Grid.txt" />
+    <Content Include="CacheGrid\Gold Sand Grid.txt" />
+    <Content Include="CacheGrid\Grade 1 Carbonized Matter Grid.txt" />
+    <Content Include="CacheGrid\Grade 1 La Noscean Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 1 Thanalan Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 2 La Noscean Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 2 Shroud Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 2 Thanalan Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 3 Carbonized Matter Grid.txt" />
+    <Content Include="CacheGrid\Grade 3 La Noscean Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 3 Shroud Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Grade 3 Thanalan Topsoil Grid.txt" />
+    <Content Include="CacheGrid\Granite Grid.txt" />
+    <Content Include="CacheGrid\Grass Viper Grid.txt" />
+    <Content Include="CacheGrid\Green Leek Grid.txt" />
+    <Content Include="CacheGrid\Green Pigment Grid.txt" />
+    <Content Include="CacheGrid\Green Quartz Grid.txt" />
+    <Content Include="CacheGrid\Gregarious Worm Grid.txt" />
+    <Content Include="CacheGrid\Grenade Ash Grid.txt" />
+    <Content Include="CacheGrid\Grey Pigment Grid.txt" />
+    <Content Include="CacheGrid\Gridanian Chestnut Grid.txt" />
+    <Content Include="CacheGrid\Gyr Abanian Mineral Water Grid.txt" />
+    <Content Include="CacheGrid\Gyr Abanian Ore Grid.txt" />
+    <Content Include="CacheGrid\Gyr Abanian Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Hallowed Basil Grid.txt" />
+    <Content Include="CacheGrid\Harcot Grid.txt" />
+    <Content Include="CacheGrid\Hard Mudstone Grid.txt" />
+    <Content Include="CacheGrid\Hardened Veteran Tree Sap Grid.txt" />
+    <Content Include="CacheGrid\Hardsilver Ore Grid.txt" />
+    <Content Include="CacheGrid\Hardsilver Sand Grid.txt" />
+    <Content Include="CacheGrid\Harpoon Head Grid.txt" />
+    <Content Include="CacheGrid\Heavens Lemon Grid.txt" />
+    <Content Include="CacheGrid\Highland Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Highland Wheat Grid.txt" />
+    <Content Include="CacheGrid\Hingan Flax Grid.txt" />
+    <Content Include="CacheGrid\Holy Basil Grid.txt" />
+    <Content Include="CacheGrid\Ice Cluster Grid.txt" />
+    <Content Include="CacheGrid\Ice Crystal Grid.txt" />
+    <Content Include="CacheGrid\Ice Rock Grid.txt" />
+    <Content Include="CacheGrid\Ice Shard Grid.txt" />
+    <Content Include="CacheGrid\Ice Stalagmite Grid.txt" />
+    <Content Include="CacheGrid\Icelight Seeds Grid.txt" />
+    <Content Include="CacheGrid\Iridescent Cocoon Grid.txt" />
+    <Content Include="CacheGrid\Iron Acorn Grid.txt" />
+    <Content Include="CacheGrid\Iron Ore Grid.txt" />
+    <Content Include="CacheGrid\Iron Sand Grid.txt" />
+    <Content Include="CacheGrid\Island Seedling Grid.txt" />
+    <Content Include="CacheGrid\Jade Grid.txt" />
+    <Content Include="CacheGrid\Jhammel Ginger Grid.txt" />
+    <Content Include="CacheGrid\Koppranickel Sand Grid.txt" />
+    <Content Include="CacheGrid\Kudzu Root Grid.txt" />
+    <Content Include="CacheGrid\Kudzu Vine Grid.txt" />
+    <Content Include="CacheGrid\Kyanite Grid.txt" />
+    <Content Include="CacheGrid\La Noscean Lettuce Grid.txt" />
+    <Content Include="CacheGrid\Lalafellin Lentil Grid.txt" />
+    <Content Include="CacheGrid\Latex Grid.txt" />
+    <Content Include="CacheGrid\Laurel Grid.txt" />
+    <Content Include="CacheGrid\Levinlight Seeds Grid.txt" />
+    <Content Include="CacheGrid\Light Gerbera Grid.txt" />
+    <Content Include="CacheGrid\Light Kidney Ore Grid.txt" />
+    <Content Include="CacheGrid\Lightning Cluster Grid.txt" />
+    <Content Include="CacheGrid\Lightning Crystal Grid.txt" />
+    <Content Include="CacheGrid\Lightning Moraine Grid.txt" />
+    <Content Include="CacheGrid\Lightning Rock Grid.txt" />
+    <Content Include="CacheGrid\Lightning Shard Grid.txt" />
+    <Content Include="CacheGrid\Lignum Vitae Log Grid.txt" />
+    <Content Include="CacheGrid\Lime Basil Grid.txt" />
+    <Content Include="CacheGrid\Limestone Grid.txt" />
+    <Content Include="CacheGrid\Limonite Grid.txt" />
+    <Content Include="CacheGrid\Little Worm Grid.txt" />
+    <Content Include="CacheGrid\Loquat Grid.txt" />
+    <Content Include="CacheGrid\Lotus Root Grid.txt" />
+    <Content Include="CacheGrid\Lumythrite Sand Grid.txt" />
+    <Content Include="CacheGrid\Mahogany Log Grid.txt" />
+    <Content Include="CacheGrid\Manasilver Sand Grid.txt" />
+    <Content Include="CacheGrid\Maple Branch Grid.txt" />
+    <Content Include="CacheGrid\Maple Log Grid.txt" />
+    <Content Include="CacheGrid\Marble Grid.txt" />
+    <Content Include="CacheGrid\Megafauna Leftovers Grid.txt" />
+    <Content Include="CacheGrid\Megafauna Trace Grid.txt" />
+    <Content Include="CacheGrid\Millioncorn Grid.txt" />
+    <Content Include="CacheGrid\Millioncorn Seed Grid.txt" />
+    <Content Include="CacheGrid\Mineral Water Grid.txt" />
+    <Content Include="CacheGrid\Miracle Apple Log Grid.txt" />
+    <Content Include="CacheGrid\Mirror Apple Grid.txt" />
+    <Content Include="CacheGrid\Mist Dill Grid.txt" />
+    <Content Include="CacheGrid\Mist Spinach Grid.txt" />
+    <Content Include="CacheGrid\Mistletoe Grid.txt" />
+    <Content Include="CacheGrid\Moko Grass Grid.txt" />
+    <Content Include="CacheGrid\Morel Grid.txt" />
+    <Content Include="CacheGrid\Mountain Popoto Grid.txt" />
+    <Content Include="CacheGrid\Muddy Water Grid.txt" />
+    <Content Include="CacheGrid\Mudstone Grid.txt" />
+    <Content Include="CacheGrid\Mythril Ore Grid.txt" />
+    <Content Include="CacheGrid\Mythril Sand Grid.txt" />
+    <Content Include="CacheGrid\Mythrite Ore Grid.txt" />
+    <Content Include="CacheGrid\Mythrite Sand Grid.txt" />
+    <Content Include="CacheGrid\Nagxian Cudweed Grid.txt" />
+    <Content Include="CacheGrid\Native Gold Grid.txt" />
+    <Content Include="CacheGrid\Nightsteel Ore Grid.txt" />
+    <Content Include="CacheGrid\Nipplewort Grid.txt" />
+    <Content Include="CacheGrid\Noble Sage Grid.txt" />
+    <Content Include="CacheGrid\Nutmeg Grid.txt" />
+    <Content Include="CacheGrid\Oak Branch Grid.txt" />
+    <Content Include="CacheGrid\Oak Log Grid.txt" />
+    <Content Include="CacheGrid\Obsidian Grid.txt" />
+    <Content Include="CacheGrid\Ogre Horn Grid.txt" />
+    <Content Include="CacheGrid\Old World Fig Grid.txt" />
+    <Content Include="CacheGrid\Old World Fig Seeds Grid.txt" />
+    <Content Include="CacheGrid\Othardian Plum Grid.txt" />
+    <Content Include="CacheGrid\Palladium Ore Grid.txt" />
+    <Content Include="CacheGrid\Palladium Sand Grid.txt" />
+    <Content Include="CacheGrid\Paprika Grid.txt" />
+    <Content Include="CacheGrid\Paprika Seeds Grid.txt" />
+    <Content Include="CacheGrid\Pearl Ginger Grid.txt" />
+    <Content Include="CacheGrid\Pearl Sprout Seed Grid.txt" />
+    <Content Include="CacheGrid\Pearl Sprout Seeds Grid.txt" />
+    <Content Include="CacheGrid\Pearl Sprouts Grid.txt" />
+    <Content Include="CacheGrid\Persimmon Grid.txt" />
+    <Content Include="CacheGrid\Persimmon Leaf Grid.txt" />
+    <Content Include="CacheGrid\Persimmon Log Grid.txt" />
+    <Content Include="CacheGrid\Phial of Thermal Fluid Grid.txt" />
+    <Content Include="CacheGrid\Pinch of Active Ingredients Grid.txt" />
+    <Content Include="CacheGrid\Pixie Apple Grid.txt" />
+    <Content Include="CacheGrid\Pixie Floss Boll Grid.txt" />
+    <Content Include="CacheGrid\Pixie Floss Grid.txt" />
+    <Content Include="CacheGrid\Platinum Ore Grid.txt" />
+    <Content Include="CacheGrid\Porcini Grid.txt" />
+    <Content Include="CacheGrid\Potter%27s Clay Grid.txt" />
+    <Content Include="CacheGrid\Pumice Grid.txt" />
+    <Content Include="CacheGrid\Pummelite Grid.txt" />
+    <Content Include="CacheGrid\Purple Carrot Grid.txt" />
+    <Content Include="CacheGrid\Purple Pigment Grid.txt" />
+    <Content Include="CacheGrid\Pyrite Grid.txt" />
+    <Content Include="CacheGrid\Radiant Astral Moraine Grid.txt" />
+    <Content Include="CacheGrid\Radiant Lightning Moraine Grid.txt" />
+    <Content Include="CacheGrid\Ragstone Grid.txt" />
+    <Content Include="CacheGrid\Rainbow Cotton Boll Grid.txt" />
+    <Content Include="CacheGrid\Rainbow Pigment Grid.txt" />
+    <Content Include="CacheGrid\Raw Agate Grid.txt" />
+    <Content Include="CacheGrid\Raw Amber Grid.txt" />
+    <Content Include="CacheGrid\Raw Amethyst Grid.txt" />
+    <Content Include="CacheGrid\Raw Aquamarine Grid.txt" />
+    <Content Include="CacheGrid\Raw Azurite Grid.txt" />
+    <Content Include="CacheGrid\Raw Carnelian Grid.txt" />
+    <Content Include="CacheGrid\Raw Chrysolite Grid.txt" />
+    <Content Include="CacheGrid\Raw Citrine Grid.txt" />
+    <Content Include="CacheGrid\Raw Danburite Grid.txt" />
+    <Content Include="CacheGrid\Raw Diamond Grid.txt" />
+    <Content Include="CacheGrid\Raw Emerald Grid.txt" />
+    <Content Include="CacheGrid\Raw Fluorite Grid.txt" />
+    <Content Include="CacheGrid\Raw Garnet Grid.txt" />
+    <Content Include="CacheGrid\Raw Goshenite Grid.txt" />
+    <Content Include="CacheGrid\Raw Heliodor Grid.txt" />
+    <Content Include="CacheGrid\Raw Imperial Jade Grid.txt" />
+    <Content Include="CacheGrid\Raw Iolite Grid.txt" />
+    <Content Include="CacheGrid\Raw Kyanite Grid.txt" />
+    <Content Include="CacheGrid\Raw Lapis Lazuli Grid.txt" />
+    <Content Include="CacheGrid\Raw Larimar Grid.txt" />
+    <Content Include="CacheGrid\Raw Malachite Grid.txt" />
+    <Content Include="CacheGrid\Raw Mormorion Grid.txt" />
+    <Content Include="CacheGrid\Raw Opal Grid.txt" />
+    <Content Include="CacheGrid\Raw Peridot Grid.txt" />
+    <Content Include="CacheGrid\Raw Petalite Grid.txt" />
+    <Content Include="CacheGrid\Raw Rhodonite Grid.txt" />
+    <Content Include="CacheGrid\Raw Rubellite Grid.txt" />
+    <Content Include="CacheGrid\Raw Ruby Grid.txt" />
+    <Content Include="CacheGrid\Raw Sapphire Grid.txt" />
+    <Content Include="CacheGrid\Raw Sphene Grid.txt" />
+    <Content Include="CacheGrid\Raw Spinel Grid.txt" />
+    <Content Include="CacheGrid\Raw Star Ruby Grid.txt" />
+    <Content Include="CacheGrid\Raw Star Sapphire Grid.txt" />
+    <Content Include="CacheGrid\Raw Star Spinel Grid.txt" />
+    <Content Include="CacheGrid\Raw Sunstone Grid.txt" />
+    <Content Include="CacheGrid\Raw Tiger%27s Eye Grid.txt" />
+    <Content Include="CacheGrid\Raw Topaz Grid.txt" />
+    <Content Include="CacheGrid\Raw Tourmaline Grid.txt" />
+    <Content Include="CacheGrid\Raw Triphane Grid.txt" />
+    <Content Include="CacheGrid\Raw Triplite Grid.txt" />
+    <Content Include="CacheGrid\Raw Turquoise Grid.txt" />
+    <Content Include="CacheGrid\Raw Zircon Grid.txt" />
+    <Content Include="CacheGrid\Red Pigment Grid.txt" />
+    <Content Include="CacheGrid\Red Quartz Grid.txt" />
+    <Content Include="CacheGrid\Rhalgr%27s Streak Grid.txt" />
+    <Content Include="CacheGrid\Rhea Grid.txt" />
+    <Content Include="CacheGrid\Rock Salt Grid.txt" />
+    <Content Include="CacheGrid\Rolanberry Grid.txt" />
+    <Content Include="CacheGrid\Rosemary Grid.txt" />
+    <Content Include="CacheGrid\Rosewood Branch Grid.txt" />
+    <Content Include="CacheGrid\Rosewood Log Grid.txt" />
+    <Content Include="CacheGrid\Royal Grapes Grid.txt" />
+    <Content Include="CacheGrid\Ruby Tomato Grid.txt" />
+    <Content Include="CacheGrid\Russet Popoto Grid.txt" />
+    <Content Include="CacheGrid\Rye Grid.txt" />
+    <Content Include="CacheGrid\Sagolii Sage Grid.txt" />
+    <Content Include="CacheGrid\Saltpeter Grid.txt" />
+    <Content Include="CacheGrid\Sandteak Log Grid.txt" />
+    <Content Include="CacheGrid\Schorl Grid.txt" />
+    <Content Include="CacheGrid\Silex Grid.txt" />
+    <Content Include="CacheGrid\Siltstone Grid.txt" />
+    <Content Include="CacheGrid\Silver Ore Grid.txt" />
+    <Content Include="CacheGrid\Silver Sand Grid.txt" />
+    <Content Include="CacheGrid\Silvergrace Ore Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Cotton Boll Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Dawn Lizard Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Fine Sand Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Highland Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Nightsteel Ore Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Resin Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Ruby Sea Water Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Truegold Ore Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 Wheat Grid.txt" />
+    <Content Include="CacheGrid\Skybuilders%27 White Ash Log Grid.txt" />
+    <Content Include="CacheGrid\Slate Grid.txt" />
+    <Content Include="CacheGrid\Soiled Femur Grid.txt" />
+    <Content Include="CacheGrid\Stalk of Ramie Grid.txt" />
+    <Content Include="CacheGrid\Stiperstone Grid.txt" />
+    <Content Include="CacheGrid\Straw Grid.txt" />
+    <Content Include="CacheGrid\Strong Steppe Spice Grid.txt" />
+    <Content Include="CacheGrid\Sturdy Vat Material Grid.txt" />
+    <Content Include="CacheGrid\Sugar Beet Grid.txt" />
+    <Content Include="CacheGrid\Sun Cabbage Grid.txt" />
+    <Content Include="CacheGrid\Sunrise Tellin Grid.txt" />
+    <Content Include="CacheGrid\Sunset Wheat Grid.txt" />
+    <Content Include="CacheGrid\Sweet Alyssum Grid.txt" />
+    <Content Include="CacheGrid\Swordleaf Grid.txt" />
+    <Content Include="CacheGrid\Tarantula Grid.txt" />
+    <Content Include="CacheGrid\Teak Log Grid.txt" />
+    <Content Include="CacheGrid\Tektite Grid.txt" />
+    <Content Include="CacheGrid\Thyme Grid.txt" />
+    <Content Include="CacheGrid\Tiger Lily Grid.txt" />
+    <Content Include="CacheGrid\Timeworn Boarskin Map Grid.txt" />
+    <Content Include="CacheGrid\Timeworn Goatskin Map Grid.txt" />
+    <Content Include="CacheGrid\Timeworn Wyvernskin Map Grid.txt" />
+    <Content Include="CacheGrid\Tin Ore Grid.txt" />
+    <Content Include="CacheGrid\Titancopper Ore Grid.txt" />
+    <Content Include="CacheGrid\Titancopper Sand Grid.txt" />
+    <Content Include="CacheGrid\Titanium Ore Grid.txt" />
+    <Content Include="CacheGrid\Torreya Branch Grid.txt" />
+    <Content Include="CacheGrid\Torreya Log Grid.txt" />
+    <Content Include="CacheGrid\Trillium Grid.txt" />
+    <Content Include="CacheGrid\Truegold Ore Grid.txt" />
+    <Content Include="CacheGrid\Truegold Sand Grid.txt" />
+    <Content Include="CacheGrid\Tungstite Grid.txt" />
+    <Content Include="CacheGrid\Twincoon Grid.txt" />
+    <Content Include="CacheGrid\Umbral Rock Grid.txt" />
+    <Content Include="CacheGrid\Unaspected Crystal Grid.txt" />
+    <Content Include="CacheGrid\Underground Spring Water Grid.txt" />
+    <Content Include="CacheGrid\Upland Wheat Grid.txt" />
+    <Content Include="CacheGrid\Urunday Log Grid.txt" />
+    <Content Include="CacheGrid\Violet Quartz Grid.txt" />
+    <Content Include="CacheGrid\Virgin Basilisk Egg Grid.txt" />
+    <Content Include="CacheGrid\Volcanic Rock Salt Grid.txt" />
+    <Content Include="CacheGrid\Volcanic Tuff Grid.txt" />
+    <Content Include="CacheGrid\Water Cluster Grid.txt" />
+    <Content Include="CacheGrid\Water Crystal Grid.txt" />
+    <Content Include="CacheGrid\Water Rock Grid.txt" />
+    <Content Include="CacheGrid\Water Shard Grid.txt" />
+    <Content Include="CacheGrid\Waterlight Seeds Grid.txt" />
+    <Content Include="CacheGrid\White Ash Log Grid.txt" />
+    <Content Include="CacheGrid\White Oak Log Grid.txt" />
+    <Content Include="CacheGrid\White Truffle Grid.txt" />
+    <Content Include="CacheGrid\Wild Popoto Grid.txt" />
+    <Content Include="CacheGrid\Wildfowl Feather Grid.txt" />
+    <Content Include="CacheGrid\Wind Cluster Grid.txt" />
+    <Content Include="CacheGrid\Wind Crystal Grid.txt" />
+    <Content Include="CacheGrid\Wind Rock Grid.txt" />
+    <Content Include="CacheGrid\Wind Shard Grid.txt" />
+    <Content Include="CacheGrid\Wind Widow Grid.txt" />
+    <Content Include="CacheGrid\Windtea Leaves Grid.txt" />
+    <Content Include="CacheGrid\Wyrm Obsidian Grid.txt" />
+    <Content Include="CacheGrid\Wyvern Obsidian Grid.txt" />
+    <Content Include="CacheGrid\Yafaem Wildgrass Grid.txt" />
+    <Content Include="CacheGrid\Yanxian Cotton Boll Grid.txt" />
+    <Content Include="CacheGrid\Yanxian Parsley Grid.txt" />
+    <Content Include="CacheGrid\Yanxian Soil Grid.txt" />
+    <Content Include="CacheGrid\Yanxian Verbena Grid.txt" />
+    <Content Include="CacheGrid\Yellow Alumen Grid.txt" />
+    <Content Include="CacheGrid\Yellow Copper Ore Grid.txt" />
+    <Content Include="CacheGrid\Yellow Ginseng Grid.txt" />
+    <Content Include="CacheGrid\Yellow Pigment Grid.txt" />
+    <Content Include="CacheGrid\Yellow Quartz Grid.txt" />
+    <Content Include="CacheGrid\Zelkova Log Grid.txt" />
+    <Content Include="CacheGrid\Zinc Ore Grid.txt" />
+    <Content Include="CacheRotations\Rotations.txt" />
+    <Content Include="CustomTeleport\Idyllshire Grid.txt" />
+    <Content Include="CustomTeleport\Idyllshire Scenario.txt" />
+    <Content Include="miqocrafter.ico" />
+    <Content Include="MiqoCrafterSerious.ico" />
+    <Content Include="miqocrafter_icon.ico" />
+    <None Include="Resources\Weaver.png" />
+    <None Include="Resources\Leatherworker.png" />
+    <None Include="Resources\Goldsmith.png" />
+    <None Include="Resources\Culinarian.png" />
+    <None Include="Resources\Carpenter.png" />
+    <None Include="Resources\Blacksmith.png" />
+    <None Include="Resources\Armorer.png" />
+    <None Include="Resources\Alchemist.png" />
+    <None Include="Resources\folder open document text.png" />
+    <None Include="Resources\MiqoCrafterSerious.png" />
+    <None Include="Resources\miqocrafter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CacheGatheringPreset\" />
+    <Folder Include="CacheSolverPresets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(SolutionDir)CacheGatheringPreset" "$(TargetDir)\CacheGatheringPreset\" /S /Y
+XCOPY "$(SolutionDir)CacheGrid" "$(TargetDir)\CacheGrid\" /S /Y
+XCOPY "$(SolutionDir)CacheRotations" "$(TargetDir)\CacheRotations\" /S /Y
+XCOPY "$(SolutionDir)CacheSolverPresets" "$(TargetDir)\CacheSolverPresets\" /S /Y
+XCOPY "$(SolutionDir)CustomTeleport" "$(TargetDir)\CustomTeleport\" /S /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

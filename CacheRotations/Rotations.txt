@@ -1,0 +1,14 @@
+gatherrotation.470 Collect 15% Gathering
+[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,1,32]
+gatherrotation.470 Collect 5% Gathering
+[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,0]
+gatherrotation.470 Collect 15% Gathering
+[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,1,32]
+gatherrotation.LegendaryG
+[31,33,9,0,6,37,12,37,12,37]
+gatherrotation.Gathering +15%/HQ+10%
+[31,1,3]
+gatherrotation.HQ +10%
+[31,3]
+gatherrotation.Yield +2
+[31,6]

@@ -1,0 +1,2 @@
+grid.Morel
+{"description":"[Idyllshire @Idyllshire]","maxaway":50,"points":[{"x":-158.764,"y":702.702,"z":191.118,"type":"stealth"},{"x":-311.68,"y":767.78,"z":200.074,"type":"mount"},{"x":-503.342,"y":709.13,"z":199.97,"type":"mount"},{"x":-363.926,"y":714.304,"z":271.238,"type":"fly"},{"x":-170.35,"y":-467.404,"z":145.385,"type":"fly"},{"x":-363.49,"y":713.984,"z":274.557,"type":"beacon"}],"edges":[{"ifrom":3,"ito":4,"isjump":0},{"ifrom":3,"ito":5,"isjump":0},{"ifrom":2,"ito":3,"isjump":0},{"ifrom":1,"ito":3,"isjump":0},{"ifrom":0,"ito":3,"isjump":0}]}

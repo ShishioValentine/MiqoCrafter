@@ -1,0 +1,3 @@
+selectGrid(Scenario - Idyllshire Crystal to Drav Hinterlands)
+waypoint(29)
+zoneGate()
