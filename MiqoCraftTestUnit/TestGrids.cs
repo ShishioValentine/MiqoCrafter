@@ -78,12 +78,14 @@ namespace MiqoCraftTestUnit
 
                 string gridContent = gridText.Replace(gridHeader, "").Trim();
 
-                JToken gridMainToken = JObject.Parse(gridContent);
-
-                string gridDescription = gridMainToken["description"].Value<string>();
+                string gridDescription = file.Name;
 
                 try
                 {
+                    JToken gridMainToken = JObject.Parse(gridContent);
+
+                    gridDescription = gridMainToken["description"].Value<string>();
+
                     string gridTeleportDescription = gridDescription.Split('[')[1].Split(']')[0];
                     if (!gridTeleportDescription.Contains("@")) throw new Exception("Grid description " + gridDescription + " doesn not include teleport name : " + file.FullName);
 
