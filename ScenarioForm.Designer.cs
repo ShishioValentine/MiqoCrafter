@@ -55,6 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this._nbSelectedItemLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this._validQuantityButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this._quantityPerNodeNumericUpDown)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -393,6 +394,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.panel3.Controls.Add(this._validQuantityButton);
             this.panel3.Controls.Add(this._craftTextBox);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this._quantityNumericUpDown);
@@ -484,6 +486,19 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Crafting Tree";
             // 
+            // _validQuantityButton
+            // 
+            this._validQuantityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this._validQuantityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._validQuantityButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._validQuantityButton.Location = new System.Drawing.Point(904, 596);
+            this._validQuantityButton.Name = "_validQuantityButton";
+            this._validQuantityButton.Size = new System.Drawing.Size(75, 23);
+            this._validQuantityButton.TabIndex = 32;
+            this._validQuantityButton.Text = "Apply";
+            this._validQuantityButton.UseVisualStyleBackColor = false;
+            this._validQuantityButton.Click += new System.EventHandler(this._validQuantityButton_Click);
+            // 
             // ScenarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,5 +565,6 @@
         private System.Windows.Forms.Label _nbSelectedItemLabel;
         private System.Windows.Forms.TextBox _craftTextBox;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button _validQuantityButton;
     }
 }

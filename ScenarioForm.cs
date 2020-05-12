@@ -604,5 +604,28 @@ namespace MiqoCraft
                 _ignoreCheckBox_CheckedChanged(sender, e);
             }
         }
+
+        private void _validQuantityButton_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection iItems = _ingredientsListView.SelectedItems;
+
+            foreach (ListViewItem listViewItem in iItems)
+            {
+                try
+                {
+                    FFXIVItem item = VPThreading.GetTag(listViewItem) as FFXIVItem;
+                    if (null != item)
+                    {
+                        if (!_itemsQuantity.ContainsKey(item.ID)) _itemsQuantity.Add(item.ID, (int)_quantityNumericUpDown.Value);
+                        else _itemsQuantity[item.ID] = (int)_quantityNumericUpDown.Value;
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+            UpdateList();
+        }
     }
 }
