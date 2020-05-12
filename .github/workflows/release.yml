@@ -1,0 +1,45 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+    - 'V*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+name: Upload Release Asset
+
+jobs:
+  build:
+    name: Upload Release Asset
+    runs-on: windows-2019
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v2
+      - name: Build MiqoCrafter
+        run: |
+           cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
+           .\MSBuild.exe /p:Configuration=Release $Env:GITHUB_WORKSPACE\MiqoCraft.csproj
+      - name: Rename release binaries
+        run: |
+           ren "D:\a\MiqoCrafter\MiqoCrafter\bin\Release" "D:\a\MiqoCrafter\MiqoCrafter\bin\MiqoCrafter"
+      - name: Zip release directory
+        run: |
+          powershell Compress-7Zip "D:\a\MiqoCrafter\MiqoCrafter\bin\MiqoCrafter" -ArchiveFileName "MiqoCrafter.zip" -Format Zip
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./MiqoCrafter.zip
+          asset_name: MiqoCrafter Binaries Windows ${{ github.ref }}
+          asset_content_type: application/zip
