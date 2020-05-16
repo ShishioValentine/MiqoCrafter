@@ -37,33 +37,33 @@ You can customize the scenario using the options on the left side:
 
 ![Search Window](Images/ScenarioOptions.PNG)
 
-- Gathering Rotation
+- *Gathering Rotation*
 This is the default gathering rotation used in the scenario. It must contain the name of a gathering rotation you have set up in miqobot, or that is inside the CacheRotations/Rotations.txt file.
 See https://miqobot.com/forum/forums/topic/help-crafting/ for more info.
 
-- Crafting Preset
+- *Crafting Preset*
 Default crafting behavior used by miqobot.
 
-- Crafting NQ/HQ
+- *Crafting NQ/HQ*
 Miqobot crafting solver balance between HQ and NQ output. Default is balanced.
 
-- Custom Craft Teleport
+- *Custom Craft Teleport*
 Teleport location used right before starting the crafting chapter of teh scenario. Use it if you want to teleport to a quiet place before crafting. You can also add a sub scenario right after this custom teleport if you add a custom scenario in the CustomTeleport directory.
 If your teleport location is "MyZone", you can add a "MyZone Scenario.txt" and a "MyZone Grid.txt" files in the CustomTeleport directory. The grid will be added to the scenario data, and the scenario file content will be added to the global scenario, right after the teleport line.
 You can use this feature to actually enter your house for example.
 
-- Ignore Catalysts
+- *Ignore Catalysts*
 Catalysts such as crystals/shards/... will nto be gathered if you activate this option
 
-- Craft as collectable
+- *Craft as collectable*
 Final craft will be done as a collectable if you activate this option
 
-- Nb Item Per Node
+- *Nb Item Per Node*
 This allows miqocraft to know how many nodes you need to gather the required number of items.
 For example, if you need 9 items, and you set this value to 4, miqocrafter will gather on 3 nodes. If you set this value to 2, it will gather on 5 nodes.
 It is recommended you adjust this value based on the gathering rate of the nodes. For 100%, 4 is OK. 75%, 3 is OK.
 
-- Miqobot Installation Path
+- *Miqobot Installation Path*
 Use this to set your miqobot folder path. It will allow miqocrafter to avoid duplicating the resources name, which generates warning for miqobot.
 
 ![Search Window](Images/CraftingTree.PNG)
