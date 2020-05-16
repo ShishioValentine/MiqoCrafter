@@ -122,7 +122,7 @@ You can also cutsomize the gathering presets in CacheGatheringPresets.
 This is a software I intended to make for myself, then realized it could help everyone out.
 For now I’m planning on adding more customization, as well as testing more scenarii when I need them (this daily GC stuff is going to help me out).
 As a final goal, I’d like the software to generate a full scenario to craft all items. I want those shiny crafting tools !
-But if you have other suggestions, tips, rotation proposal, … send me a mail ! `shishio.valentine@gmail.com`
+But if you have other suggestions, tips, rotation proposal, … use this github !
 
 I hope you’ll enjoy this little piece of software, and help me/us out with all those grids 🙂
 
