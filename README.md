@@ -48,12 +48,12 @@ Default crafting behavior used by miqobot.
 Miqobot crafting solver balance between HQ and NQ output. Default is balanced.
 
 - *Custom Craft Teleport*
-Teleport location used right before starting the crafting chapter of teh scenario. Use it if you want to teleport to a quiet place before crafting. You can also add a sub scenario right after this custom teleport if you add a custom scenario in the CustomTeleport directory.
+Teleport location used right before starting the crafting chapter of the scenario. Use it if you want to teleport to a quiet place before crafting. You can also add a sub scenario right after this custom teleport if you add a custom scenario in the CustomTeleport directory.
 If your teleport location is "MyZone", you can add a "MyZone Scenario.txt" and a "MyZone Grid.txt" files in the CustomTeleport directory. The grid will be added to the scenario data, and the scenario file content will be added to the global scenario, right after the teleport line.
 You can use this feature to actually enter your house for example.
 
 - *Ignore Catalysts*
-Catalysts such as crystals/shards/... will nto be gathered if you activate this option
+Catalysts such as crystals/shards/... will not be gathered if you activate this option
 
 - *Craft as collectable*
 Final craft will be done as a collectable if you activate this option
@@ -115,12 +115,12 @@ In the end, that’s what will make this tool really useful.
 
 Yeah, you can customize the generated scenario, if you have customized gathering rotation/solver preset.
 Just add the gathering rotation text file into CacheRotations directory, and solver preset in CacheSolverPresets.
-You can also cutsomize the gathering presets in CacheGatheringPresets.
+You can also customize the gathering presets in CacheGatheringPresets.
 
 ### What’s next ?
 
 This is a software I intended to make for myself, then realized it could help everyone out.
-For now I’m planning on adding more customization, as well as testing more scenarii when I need them (this daily GC stuff is going to help me out).
+For now I’m planning on adding more customization, as well as testing more scenario when I need them (this daily GC stuff is going to help me out).
 As a final goal, I’d like the software to generate a full scenario to craft all items. I want those shiny crafting tools !
 But if you have other suggestions, tips, rotation proposal, … use this github !
 
