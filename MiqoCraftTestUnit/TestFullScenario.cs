@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MiqoCraft;
+using MiqoCraftCore;
 using VPL.Application.Data;
 
 namespace MiqoCraftTestUnit
@@ -134,20 +135,20 @@ namespace MiqoCraftTestUnit
             if (itemFullName.Length <= 0) itemFullName = iItemName;
             FFXIVItem.TypeItem expectedType = iExpectedType;
 
-            List<FFXIVCraftingSearchItem> listResults = FXIVGarlandTool.Search(elemToSearch, null);
+            List<FFXIVSearchItem> listResults = GarlandTool.Search(elemToSearch, null);
             if (listResults.Count != nbExpectedSearchItems) throw new Exception("Erreur de recherche de " + elemToSearch + ": " + listResults.Count + " items found while " + nbExpectedSearchItems + " expected.");
 
             FFXIVItem item = listResults[nbItemInList];
             if (item.Name != itemFullName) throw new Exception("Item name is not the expected one: " + item.Name + ", expected : " + itemFullName);
 
-            FFXIVItem itemToCraft = FXIVGarlandTool.RecBuildCraftingTree(null, item.ID);
+            FFXIVItem itemToCraft = GarlandTool.RecBuildCraftingTree(null, item.ID);
             if (itemToCraft.Type != expectedType) throw new Exception("Item type is not the expected one: " + itemToCraft.Type + ", expected : " + expectedType);
 
             string solution_dir = Service_Misc.GetExecutionPath();
             DirectoryInfo refDirectory = new DirectoryInfo(Path.Combine(solution_dir, "References"));
             if (!refDirectory.Exists) throw new Exception("Reference directory " + refDirectory.FullName + " does not exist");
 
-            Miqobot.MiqobotScenarioOption options = new Miqobot.MiqobotScenarioOption();
+            MiqoCraftCore.MiqoCraftCore.MiqobotScenarioOption options = new MiqoCraftCore.MiqoCraftCore.MiqobotScenarioOption();
             options.GatheringRotation = "HQ +10%";
             options.CraftPreset = "recommended";
             options.NQHQPreset = "balanced";
@@ -158,7 +159,7 @@ namespace MiqoCraftTestUnit
             options.IgnoreCatalysts = iIgnoreCatalyst;
 
             string fullScenario = "";
-            string res = Miqobot.GenerateScenario(itemToCraft, options, null, out fullScenario);
+            string res = MiqoCraftCore.MiqoCraftCore.GenerateScenario(itemToCraft, options, null, out fullScenario);
 
             FileInfo refFile = new FileInfo(Path.Combine(refDirectory.FullName, itemFullName + _dumpSuffix + ".txt"));
 

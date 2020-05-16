@@ -7,6 +7,7 @@ using System.IO;
 using MiqoCraft;
 using System.Web;
 using System.Text.RegularExpressions;
+using MiqoCraftCore;
 
 namespace MiqoCraftTestUnit
 {

@@ -2,11 +2,6 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Variable nécessaire au concepteur.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
         #region Code généré par le Concepteur Windows Form
 
         /// <summary>

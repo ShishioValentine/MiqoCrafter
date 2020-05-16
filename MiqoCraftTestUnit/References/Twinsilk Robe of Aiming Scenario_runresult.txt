@@ -28,6 +28,14 @@
 //
 // You will need to manually reduce those items, cause Miqocrafter can't automate it [Yet]
 // However Miqocrafter will try to gather/craft/retrieve the items that need to be reduced.
+
+
+// Items without grid / Miqocrafter couldn't automate
+//--------------------------------------------------------------
+//
+// You will need to buy or obtain those items using external means, cause Miqocrafter can't automate it [Yet]
+//    - 5x Doman Iron Ore (see http://garlandtools.org/db/#item/19953)
+
 ","
 
 // Gathered Items
@@ -82,14 +90,7 @@ selectGatherPreset(Doman Iron Sand preset)
 rotationIfGP(HQ +10%)
 startGathering(5)
 
-// Gathering Doman Iron Ore
-teleportIfNotThere(Namai)
-changeJob(MIN)
-selectGrid(Doman Iron Ore Grid)
-selectGatherPreset(Doman Iron Ore preset)
-rotationIfGP(HQ +10%)
-startGathering(5)
-
+// Failed to retrieve item gathering scenario from miqobot forums, can't gather this item Doman Iron Ore (see http://garlandtools.org/db/#item/19953)
 // Gathering Iron Ore
 teleportIfNotThere(Horizon)
 changeJob(MIN)

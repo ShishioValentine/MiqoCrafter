@@ -1,0 +1,2 @@
+grid.frantolio
+{"description":"New Grid description","maxaway":50,"points":[{"x":666.682,"y":113.93,"z":16.64,"type":"foot"},{"x":735.198,"y":106.688,"z":15.518,"type":"foot"},{"x":719.288,"y":106.289,"z":32.638,"type":"fly"},{"x":681.039,"y":285.684,"z":14.338,"type":"foot"},{"x":689.228,"y":257.308,"z":29.347,"type":"fly"}],"edges":[{"ifrom":2,"ito":1,"isjump":0},{"ifrom":2,"ito":0,"isjump":0},{"ifrom":4,"ito":3,"isjump":0},{"ifrom":4,"ito":2,"isjump":0}]}

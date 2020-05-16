@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoCraft", "MiqoCraft.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoCraftTestUnit", "MiqoCraftTestUnit\MiqoCraftTestUnit.csproj", "{680ABE3B-8697-4C62-80A6-F37C095D0454}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoCraftCore", "MiqoCraftCore\MiqoCraftCore.csproj", "{C235E0A1-1D79-490D-B7E9-7D71D30F1607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoCraftMapViewer", "MiqoCraftMapViewer\MiqoCraftMapViewer.csproj", "{6E2C87A3-E07D-4DA2-B526-6798F83A2772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiqoGridFinder", "MiqoGridFinder\MiqoGridFinder.csproj", "{EBFF47B6-45F0-43C6-A319-E5A13DD54D72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{680ABE3B-8697-4C62-80A6-F37C095D0454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C235E0A1-1D79-490D-B7E9-7D71D30F1607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C235E0A1-1D79-490D-B7E9-7D71D30F1607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C235E0A1-1D79-490D-B7E9-7D71D30F1607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C235E0A1-1D79-490D-B7E9-7D71D30F1607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2C87A3-E07D-4DA2-B526-6798F83A2772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2C87A3-E07D-4DA2-B526-6798F83A2772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2C87A3-E07D-4DA2-B526-6798F83A2772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2C87A3-E07D-4DA2-B526-6798F83A2772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBFF47B6-45F0-43C6-A319-E5A13DD54D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFF47B6-45F0-43C6-A319-E5A13DD54D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFF47B6-45F0-43C6-A319-E5A13DD54D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFF47B6-45F0-43C6-A319-E5A13DD54D72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

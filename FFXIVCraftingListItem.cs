@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VPL.Threading.Modeler;
+using MiqoCraftCore;
 
 namespace MiqoCraft
 {
     public partial class FFXIVCraftingListItem : UserControl
     {
-        private FFXIVCraftingSearchItem _item;
+        private FFXIVSearchItem _item;
 
         /// <summary>
         /// Associated Item
         /// </summary>
-        public FFXIVCraftingSearchItem Item
+        public FFXIVSearchItem Item
         {
             get => _item;
             set

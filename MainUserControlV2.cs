@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiqoCraftCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +19,10 @@ namespace MiqoCraft
     public partial class MainUserControlV2 : UserControl
     {
         object _locker = new object();
-        List<FFXIVCraftingSearchItem> _itemsToCraft = new List<FFXIVCraftingSearchItem>();
+        List<FFXIVSearchItem> _itemsToCraft = new List<FFXIVSearchItem>();
 
         List<string> _jobFilter = new List<string>();
-        List<FFXIVCraftingSearchItem> _lastDisplayedItems = new List<FFXIVCraftingSearchItem>();
+        List<FFXIVSearchItem> _lastDisplayedItems = new List<FFXIVSearchItem>();
 
         Thread _updateBDDThread;
         Thread _updateResultPictureThread;
@@ -88,7 +89,7 @@ namespace MiqoCraft
                 jobs = _jobFilter;
             }
             Service_Misc.LogText(_logTextBox, "Alright, let's look for " + elemToSearch);
-            List<FFXIVCraftingSearchItem> listResults = FXIVGarlandTool.Search(elemToSearch, _logTextBox, FFXIVItem.TypeItem.Crafted, jobs, minLevel, maxLevel);
+            List<FFXIVSearchItem> listResults = GarlandTool.Search(elemToSearch, _logTextBox, FFXIVItem.TypeItem.Crafted, jobs, minLevel, maxLevel);
 
             //Storing in options
             MiqoCraftOptions options = new MiqoCraftOptions();
@@ -102,13 +103,13 @@ namespace MiqoCraft
             DisplayItemList(listResults);
         }
 
-        private void DisplayItemList(List<FFXIVCraftingSearchItem> iItems)
+        private void DisplayItemList(List<FFXIVSearchItem> iItems)
         {
             VPThreading.ClearItems(_resultListView);
             _lastDisplayedItems = iItems;
 
             Service_Misc.LogText(_logTextBox, "Updating list...");
-            foreach (FFXIVCraftingSearchItem item in iItems)
+            foreach (FFXIVSearchItem item in iItems)
             {
                 if (null == item) continue;
 
@@ -244,7 +245,7 @@ namespace MiqoCraft
             Service_Misc.LogText(_logTextBox, "Updating database...");
             VPThreading.SetText(_gridStatusLabel, "-");
 
-            Miqobot.DownloadGrids();
+            MiqoCraftCore.MiqoCraftCore.DownloadGrids();
 
             try
             {
@@ -358,7 +359,7 @@ namespace MiqoCraft
             {
                 try
                 {
-                    FFXIVCraftingSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVCraftingSearchItem;
+                    FFXIVSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVSearchItem;
                     if (!_prerequisiteImageList.Images.ContainsKey(item.ID))
                     {
                         System.Net.WebRequest request = System.Net.WebRequest.Create(item.UrlImage);
@@ -371,7 +372,7 @@ namespace MiqoCraft
                     }
                     VPThreading.SetImageKey(listViewItem, item.ID);
                 }
-                catch (Exception exc)
+                catch (Exception)
                 {
                 }
             }
@@ -398,7 +399,7 @@ namespace MiqoCraft
                 {
                     try
                     {
-                        FFXIVCraftingSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVCraftingSearchItem;
+                        FFXIVSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVSearchItem;
                         //if (null != item) item.Quantity = (int)VPThreading.GetValue(_quantityNumericUpDown);
                         DisplayItemList(_lastDisplayedItems);
                     }
@@ -433,7 +434,7 @@ namespace MiqoCraft
             {
                 try
                 {
-                    FFXIVCraftingSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVCraftingSearchItem;
+                    FFXIVSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVSearchItem;
                     if (null != item) _itemsToCraft.Add(item);
                 }
                 catch
@@ -448,7 +449,7 @@ namespace MiqoCraft
         {
             _craftingListPanel.Controls.Clear();
 
-            foreach(FFXIVCraftingSearchItem item in _itemsToCraft)
+            foreach(FFXIVSearchItem item in _itemsToCraft)
             {
                 FFXIVCraftingListItem control = new FFXIVCraftingListItem();
                 control.Item = item;

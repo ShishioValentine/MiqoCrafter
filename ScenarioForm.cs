@@ -12,6 +12,7 @@ using System.Threading;
 using System.Net;
 using VPL.Application.Data;
 using System.IO;
+using MiqoCraftCore;
 
 namespace MiqoCraft
 {
@@ -41,14 +42,14 @@ namespace MiqoCraft
         /// <summary>
         /// List of items to craft, from the search
         /// </summary>
-        List<FFXIVCraftingSearchItem> _listItemsToCraft = null;
+        List<FFXIVSearchItem> _listItemsToCraft = null;
 
         Dictionary<string, int> _itemsQuantity = new Dictionary<string, int>();
 
         /// <summary>
         /// List of items to craft, from the search
         /// </summary>
-        public List<FFXIVCraftingSearchItem> ListItemsToCraft
+        public List<FFXIVSearchItem> ListItemsToCraft
         {
             get => _listItemsToCraft;
             set
@@ -169,7 +170,7 @@ namespace MiqoCraft
                 ListResultItems = new List<FFXIVItem>();
                 for (int i = 0; i < ListItemsToCraft.Count; i++)
                 {
-                    FFXIVCraftingSearchItem itemToCraft = ListItemsToCraft[i];
+                    FFXIVSearchItem itemToCraft = ListItemsToCraft[i];
                     if (null == itemToCraft) continue;
 
                     if (i == 0)
@@ -181,7 +182,7 @@ namespace MiqoCraft
                         SetProgressStatus((i + 1) * 100 / ListItemsToCraft.Count, "Building " + itemToCraft.Name + " crafting tree..");
                     }
 
-                    FFXIVItem item = FXIVGarlandTool.RecBuildCraftingTree(null, itemToCraft.ID, itemToCraft.Quantity);
+                    FFXIVItem item = GarlandTool.RecBuildCraftingTree(null, itemToCraft.ID, itemToCraft.Quantity);
                     if (null == item) continue;
                     //item.Quantity = itemToCraft.Quantity;
                     if (!_itemsQuantity.ContainsKey(item.ID)) _itemsQuantity.Add(item.ID, itemToCraft.Quantity);
@@ -218,7 +219,7 @@ namespace MiqoCraft
 
                     SetProgressStatus(i * 100 / ListItemsToCraft.Count, "Computing " + item.Name + " quantity..");
 
-                    Miqobot.RecFindItems(item, GetItemQuantity(item, 1), ref allItems, ref allItemsQuantity, _itemsQuantity);
+                    MiqoCraftCore.MiqoCraftCore.RecFindItems(item, GetItemQuantity(item, 1), ref allItems, ref allItemsQuantity, _itemsQuantity);
                 }
 
                 SetProgressStatus(-1, "Displaying Items..");
@@ -267,7 +268,7 @@ namespace MiqoCraft
                         }
                         listViewItem.ImageKey = iItem.ID;
                     }
-                    catch (Exception exc)
+                    catch (Exception)
                     {
                     }
 
@@ -278,7 +279,7 @@ namespace MiqoCraft
                 }
 
             }
-            catch (Exception exc)
+            catch (Exception)
             {
 
             }
@@ -337,7 +338,7 @@ namespace MiqoCraft
             //Generating
             {
                 SetProgressStatus(-1, "Generating Scenario");
-                Miqobot.MiqobotScenarioOption options = new Miqobot.MiqobotScenarioOption();
+                MiqoCraftCore.MiqoCraftCore.MiqobotScenarioOption options = new MiqoCraftCore.MiqoCraftCore.MiqobotScenarioOption();
                 options.GatheringRotation = VPThreading.GetText(_rotationTextBox);
                 options.CraftPreset = VPThreading.GetText(_craftingpresetTextBox);
                 options.NQHQPreset = VPThreading.GetText(_nghqTextBox);
@@ -349,7 +350,7 @@ namespace MiqoCraft
                 options.CustomQuantities = _itemsQuantity;
 
                 string fullScenario = "";
-                string textFileContent = Miqobot.GenerateScenario(ListResultItems,
+                string textFileContent = MiqoCraftCore.MiqoCraftCore.GenerateScenario(ListResultItems,
                     options,
                     null,
                     out fullScenario);
@@ -430,7 +431,7 @@ namespace MiqoCraft
                 gatheredItem = iItem as FFXIVGatheredItem;
             }
 
-            List<string> catalysts = Miqobot.GetCatalysts();
+            List<string> catalysts = MiqoCraftCore.MiqoCraftCore.GetCatalysts();
             if (null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower()))
             {
                 groupName = "Catalysts";
@@ -448,7 +449,7 @@ namespace MiqoCraft
             else if (null != gatheredItem)
             {
                 groupName = "Gathered";
-                if(!Miqobot.HasGrid(gatheredItem.Name))
+                if(!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
                 {
                     groupName = "Gathered - No Grid";
                 }

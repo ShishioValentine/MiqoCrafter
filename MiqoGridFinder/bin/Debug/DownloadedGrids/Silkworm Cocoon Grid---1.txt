@@ -1,0 +1,2 @@
+grid.BTN50-Unspoiled Silkworm
+{"description":"East Shroud, Nine Ivies:\r\nSilkworm Cocoon","maxaway":50,"points":[{"x":-15.311,"y":278.793,"z":-8.635,"type":"mount"},{"x":0.038,"y":274.507,"z":-8.054,"type":"foot"},{"x":29.269,"y":214.407,"z":-3.597,"type":"foot"},{"x":44.402,"y":255.466,"z":-2.731,"type":"foot"},{"x":0.192,"y":252.102,"z":-7.069,"type":"beacon"}],"edges":[{"ifrom":4,"ito":2,"isjump":0},{"ifrom":4,"ito":3,"isjump":0},{"ifrom":4,"ito":1,"isjump":0}]}

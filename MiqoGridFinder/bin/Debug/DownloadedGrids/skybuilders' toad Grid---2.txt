@@ -1,0 +1,2 @@
+grid.Skybuilders Toad
+{"description":"New Grid description","maxaway":50,"points":[{"x":-194.139,"y":-323.964,"z":14.514,"type":"foot"},{"x":-231.089,"y":-343.608,"z":14.514,"type":"foot"},{"x":-237.857,"y":-315.912,"z":14.514,"type":"foot"},{"x":-214.097,"y":-305.111,"z":14.514,"type":"foot"},{"x":-200.307,"y":-310.498,"z":14.514,"type":"foot"}],"edges":[{"ifrom":0,"ito":1,"isjump":0},{"ifrom":1,"ito":2,"isjump":0},{"ifrom":2,"ito":3,"isjump":0},{"ifrom":3,"ito":4,"isjump":0},{"ifrom":4,"ito":0,"isjump":0}]}

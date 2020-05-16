@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E2C87A3-E07D-4DA2-B526-6798F83A2772}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MiqoCraftMapViewer</RootNamespace>
+    <AssemblyName>MiqoCraftMapViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VPL.Application.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\VPL.Application.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Common.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\VPL.Common.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Threading.Modeler">
+      <HintPath>..\Dependencies\VPL.Threading.Modeler.dll</HintPath>
+    </Reference>
+    <Reference Include="VPL.Windows.Modeler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\VPL.Windows.Modeler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewer.Designer.cs">
+      <DependentUpon>FormViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormViewer.resx">
+      <DependentUpon>FormViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MiqoCraftCore\MiqoCraftCore.csproj">
+      <Project>{c235e0a1-1d79-490d-b7e9-7d71d30f1607}</Project>
+      <Name>MiqoCraftCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Metadata\Amh Araeng.txt" />
+    <Content Include="Metadata\Azys Lla.txt" />
+    <Content Include="Metadata\Central Shroud.txt" />
+    <Content Include="Metadata\Central Thanalan.txt" />
+    <Content Include="Metadata\Coerthas Central Highlands.txt" />
+    <Content Include="Metadata\Coerthas Western Highlands.txt" />
+    <Content Include="Metadata\Crystarium.txt" />
+    <Content Include="Metadata\East Shroud.txt" />
+    <Content Include="Metadata\Eastern La Noscea.txt" />
+    <Content Include="Metadata\Eastern Thanalan.txt" />
+    <Content Include="Metadata\Eulmore.txt" />
+    <Content Include="Metadata\Foundation.txt" />
+    <Content Include="Metadata\Idyllshire.txt" />
+    <Content Include="Metadata\Il Mheg.txt" />
+    <Content Include="Metadata\Kholusia.txt" />
+    <Content Include="Metadata\Kugane.txt" />
+    <Content Include="Metadata\Lakeland.txt" />
+    <Content Include="Metadata\Limsa Lominsa Lower Decks.txt" />
+    <Content Include="Metadata\Lower La Noscea.txt" />
+    <Content Include="Metadata\Middle La Noscea.txt" />
+    <Content Include="Metadata\Middle La Noscea.txt.txt" />
+    <Content Include="Metadata\Mor Dhona.txt" />
+    <Content Include="Metadata\New Gridania.txt" />
+    <Content Include="Metadata\North Shroud.txt" />
+    <Content Include="Metadata\Northern Thanalan.txt" />
+    <Content Include="Metadata\Outer La Noscea.txt" />
+    <Content Include="Metadata\Rhalgr%27s Reach.txt" />
+    <Content Include="Metadata\South Shroud.txt" />
+    <Content Include="Metadata\Southern Thanalan.txt" />
+    <Content Include="Metadata\The Azim Steppe.txt" />
+    <Content Include="Metadata\The Churning Mists.txt" />
+    <Content Include="Metadata\The Dravanian Forelands.txt" />
+    <Content Include="Metadata\The Dravanian Hinterlands.txt" />
+    <Content Include="Metadata\The Fringes.txt" />
+    <Content Include="Metadata\The Lochs.txt" />
+    <Content Include="Metadata\The Peaks.txt" />
+    <Content Include="Metadata\The Rak%27tika Greatwood.txt" />
+    <Content Include="Metadata\The Ruby Sea.txt" />
+    <Content Include="Metadata\The Sea of Clouds.txt" />
+    <Content Include="Metadata\The Tempest.txt" />
+    <Content Include="Metadata\Ul%27dah - Steps of Nald.txt" />
+    <Content Include="Metadata\Upper La Noscea.txt" />
+    <Content Include="Metadata\Western La Noscea.txt" />
+    <Content Include="Metadata\Western Thanalan.txt" />
+    <Content Include="Metadata\Wolves%27 Den Pier.txt" />
+    <Content Include="Metadata\Yanxia.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+XCOPY "$(ProjectDir)Metadata" "$(TargetDir)\Metadata\" /S /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

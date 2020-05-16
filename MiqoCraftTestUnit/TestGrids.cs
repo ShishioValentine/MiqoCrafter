@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MiqoCraft;
+using MiqoCraftCore;
 using Newtonsoft.Json.Linq;
 
 namespace MiqoCraftTestUnit
