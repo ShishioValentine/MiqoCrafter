@@ -104,7 +104,7 @@ namespace MiqoCraftCore
                     nodeName = iGatheredItem.Name;
 
                     {
-                        nodeName = nodeName + "\",\"Crystal\",\"Shard";
+                        nodeName = "{" + nodeName + "}\",\"" + nodeName + "\",\"Cluster\",\"Crystal\",\"Shard\",\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z";
                     }
                 }
                 rawPreset += "{\"owntab\":0,\"assistmode\":false,\"nodename\":\"\",\"slot\":" + slot + ",\"maxcount\":32,\"usecompass\":" + useCompass + ",\"usecompass2\":" + useCompass2 + ",\"usetruth\":" + useTruth + ",\"userotation\":true,\"usemacro\":false,\"macro\":\"\",\"speargig\":0,\"spearshadows\":0,\"usecordials\":true,\"usefavors\":false,\"spearcollect\":true,\"spearcollectability\":1,\"byname\":[\"" + nodeName + "\"],\"veterantradebyname\":[],\"gridname\":\"" + iGridName + "\",\"rotationname\":\"" + "" + "\"}" + Environment.NewLine;
@@ -287,9 +287,22 @@ namespace MiqoCraftCore
             string allPreset = "";
 
             List<string> catalysts = GetCatalysts();
-            if (!iOptions.IgnoreCatalysts) catalysts.Clear();
-
+            List<string> Namedcatalysts = GetCatalysts();
+            if (!iOptions.IgnoreCatalysts)
+            {
+                catalysts.Clear();
+            }
             //Creating rotations
+            allRotations += "gatherrotation.EfficiencyMinGP500" + Environment.NewLine;
+            allRotations += "[31,6]" + Environment.NewLine;
+            allRotations += "gatherrotation.EfficiencyMinGP600" + Environment.NewLine;
+            allRotations += "[31,6,12]" + Environment.NewLine;
+            allRotations += "gatherrotation.EfficiencyMinGP700" + Environment.NewLine;
+            allRotations += "[31,6,12,37,12]" + Environment.NewLine;
+            allRotations += "gatherrotation.MinFarmShardCrystalCluster" + Environment.NewLine;
+            allRotations += "[31,38]" + Environment.NewLine;
+            allRotations += "gatherrotation.MaxFarmShardCrystalCluster" + Environment.NewLine;
+            allRotations += "[31,38,40]" + Environment.NewLine;
             allRotations += "gatherrotation.Collect Gathering +15%" + Environment.NewLine;
             allRotations += "[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,1,32]" + Environment.NewLine;
             allRotations += "gatherrotation.Collect Gathering +5%" + Environment.NewLine;
@@ -300,6 +313,7 @@ namespace MiqoCraftCore
             allRotations += "[31,3]" + Environment.NewLine;
             allRotations += "gatherrotation.Gathering +5%/HQ +10%" + Environment.NewLine;
             allRotations += "[31,0,3]" + Environment.NewLine;
+
             allRotations += MiqoCraftCore.GetCacheRotations() + Environment.NewLine; ;
 
             //Creating default preset
@@ -570,14 +584,20 @@ namespace MiqoCraftCore
                                 fullScenario += "changeJob(" + GarlandTool.GetGatheringJobName(gatheringType, iItem) + ")" + Environment.NewLine;
                                 fullScenario += "selectGrid(" + gridName + ")" + Environment.NewLine;
                                 fullScenario += "selectGatherPreset(" + presetName + ")" + Environment.NewLine;
-                                if (null != gatheredItem && gatheredItem.AsCollectable)
+                                //Special Rotation for Shards Crystal Clusters
+                                if (Namedcatalysts.Contains(iItem.Name))
                                 {
-                                    fullScenario += "rotationIfGP(470 Collect 5% Gathering)" + Environment.NewLine;
-                                    fullScenario += "rotationIfGP(470 Collect 15% Gathering)" + Environment.NewLine;
+                                    fullScenario += "gatherRotation(MinFarmShardCrystalCluster)" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(MaxFarmShardCrystalCluster)" + Environment.NewLine;
+                                }
+                                else if (null != gatheredItem && gatheredItem.AsCollectable)
+                                {
+                                    fullScenario += "gatherRotation(470 Collect 5% Gathering)" + Environment.NewLine;
+                                    fullScenario += "gatherRotation(470 Collect 15% Gathering)" + Environment.NewLine;
                                 }
                                 else
                                 {
-                                    fullScenario += "rotationIfGP(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
+                                    fullScenario += "gatherRotation(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
                                 }
                                 fullScenario += "startGathering(" + quantity + ")" + Environment.NewLine;
                                 fullScenario += Environment.NewLine;
