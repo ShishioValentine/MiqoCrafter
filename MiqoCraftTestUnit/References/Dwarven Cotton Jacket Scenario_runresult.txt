@@ -31,7 +31,7 @@ teleport(Tomra)
 changeJob(BTN)
 selectGrid(Dwarven Cotton Boll Grid)
 selectGatherPreset(Dwarven Cotton Boll preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(13)
 
 // Gathering Lightning Crystal
@@ -39,7 +39,8 @@ teleportIfNotThere(Little Ala Mhigo)
 changeJob(MIN)
 selectGrid(Lightning Crystal Grid)
 selectGatherPreset(Lightning Crystal preset)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(25)
 
 // Gathering Yellow Alumen
@@ -47,7 +48,7 @@ teleportIfNotThere(Mord Souq)
 changeJob(MIN)
 selectGrid(Yellow Alumen Grid)
 selectGatherPreset(Yellow Alumen preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Earth Crystal
@@ -55,7 +56,8 @@ teleportIfNotThere(Moraby Drydocks)
 changeJob(MIN)
 selectGrid(Earth Crystal Grid)
 selectGatherPreset(Earth Crystal preset)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(8)
 
 // Gathering Truegold Sand
@@ -63,7 +65,7 @@ teleportIfNotThere(Wright)
 changeJob(MIN)
 selectGrid(Truegold Sand Grid)
 selectGatherPreset(Truegold Sand preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(5)
 
 // Gathering Gold Ore
@@ -71,7 +73,7 @@ teleportIfNotThere(Camp Drybone)
 changeJob(MIN)
 selectGrid(Gold Ore Grid)
 selectGatherPreset(Gold Ore preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Wind Crystal
@@ -79,7 +81,8 @@ teleportIfNotThere(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid)
 selectGatherPreset(Wind Crystal preset)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(14)
 
 ","

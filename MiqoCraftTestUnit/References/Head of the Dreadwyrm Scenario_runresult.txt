@@ -39,7 +39,7 @@ teleport(Ceruleum Processing Plant)
 changeJob(MIN)
 selectGrid(Cobalt Ore Grid)
 selectGatherPreset(Cobalt Ore preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(6)
 
 ","

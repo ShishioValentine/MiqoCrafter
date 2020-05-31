@@ -85,3 +85,4 @@ D:\GitHub\ShishioValentine\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.csp
 D:\GitHub\ShishioValentine\MiqoCrafter\MiqoCraftCore\bin\Debug\MiqoCraftCore.dll.config
 D:\GitHub\ShishioValentine\MiqoCrafter\MiqoCraftCore\bin\Debug\HtmlAgilityPack.dll
 D:\GitHub\ShishioValentine\MiqoCrafter\MiqoCraftCore\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\ShishioValentine\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.csprojAssemblyReference.cache

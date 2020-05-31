@@ -33,7 +33,7 @@ teleport(Tailfeather)
 changeJob(BTN)
 selectGrid(Dark Chestnut Log Grid1)
 selectGatherPreset(Dark Chestnut Log preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(7)
 
 // Gathering Wind Crystal
@@ -41,7 +41,8 @@ teleportIfNotThere(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid1)
 selectGatherPreset(Wind Crystal preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(9)
 
 // Gathering Titanium Ore
@@ -49,7 +50,7 @@ teleportIfNotThere(Tailfeather)
 changeJob(MIN)
 selectGrid(Titanium Ore Grid1)
 selectGatherPreset(Titanium Ore preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(11)
 
 // Gathering Iron Ore
@@ -57,7 +58,7 @@ teleportIfNotThere(Horizon)
 changeJob(MIN)
 selectGrid(Iron Ore Grid1)
 selectGatherPreset(Iron Ore preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Grenade Ash
@@ -65,7 +66,7 @@ teleportIfNotThere(Camp Bluefog)
 changeJob(MIN)
 selectGrid(Grenade Ash Grid1)
 selectGatherPreset(Grenade Ash preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Fire Crystal
@@ -73,7 +74,8 @@ teleportIfNotThere(Tailfeather)
 changeJob(MIN)
 selectGrid(Fire Crystal Grid1)
 selectGatherPreset(Fire Crystal preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(9)
 
 // Gathering Earth Crystal
@@ -81,7 +83,8 @@ teleportIfNotThere(Moraby Drydocks)
 changeJob(MIN)
 selectGrid(Earth Crystal Grid1)
 selectGatherPreset(Earth Crystal preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(5)
 
 // Gathering Water Crystal
@@ -89,7 +92,8 @@ teleportIfNotThere(Camp Cloudtop)
 changeJob(BTN)
 selectGrid(Water Crystal Grid1)
 selectGatherPreset(Water Crystal preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(4)
 
 // Gathering Ice Crystal
@@ -97,7 +101,8 @@ teleportIfNotThere(Falcon's Nest)
 changeJob(MIN)
 selectGrid(Ice Crystal Grid1)
 selectGatherPreset(Ice Crystal preset1)
-rotationIfGP(HQ +10%)
+gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(4)
 
 ","

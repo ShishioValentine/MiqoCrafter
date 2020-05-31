@@ -28,14 +28,6 @@
 //
 // You will need to manually reduce those items, cause Miqocrafter can't automate it [Yet]
 // However Miqocrafter will try to gather/craft/retrieve the items that need to be reduced.
-
-
-// Items without grid / Miqocrafter couldn't automate
-//--------------------------------------------------------------
-//
-// You will need to buy or obtain those items using external means, cause Miqocrafter can't automate it [Yet]
-//    - 5x Doman Iron Ore (see http://garlandtools.org/db/#item/19953)
-
 ","
 
 // Gathered Items
@@ -47,7 +39,7 @@ teleport(Ala Ghiri)
 changeJob(BTN)
 selectGrid(Twincoon Grid)
 selectGatherPreset(Twincoon preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(13)
 
 // Gathering Effervescent Water
@@ -55,7 +47,7 @@ teleportIfNotThere(Camp Tranquil)
 changeJob(MIN)
 selectGrid(Effervescent Water Grid)
 selectGatherPreset(Effervescent Water preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(5)
 
 // Gathering Persimmon
@@ -63,7 +55,7 @@ teleportIfNotThere(Castrum Oriens)
 changeJob(BTN)
 selectGrid(Persimmon Grid)
 selectGatherPreset(Persimmon preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(6)
 
 // Gathering Crescent Spring Water
@@ -71,7 +63,7 @@ teleportIfNotThere(Namai)
 changeJob(MIN)
 selectGrid(Crescent Spring Water Grid)
 selectGatherPreset(Crescent Spring Water preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Rock Salt
@@ -79,7 +71,7 @@ teleportIfNotThere(Black Brush Station)
 changeJob(MIN)
 selectGrid(Rock Salt Grid)
 selectGatherPreset(Rock Salt preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Doman Iron Sand
@@ -87,16 +79,23 @@ teleportIfNotThere(Reunion)
 changeJob(MIN)
 selectGrid(Doman Iron Sand Grid)
 selectGatherPreset(Doman Iron Sand preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(5)
 
-// Failed to retrieve item gathering scenario from miqobot forums, can't gather this item Doman Iron Ore (see http://garlandtools.org/db/#item/19953)
+// Gathering Doman Iron Ore
+teleportIfNotThere(Namai)
+changeJob(MIN)
+selectGrid(Doman Iron Ore Grid)
+selectGatherPreset(Doman Iron Ore preset)
+gatherRotation(HQ +10%)
+startGathering(5)
+
 // Gathering Iron Ore
 teleportIfNotThere(Horizon)
 changeJob(MIN)
 selectGrid(Iron Ore Grid)
 selectGatherPreset(Iron Ore preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Gyr Abanian Mineral Water
@@ -104,7 +103,7 @@ teleportIfNotThere(The Peering Stones)
 changeJob(MIN)
 selectGrid(Gyr Abanian Mineral Water Grid)
 selectGatherPreset(Gyr Abanian Mineral Water preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Holy Basil
@@ -112,7 +111,7 @@ teleportIfNotThere(Castrum Oriens)
 changeJob(BTN)
 selectGrid(Holy Basil Grid)
 selectGatherPreset(Holy Basil preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Coneflower
@@ -120,7 +119,7 @@ teleportIfNotThere(Tailfeather)
 changeJob(BTN)
 selectGrid(Coneflower Grid)
 selectGatherPreset(Coneflower preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Diatomite
@@ -128,7 +127,7 @@ teleportIfNotThere(Onokoro)
 changeJob(MIN)
 selectGrid(Diatomite Grid)
 selectGatherPreset(Diatomite preset)
-rotationIfGP(HQ +10%)
+gatherRotation(HQ +10%)
 startGathering(2)
 
 ","
