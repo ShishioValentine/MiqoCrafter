@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Windows.Forms;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MiqoCraft;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MiqoCraftCore;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace MiqoCraftTestUnit
 {
@@ -69,7 +66,7 @@ namespace MiqoCraftTestUnit
             DirectoryInfo cacheGridDirectory = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CacheGrid"));
             if (!cacheGridDirectory.Exists) throw new Exception("Cache grid directory does not exist !");
 
-            foreach(FileInfo file in cacheGridDirectory.GetFiles())
+            foreach (FileInfo file in cacheGridDirectory.GetFiles())
             {
                 string gridText = File.ReadAllText(file.FullName);
 

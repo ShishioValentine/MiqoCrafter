@@ -1,18 +1,11 @@
-﻿using System;
+﻿using MiqoCraftCore;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using VPL.Threading.Modeler;
 using System.Threading;
-using System.Net;
+using System.Windows.Forms;
 using VPL.Application.Data;
-using System.IO;
-using MiqoCraftCore;
+using VPL.Threading.Modeler;
 
 namespace MiqoCraft
 {
@@ -147,7 +140,7 @@ namespace MiqoCraft
                     if (null != itemOption)
                     {
                         string detailsOption = itemOption.ToString();
-                        if(detailsOption != "") VPThreading.SetText(listViewItem, VPThreading.GetText(listViewItem).Split('{')[0] + Environment.NewLine + "{" + detailsOption + "}" );
+                        if (detailsOption != "") VPThreading.SetText(listViewItem, VPThreading.GetText(listViewItem).Split('{')[0] + Environment.NewLine + "{" + detailsOption + "}");
                     }
                 }
             }
@@ -204,9 +197,9 @@ namespace MiqoCraft
         }
 
         private void DisplayListResultThread()
-        { 
+        {
             try
-            { 
+            {
                 //Display
                 VPThreading.ClearItems(_ingredientsListView);
                 SetProgressStatus(-1, "Updating Quantities..");
@@ -246,7 +239,7 @@ namespace MiqoCraft
                     }
                     if (null != craftedItem)
                     {
-                        if(craftedItem.RecipeQuantity == 1) listViewItem.Text = "[" + craftedItem.Class + " lvl" + craftedItem.Level + "]" + Environment.NewLine + listViewItem.Text;
+                        if (craftedItem.RecipeQuantity == 1) listViewItem.Text = "[" + craftedItem.Class + " lvl" + craftedItem.Level + "]" + Environment.NewLine + listViewItem.Text;
                         else listViewItem.Text = "[" + craftedItem.Class + " lvl" + craftedItem.Level + "]" + Environment.NewLine + listViewItem.Text + "[x" + craftedItem.RecipeQuantity + "]";
 
                         listViewItem.ToolTipText = craftedItem.Class + " lvl" + craftedItem.Level;
@@ -390,7 +383,7 @@ namespace MiqoCraft
         /// <returns></returns>
         private int GetItemQuantity(FFXIVItem iItem, int iDefaultValue)
         {
-            if(null != iItem && _itemsQuantity.ContainsKey(iItem.ID))
+            if (null != iItem && _itemsQuantity.ContainsKey(iItem.ID))
             {
                 return _itemsQuantity[iItem.ID];
             }
@@ -458,7 +451,8 @@ namespace MiqoCraft
                         groupName = "Unspoiled Nodes - No Grid";
                     }
                 }
-                else {
+                else
+                {
                     groupName = "Gathered";
                     if (!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
                     {
@@ -510,7 +504,7 @@ namespace MiqoCraft
                 }
             }
 
-            if(null == firstItem)
+            if (null == firstItem)
             {
                 _quantityNumericUpDown.Enabled = false;
                 //_ignoreCheckBox.Enabled = false;
@@ -548,7 +542,7 @@ namespace MiqoCraft
 
         private void _quantityNumericUpDown_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 ListView.SelectedListViewItemCollection iItems = _ingredientsListView.SelectedItems;
 
@@ -613,7 +607,7 @@ namespace MiqoCraft
 
         private void _craftTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 _ignoreCheckBox_CheckedChanged(sender, e);
             }

@@ -2,18 +2,12 @@
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-using HtmlAgilityPack;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using VPL.Application.Data;
 
 namespace MiqoCraftCore
@@ -230,11 +224,12 @@ namespace MiqoCraftCore
         {
             List<UnspoiledNodes> result = new List<UnspoiledNodes>();
             string stream = File.ReadAllText("UnspoiledNodes.json");
-            result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<UnspoiledNodes>>(stream); 
+            result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<UnspoiledNodes>>(stream);
             return result;
         }
 
-        public static UnspoiledNodes IsUnspoiledNode(string name, List<UnspoiledNodes> Nodes) {
+        public static UnspoiledNodes IsUnspoiledNode(string name, List<UnspoiledNodes> Nodes)
+        {
             for (int i = 0; i < Nodes.Count; i++)
             {
                 if (Nodes[i].UnspoiledNodeName.Equals(name))
@@ -579,7 +574,8 @@ namespace MiqoCraftCore
                                     fullScenario += "// Location: " + compare.UnspoiledNodeLocation + Environment.NewLine;
                                     fullScenario += "// Coordinate: " + compare.UnspoiledNodeCoordinate + Environment.NewLine;
                                 }
-                                else {
+                                else
+                                {
                                     fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
                                 }
                                 if (lastTeleport == "" || lastTeleport == teleportTo)

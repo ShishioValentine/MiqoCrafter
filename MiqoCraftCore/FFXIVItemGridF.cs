@@ -1,14 +1,9 @@
-﻿using MiqoCraftCore;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MiqoCraftCore
 {
@@ -265,7 +260,7 @@ namespace MiqoCraftCore
                 }
                 else
                 {
-                    if(AllNodes.Count == 1)
+                    if (AllNodes.Count == 1)
                     {
                         ClosestNode = AllNodes[0];
                     }
@@ -281,7 +276,7 @@ namespace MiqoCraftCore
                 List<FFXIVAetheryte> listZoneAetherytes = new List<FFXIVAetheryte>();
                 foreach (FFXIVAetheryte aetherythe in iAetherytes)
                 {
-                    if(noGatheringNodeMode)
+                    if (noGatheringNodeMode)
                     {
                         foreach (FFXIVGatheringNode node in correspondingNodes)
                         {
@@ -382,7 +377,7 @@ namespace MiqoCraftCore
             {
                 newGridBitmapDirectory.Create();
             }
-            if(null != ClosestNode)
+            if (null != ClosestNode)
             {
                 foreach (string itemName in ClosestNode.NodeItems)
                 {

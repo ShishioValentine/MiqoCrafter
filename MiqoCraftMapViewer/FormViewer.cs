@@ -1,15 +1,10 @@
 ﻿using MiqoCraftCore;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using VPL.Threading.Modeler;
 
 namespace MiqoCraftMapViewer
 {
@@ -57,7 +52,7 @@ namespace MiqoCraftMapViewer
         private void FormViewer_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            if(files.Count() > 0)
+            if (files.Count() > 0)
             {
                 try
                 {
@@ -80,7 +75,7 @@ namespace MiqoCraftMapViewer
                     pictureBox1.BackgroundImage = gridF.Picture;
                     pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
                 }
-                catch(Exception exc)
+                catch (Exception exc)
                 {
                     Console.WriteLine(exc.Message);
                 }
@@ -97,9 +92,9 @@ namespace MiqoCraftMapViewer
             string gridName = _aetheryteComboBox.Text;
             if (null == gridF) return;
 
-            foreach(FFXIVAetheryte aetheryte in ListAetherytes)
+            foreach (FFXIVAetheryte aetheryte in ListAetherytes)
             {
-                if(null != aetheryte && aetheryte.ToString() == gridName)
+                if (null != aetheryte && aetheryte.ToString() == gridName)
                 {
                     gridF.ClosestAetheryte = aetheryte;
                     break;

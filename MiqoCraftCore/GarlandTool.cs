@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using HtmlAgilityPack;
+using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
-using System.IO;
 
 namespace MiqoCraftCore
 {
@@ -441,7 +438,7 @@ namespace MiqoCraftCore
                     //gatheringNode.Type = type;
                     gatheringNode.Zone = zone;
 
-                    if(null != gatherResultNodeToken["items"])
+                    if (null != gatherResultNodeToken["items"])
                     {
                         foreach (JToken nodeItemToken in gatherResultNodeToken["items"].Children())
                         {

@@ -8,7 +8,6 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace MiqoCraftCore
 {
@@ -577,7 +576,7 @@ namespace MiqoCraftCore
        )).Replace("竕", "")
        .Replace("%}", "%\"}")
        .Replace("+1}", "+1\"}")
-       .Replace("・・", "\""); 
+       .Replace("・・", "\"");
         }
     }
     public static class ZipArchiveExtensions

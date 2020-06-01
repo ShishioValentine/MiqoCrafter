@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiqoCraftCore
+﻿namespace MiqoCraftCore
 {
     public class UnspoiledNodes
     {
@@ -12,6 +6,6 @@ namespace MiqoCraftCore
         public string UnspoiledNodeTime = "";
         public string UnspoiledNodeLocation = "";
         public string UnspoiledNodeCoordinate = "";
-        public string UnspoiledNodeXpac= "";
+        public string UnspoiledNodeXpac = "";
     }
 }

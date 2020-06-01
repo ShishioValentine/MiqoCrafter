@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using VPL.Application.Data;
-using VPL.Threading.Modeler;
+﻿using System.Windows.Forms;
 
 namespace MiqoCraft
 {

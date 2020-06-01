@@ -1,15 +1,10 @@
 ﻿using MiqoCraftCore;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VPL.Threading.Modeler;
 
@@ -104,7 +99,7 @@ namespace MiqoGridFinder
             Dictionary<string, double> dictionaryClosestAetherytes = new Dictionary<string, double>();
             FileInfo[] files = analyzeDirectory.GetFiles();
             int index = 0;
-            foreach(FileInfo file in files)
+            foreach (FileInfo file in files)
             {
                 index++;
                 double percentage = (double)index / (double)files.Count() * 100.0;
@@ -130,7 +125,7 @@ namespace MiqoGridFinder
                     gridF.Analyze(ListAetherytes, ListGatheringNodes, ref dictionaryClosestAetherytes);
                     ListGridF.Add(gridF);
 
-                    if(gridF.IsValid)
+                    if (gridF.IsValid)
                     {
                         gridF.SaveAsGrids();
                     }
@@ -141,7 +136,7 @@ namespace MiqoGridFinder
                     item.Tag = gridF;
                     VPThreading.AddItem(_gridListView, item);
                 }
-                catch(Exception exc)
+                catch (Exception exc)
                 {
                     Console.WriteLine(exc.Message);
                 }
@@ -178,7 +173,7 @@ namespace MiqoGridFinder
             DirectoryInfo exeDirectory = new DirectoryInfo(Service_Misc.GetExecutionPath());
             DirectoryInfo cacheDirectory = new DirectoryInfo(Path.Combine(exeDirectory.FullName, "CacheGrid"));
             DirectoryInfo analyzeDirectory = new DirectoryInfo(Path.Combine(exeDirectory.FullName, "DownloadedGrids"));
-            if(!analyzeDirectory.Exists)
+            if (!analyzeDirectory.Exists)
             {
                 analyzeDirectory.Create();
             }
@@ -217,7 +212,7 @@ namespace MiqoGridFinder
 
                     //Looking for all links
                     List<MiqoItemPage> listLinks = Miqobot.GetURLItem(itemName, logMiqobotCookies, answer);
-                    foreach(MiqoItemPage page in listLinks)
+                    foreach (MiqoItemPage page in listLinks)
                     {
                         //List<string> ListGrids = Miqobot.GetAllGridsFromForum(itemName, logMiqobotCookies, page);
                         //if (null == ListGrids) continue;
@@ -375,9 +370,9 @@ namespace MiqoGridFinder
         }
 
         private void DownloadFromURL(string iURL, string iItemName = "", CookieCollection iCookies = null)
-        { 
+        {
             VPThreading.SetText(_progressLabel, "Downloading grid from given URL...");
-            if(null == iCookies) iCookies = Miqobot.LogInForum();
+            if (null == iCookies) iCookies = Miqobot.LogInForum();
             List<string> listGridRawContent = Miqobot.GetAllGridsRawContentFromForum(iURL, iCookies);
             List<MiqobotGrid> listGrids = new List<MiqobotGrid>();
 
@@ -417,7 +412,7 @@ namespace MiqoGridFinder
             foreach (MiqobotGrid grid in listGrids)
             {
                 List<string> listCorrespondingItemNames = new List<string>();
-                foreach(FFXIVSearchItem item in listAllGatheredItems)
+                foreach (FFXIVSearchItem item in listAllGatheredItems)
                 {
                     if (null == grid.Description) continue;
                     if (grid.Description.ToLower().Contains(item.Name.ToLower()))
@@ -430,7 +425,7 @@ namespace MiqoGridFinder
                     }
                 }
 
-                if(listCorrespondingItemNames.Count <= 0 && iItemName != "")
+                if (listCorrespondingItemNames.Count <= 0 && iItemName != "")
                 {
                     listCorrespondingItemNames.Add(iItemName);
                 }
@@ -440,13 +435,13 @@ namespace MiqoGridFinder
                     bool hasBigger = false;
                     foreach (string itemName2 in listCorrespondingItemNames)
                     {
-                        if(itemName2 != itemName && itemName2.Contains(itemName))
+                        if (itemName2 != itemName && itemName2.Contains(itemName))
                         {
                             hasBigger = true;
                             break;
                         }
                     }
-                    if(!hasBigger)
+                    if (!hasBigger)
                     {
                         listFilteredCorrespondingItemNames.Add(itemName);
                     }

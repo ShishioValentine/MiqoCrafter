@@ -1,12 +1,6 @@
 ﻿using MiqoCraftCore;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VPL.Application.Data;
 using VPL.Threading.Modeler;
@@ -49,7 +43,7 @@ namespace MiqoCraft
             Options = options.GetOption(_item);
 
             //Creating option if need be
-            if(null == Options)
+            if (null == Options)
             {
                 Options = new FFXIVCraftingOptions();
                 Options.ItemID = _item.ID;
@@ -75,7 +69,7 @@ namespace MiqoCraft
             options.Load(OptionLocation.UserOption);
 
             FFXIVCraftingOptions existingOption = options.GetOption(Options.ItemID);
-            while(null != existingOption)
+            while (null != existingOption)
             {
                 options.ListItemOptions.Remove(existingOption);
                 existingOption = options.GetOption(Options.ItemID);
