@@ -226,6 +226,25 @@ namespace MiqoCraftCore
             return result;
         }
 
+        public static List<UnspoiledNodes> GetAllUnspoiledNodes()
+        {
+            List<UnspoiledNodes> result = new List<UnspoiledNodes>();
+            string stream = File.ReadAllText("UnspoiledNodes.json");
+            result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<UnspoiledNodes>>(stream); 
+            return result;
+        }
+
+        public static UnspoiledNodes IsUnspoiledNode(string name, List<UnspoiledNodes> Nodes) {
+            for (int i = 0; i < Nodes.Count; i++)
+            {
+                if (Nodes[i].UnspoiledNodeName.Equals(name))
+                {
+                    return Nodes[i];
+                }
+            }
+            return null;
+        }
+
         public class MiqobotScenarioOption
         {
             public int Quantity = 1;
@@ -288,6 +307,7 @@ namespace MiqoCraftCore
 
             List<string> catalysts = GetCatalysts();
             List<string> Namedcatalysts = GetCatalysts();
+            List<UnspoiledNodes> AllUnspoiledNodes = GetAllUnspoiledNodes();
             if (!iOptions.IgnoreCatalysts)
             {
                 catalysts.Clear();
@@ -550,7 +570,18 @@ namespace MiqoCraftCore
                                 //Add gathering rotation to scenario
                                 //teleportIf(Black Brush Station)\r\nunstealth()\r\nchangeJob(Miner)\r\nselectGrid(Min5-Copper Ore)\r\nselectGatherPreset(Metal Worm Jar- Copper Ore)\r\nstartGathering(4)
                                 //teleportIfNotThere
-                                fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
+                                UnspoiledNodes compare = IsUnspoiledNode(iItem.Name, AllUnspoiledNodes);
+                                if (compare != null)
+                                {
+                                    fullScenario += "// Gathering Unspoiled Node: " + compare.UnspoiledNodeName + Environment.NewLine;
+                                    fullScenario += "// Expansion: " + compare.UnspoiledNodeXpac + Environment.NewLine;
+                                    fullScenario += "// Time(ET): " + compare.UnspoiledNodeTime + Environment.NewLine;
+                                    fullScenario += "// Location: " + compare.UnspoiledNodeLocation + Environment.NewLine;
+                                    fullScenario += "// Coordinate: " + compare.UnspoiledNodeCoordinate + Environment.NewLine;
+                                }
+                                else {
+                                    fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
+                                }
                                 if (lastTeleport == "" || lastTeleport == teleportTo)
                                 {
                                     fullScenario += "teleport(" + teleportTo + ")" + Environment.NewLine;

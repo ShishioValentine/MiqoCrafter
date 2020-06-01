@@ -432,6 +432,8 @@ namespace MiqoCraft
             }
 
             List<string> catalysts = MiqoCraftCore.MiqoCraftCore.GetCatalysts();
+            List<UnspoiledNodes> AllUnspoiledNodes = MiqoCraftCore.MiqoCraftCore.GetAllUnspoiledNodes();
+
             if (null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower()))
             {
                 groupName = "Catalysts";
@@ -448,11 +450,22 @@ namespace MiqoCraft
             }
             else if (null != gatheredItem)
             {
-                groupName = "Gathered";
-                if(!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
+                if (MiqoCraftCore.MiqoCraftCore.IsUnspoiledNode(gatheredItem.Name, AllUnspoiledNodes) != null)
                 {
-                    groupName = "Gathered - No Grid";
+                    groupName = "Gathered Unspoiled Nodes";
+                    if (!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
+                    {
+                        groupName = "Unspoiled Nodes - No Grid";
+                    }
                 }
+                else {
+                    groupName = "Gathered";
+                    if (!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
+                    {
+                        groupName = "Gathered - No Grid";
+                    }
+                }
+
             }
 
             foreach (ListViewGroup group in groups)

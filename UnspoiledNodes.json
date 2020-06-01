@@ -1,0 +1,1073 @@
+[
+  {
+    "UnspoiledNodeTime": "01:00",
+    "UnspoiledNodeName": "Darksteel Ore",
+    "UnspoiledNodeLocation": "Coerthas Central Highlands",
+    "UnspoiledNodeCoordinate": "(x27,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "01:00",
+    "UnspoiledNodeName": "Pumice",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x17,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "02:00",
+    "UnspoiledNodeName": "Antumbral Rock",
+    "UnspoiledNodeLocation": "Eastern Thanalan",
+    "UnspoiledNodeCoordinate": "(x26,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "03:00",
+    "UnspoiledNodeName": "Ferberite",
+    "UnspoiledNodeLocation": "Northern Thanalan",
+    "UnspoiledNodeCoordinate": "(x16,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "03:00",
+    "UnspoiledNodeName": "Raw Topaz",
+    "UnspoiledNodeLocation": "Northern Thanalan",
+    "UnspoiledNodeCoordinate": "(x16,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "03:00",
+    "UnspoiledNodeName": "Raw Iolite",
+    "UnspoiledNodeLocation": "Northern Thanalan",
+    "UnspoiledNodeCoordinate": "(x16,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "04:00",
+    "UnspoiledNodeName": "Native Gold",
+    "UnspoiledNodeLocation": "Central Thanalan",
+    "UnspoiledNodeCoordinate": "(x24,y16)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "04:00",
+    "UnspoiledNodeName": "Raw Diamond",
+    "UnspoiledNodeLocation": "Central Thanalan",
+    "UnspoiledNodeCoordinate": "(x24,y16)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "04:00",
+    "UnspoiledNodeName": "Raw Emerald",
+    "UnspoiledNodeLocation": "Central Thanalan",
+    "UnspoiledNodeCoordinate": "(x24,y16)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "04:00",
+    "UnspoiledNodeName": "Platinum Ore",
+    "UnspoiledNodeLocation": "Southern Thanalan",
+    "UnspoiledNodeCoordinate": "(x19,y8)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "05:00",
+    "UnspoiledNodeName": "Water Cluster",
+    "UnspoiledNodeLocation": "Western Thanalan",
+    "UnspoiledNodeCoordinate": "(x18,y27)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "05:00",
+    "UnspoiledNodeName": "Gold Sand",
+    "UnspoiledNodeLocation": "Eastern Thanalan",
+    "UnspoiledNodeCoordinate": "(x25,y22)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "06:00",
+    "UnspoiledNodeName": "Umbral Rock",
+    "UnspoiledNodeLocation": "South Shroud",
+    "UnspoiledNodeCoordinate": "(x16,y31)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "09:00",
+    "UnspoiledNodeName": "Gold Ore",
+    "UnspoiledNodeLocation": "Eastern Thanalan",
+    "UnspoiledNodeCoordinate": "(x28,y22)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "09:00",
+    "UnspoiledNodeName": "Coblyn Larva",
+    "UnspoiledNodeLocation": "Eastern Thanalan",
+    "UnspoiledNodeCoordinate": "(x28,y22)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "17:00",
+    "UnspoiledNodeName": "Volcanic Rock Salt",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x21,y32)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "17:00",
+    "UnspoiledNodeName": "Virgin Basilisk Egg",
+    "UnspoiledNodeLocation": "Northern Thanalan",
+    "UnspoiledNodeCoordinate": "(x24,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "18:00",
+    "UnspoiledNodeName": "Raw Ruby",
+    "UnspoiledNodeLocation": "Lower La Noscea",
+    "UnspoiledNodeCoordinate": "(x23,y21)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "18:00",
+    "UnspoiledNodeName": "Raw Sapphire",
+    "UnspoiledNodeLocation": "Lower La Noscea",
+    "UnspoiledNodeCoordinate": "(x23,y21)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "21:00",
+    "UnspoiledNodeName": "Astral Rock",
+    "UnspoiledNodeLocation": "Coerthas Central Highlands",
+    "UnspoiledNodeCoordinate": "(x23,y23)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Lumythrite Ore",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x11,y38)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Aurum Regis Ore",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x11,y38)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Tungstite",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x10,y9)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Sun Mica",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x35,y39)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Luminium Ore",
+    "UnspoiledNodeLocation": "Azys Lla",
+    "UnspoiledNodeCoordinate": "(x5,y17)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Blue Quartz",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x11,y16)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Smithsonite Ore",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x38,y15)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Meteorite",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x38,y15)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Zeolite Ore",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x13,y31)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Red Alumen",
+    "UnspoiledNodeLocation": "Azys Lla",
+    "UnspoiledNodeCoordinate": "(x35,y16)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Violet Quartz",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x11,y21)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Astral Moraine",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x37,y16)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Cuprite",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x34,y30)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Light Kidney Ore",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x34,y30)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Yellow Copper Ore",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x30,y23)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Yellow Quartz",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x33,y22)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Green Quartz",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x33,y22)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Chalcocite",
+    "UnspoiledNodeLocation": "The Dravanian Forelands",
+    "UnspoiledNodeCoordinate": "(x26,y17)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Pyrite",
+    "UnspoiledNodeLocation": "The Dravanian Forelands",
+    "UnspoiledNodeCoordinate": "(x26,y17)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Limonite",
+    "UnspoiledNodeLocation": "The Dravanian Forelands",
+    "UnspoiledNodeCoordinate": "(x26,y17)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Abalathian Rock Salt",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x7,y7)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Red Quartz",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x7,y7)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Adamantite Ore",
+    "UnspoiledNodeLocation": "Azys Lla",
+    "UnspoiledNodeCoordinate": "(x24,y6)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Raw Star Spinel",
+    "UnspoiledNodeLocation": "The Ruby Sea",
+    "UnspoiledNodeCoordinate": "(x15,y4.5)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Ala Mhigan Salt Crystal",
+    "UnspoiledNodeLocation": "The Lochs",
+    "UnspoiledNodeCoordinate": "(x21,y29)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Gyr Abanian Ore",
+    "UnspoiledNodeLocation": "The Fringes",
+    "UnspoiledNodeCoordinate": "(x31,y27)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Raw Triphane",
+    "UnspoiledNodeLocation": "The Fringes",
+    "UnspoiledNodeCoordinate": "(x25,y8)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Raw Azurite",
+    "UnspoiledNodeLocation": "Azim Steppe",
+    "UnspoiledNodeCoordinate": "(x5,y29)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Palladium Ore",
+    "UnspoiledNodeLocation": "Yanxia",
+    "UnspoiledNodeCoordinate": "(x20.5,y10.4)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Raw Imperial Jade",
+    "UnspoiledNodeLocation": "Yanxia",
+    "UnspoiledNodeCoordinate": "(x29,y9)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Nightsteel Ore",
+    "UnspoiledNodeLocation": "The Ruby Sea",
+    "UnspoiledNodeCoordinate": "(x11,y23)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Hawk's Eye",
+    "UnspoiledNodeLocation": "The Ruby Sea",
+    "UnspoiledNodeCoordinate": "(x11,y23)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Pummelite",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x26,y12)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Raw Rhodonite",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x26,y12)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Silvergrace Ore",
+    "UnspoiledNodeLocation": "The Azim Steppe",
+    "UnspoiledNodeCoordinate": "(x23,y36)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Azim Spring Water",
+    "UnspoiledNodeLocation": "The Azim Steppe",
+    "UnspoiledNodeCoordinate": "(x23,y36)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Chromite Ore",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x16.0,y33.9 )",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Gyr Abanian Spring Water",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x16.0,y33.9 )",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Evergleam Ore",
+    "UnspoiledNodeLocation": "The Lochs",
+    "UnspoiledNodeCoordinate": "(x22,y13 )",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Raw Triplite",
+    "UnspoiledNodeLocation": "Amh Araeng",
+    "UnspoiledNodeCoordinate": "(x20,y29)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Raw Onyx",
+    "UnspoiledNodeLocation": "The Tempest",
+    "UnspoiledNodeCoordinate": "(x16,y21)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Raw Hematite",
+    "UnspoiledNodeLocation": "Kholusia",
+    "UnspoiledNodeCoordinate": "(x33,y23)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Fireheart Cobalt",
+    "UnspoiledNodeLocation": "Lakeland",
+    "UnspoiledNodeCoordinate": "(x4,y33)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Raw Lazurite",
+    "UnspoiledNodeLocation": "The Rak'tika Greatwood",
+    "UnspoiledNodeCoordinate": "(x19,y21)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Prismstone",
+    "UnspoiledNodeLocation": "Il Mheg",
+    "UnspoiledNodeCoordinate": "(x30,y20)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Beryllium Ore",
+    "UnspoiledNodeLocation": "Il Mheg",
+    "UnspoiledNodeCoordinate": "(x30,y20)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Raw Diaspore",
+    "UnspoiledNodeLocation": "Il Mheg",
+    "UnspoiledNodeCoordinate": "(x26,y13)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Raw Petalite",
+    "UnspoiledNodeLocation": "Lakeland",
+    "UnspoiledNodeCoordinate": "(x28,y33)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Purpure Shell Chip",
+    "UnspoiledNodeLocation": "The Tempest",
+    "UnspoiledNodeCoordinate": "(x34,y31)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Tungsten Ore",
+    "UnspoiledNodeLocation": "The Tempest",
+    "UnspoiledNodeCoordinate": "(x32,y7)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Ashen Alumen",
+    "UnspoiledNodeLocation": "Amh Araeng",
+    "UnspoiledNodeCoordinate": "(x20,y8)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "01:00",
+    "UnspoiledNodeName": "Silkworm Cocoon",
+    "UnspoiledNodeLocation": "East Shroud",
+    "UnspoiledNodeCoordinate": "(x22,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "02:00",
+    "UnspoiledNodeName": "Fragrant Log",
+    "UnspoiledNodeLocation": "South Shroud",
+    "UnspoiledNodeCoordinate": "(x18,y23)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "02:00",
+    "UnspoiledNodeName": "Shroud Tea Leaves",
+    "UnspoiledNodeLocation": "Central Shroud",
+    "UnspoiledNodeCoordinate": "(x16,y20)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "03:00",
+    "UnspoiledNodeName": "Scarlet Sap",
+    "UnspoiledNodeLocation": "North Shroud",
+    "UnspoiledNodeCoordinate": "(x18,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "04:00",
+    "UnspoiledNodeName": "Ebony Log",
+    "UnspoiledNodeLocation": "Middle La Noscea",
+    "UnspoiledNodeCoordinate": "(x23.2,y26.3)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "05:00",
+    "UnspoiledNodeName": "Trillium",
+    "UnspoiledNodeLocation": "East Shroud",
+    "UnspoiledNodeCoordinate": "(x17,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "05:00",
+    "UnspoiledNodeName": "Honey Lemon",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x26,y32)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "06:00",
+    "UnspoiledNodeName": "Young Cieldalaes Spinach",
+    "UnspoiledNodeLocation": "Lower La Noscea",
+    "UnspoiledNodeCoordinate": "(x32,y11)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "06:00",
+    "UnspoiledNodeName": "Redolent Log",
+    "UnspoiledNodeLocation": "Central Shroud",
+    "UnspoiledNodeCoordinate": "(x30,y19)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "07:00",
+    "UnspoiledNodeName": "Blood Orange",
+    "UnspoiledNodeLocation": "Upper La Noscea",
+    "UnspoiledNodeCoordinate": "(x28,y25)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "07:00",
+    "UnspoiledNodeName": "Bamboo Stick",
+    "UnspoiledNodeLocation": "Upper La Noscea",
+    "UnspoiledNodeCoordinate": "(x28,y25)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "08:00",
+    "UnspoiledNodeName": "La Noscean Leek",
+    "UnspoiledNodeLocation": "Western La Noscea",
+    "UnspoiledNodeCoordinate": "(x34,y28)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "08:00",
+    "UnspoiledNodeName": "Mazlaya Greens",
+    "UnspoiledNodeLocation": "Western La Noscea",
+    "UnspoiledNodeCoordinate": "(x34,y28)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "08:00",
+    "UnspoiledNodeName": "Waterfowl Feather",
+    "UnspoiledNodeLocation": "Western La Noscea",
+    "UnspoiledNodeCoordinate": "(x34,y28)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "09:00",
+    "UnspoiledNodeName": "Apricot",
+    "UnspoiledNodeLocation": "Middle La Noscea",
+    "UnspoiledNodeCoordinate": "(x19,y16)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "09:00",
+    "UnspoiledNodeName": "Spruce Log",
+    "UnspoiledNodeLocation": "Coerthas Central Highlands",
+    "UnspoiledNodeCoordinate": "(x27,y12)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "09:00",
+    "UnspoiledNodeName": "Prickly Pineapple Seeds",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x30,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "09:00",
+    "UnspoiledNodeName": "Prickly Pineapple",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x30,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "10:00",
+    "UnspoiledNodeName": "Cypress Log",
+    "UnspoiledNodeLocation": "Central Shroud",
+    "UnspoiledNodeCoordinate": "(x25,y29)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "13:00",
+    "UnspoiledNodeName": "Vampire Plant",
+    "UnspoiledNodeLocation": "Coerthas Central Highlands",
+    "UnspoiledNodeCoordinate": "(x27,y24)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "13:00",
+    "UnspoiledNodeName": "Black Truffle",
+    "UnspoiledNodeLocation": "Eastern Thanalan",
+    "UnspoiledNodeCoordinate": "(x12,y16)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "13:00",
+    "UnspoiledNodeName": "Mazlaya Greens",
+    "UnspoiledNodeLocation": "Eastern Thanalan",
+    "UnspoiledNodeCoordinate": "(x12,y16)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "13:00",
+    "UnspoiledNodeName": "Dzemael Tomato",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x18,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "13:00",
+    "UnspoiledNodeName": "Dzemael Tomato Seeds",
+    "UnspoiledNodeLocation": "Eastern La Noscea",
+    "UnspoiledNodeCoordinate": "(x18,y26)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "17:00",
+    "UnspoiledNodeName": "Thavnairian Mistletoe",
+    "UnspoiledNodeLocation": "Coerthas Central Highlands",
+    "UnspoiledNodeCoordinate": "(x8,y13)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "17:00",
+    "UnspoiledNodeName": "Rosemary",
+    "UnspoiledNodeLocation": "East Shroud",
+    "UnspoiledNodeCoordinate": "(x22,y30)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "21:00",
+    "UnspoiledNodeName": "Kidragora",
+    "UnspoiledNodeLocation": "East Shroud",
+    "UnspoiledNodeCoordinate": "(x13,y23)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "21:00",
+    "UnspoiledNodeName": "Trillium Bulb",
+    "UnspoiledNodeLocation": "East Shroud",
+    "UnspoiledNodeCoordinate": "(x13,y23)",
+    "UnspoiledNodeXpac": "ARR"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Wattle Bark",
+    "UnspoiledNodeLocation": "Azys Lla",
+    "UnspoiledNodeCoordinate": "(x22,y10)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Star Cotton Boll",
+    "UnspoiledNodeLocation": "Azys Lla",
+    "UnspoiledNodeCoordinate": "(x9,y31)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Seventh Heaven",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x17,y36)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Vanilla Beans",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x23,y21)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Frost Cotton Boll",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x23,y21)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Dravanian Paprika",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x23,y21)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Noble Sage",
+    "UnspoiledNodeLocation": "The Dravanian Forelands",
+    "UnspoiledNodeCoordinate": "(x33,y30)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Crystallized Sap",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x11,y10)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Old-growth Camphorwood Log",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x11,y10)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Brown Mushroom",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x12,y37)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Snurbleberry",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x39,y26)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Honeydew Almonds",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x24,y6)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Teak Log",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x6,y28)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Old World Fig Seeds",
+    "UnspoiledNodeLocation": "The Dravanian Forelands",
+    "UnspoiledNodeCoordinate": "(x26,12)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Old World Fig",
+    "UnspoiledNodeLocation": "The Dravanian Forelands",
+    "UnspoiledNodeCoordinate": "(x26,12)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Cloud Banana",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x19,y36)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Morel",
+    "UnspoiledNodeLocation": "The Dravanian Hinterlands",
+    "UnspoiledNodeCoordinate": "(x19,y36)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Heavens Lemon",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x35,y23)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Abalathian Mistletoe",
+    "UnspoiledNodeLocation": "The Sea of Clouds",
+    "UnspoiledNodeCoordinate": "(x35,y23)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Chysahl Greens",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x8,y9)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Chives",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x31,y20)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Pearl Sprout Seeds",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x31,y20)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Coerthan Tea Seeds",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x31,y20)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Pearl Sprouts",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x31,y20)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Coerthan Tea Leaves",
+    "UnspoiledNodeLocation": "Coerthas Western Highlands",
+    "UnspoiledNodeCoordinate": "(x31,y20)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Dravanian Mistletoe",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x24,y6)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Porcini",
+    "UnspoiledNodeLocation": "The Churning Mists",
+    "UnspoiledNodeCoordinate": "(x24,y6)",
+    "UnspoiledNodeXpac": "Heavensward"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Rhea",
+    "UnspoiledNodeLocation": "Azim Steppe",
+    "UnspoiledNodeCoordinate": "(x20,y8)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Azim Cotton Boll",
+    "UnspoiledNodeLocation": "Azim Steppe",
+    "UnspoiledNodeCoordinate": "(x20,y8)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Othardian Plum",
+    "UnspoiledNodeLocation": "Azim Steppe",
+    "UnspoiledNodeCoordinate": "(x27,y17)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Hingan Flax",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x24,y36)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Yanxian Cotton Boll",
+    "UnspoiledNodeLocation": "Yanxia",
+    "UnspoiledNodeCoordinate": "(x28,y35)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Rhalgr's Streak",
+    "UnspoiledNodeLocation": "The Lochs",
+    "UnspoiledNodeCoordinate": "(x8,y8)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Jhammel Ginger",
+    "UnspoiledNodeLocation": "The Lochs",
+    "UnspoiledNodeCoordinate": "(x8,y8)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Black Willow Log",
+    "UnspoiledNodeLocation": "The Fringes",
+    "UnspoiledNodeCoordinate": "(x15,y21)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Hardened Veteran Tree Sap",
+    "UnspoiledNodeLocation": "The Fringes",
+    "UnspoiledNodeCoordinate": "(x15,y21)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Urunday Log",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x32,y10)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Hallowed Basil",
+    "UnspoiledNodeLocation": "The Peaks",
+    "UnspoiledNodeCoordinate": "(x23,y16)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Beech Branch",
+    "UnspoiledNodeLocation": "The Fringes",
+    "UnspoiledNodeCoordinate": "(x11,y18)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Torreya Log",
+    "UnspoiledNodeLocation": "The Lochs",
+    "UnspoiledNodeCoordinate": "(x11,y13)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Lotus Root",
+    "UnspoiledNodeLocation": "Yanxia",
+    "UnspoiledNodeCoordinate": "(x28,y7)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Bamboo Shoot",
+    "UnspoiledNodeLocation": "Yanxia",
+    "UnspoiledNodeCoordinate": "(x28,y25)",
+    "UnspoiledNodeXpac": "Stormblood"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Broad Beans",
+    "UnspoiledNodeLocation": "Il Mheg",
+    "UnspoiledNodeCoordinate": "(x24,y36)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Imperial Fern",
+    "UnspoiledNodeLocation": "Kholusia",
+    "UnspoiledNodeCoordinate": "(x28,y21)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "12:00 AM/PM",
+    "UnspoiledNodeName": "Mist Spinach",
+    "UnspoiledNodeLocation": "The Rak'tika Greatwood",
+    "UnspoiledNodeCoordinate": "(x34,y21)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Sandalwood Log",
+    "UnspoiledNodeLocation": "The Rak'tika Greatwood",
+    "UnspoiledNodeCoordinate": "(x24,y36)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "2:00 AM/PM",
+    "UnspoiledNodeName": "Sandalwood Sap",
+    "UnspoiledNodeLocation": "The Rak'tika Greatwood",
+    "UnspoiledNodeCoordinate": "(x24,y36)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "4:00 AM/PM",
+    "UnspoiledNodeName": "Duskblooms",
+    "UnspoiledNodeLocation": "Amh Araeng",
+    "UnspoiledNodeCoordinate": "(x32,y33)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "6:00 AM/PM",
+    "UnspoiledNodeName": "Lemonette",
+    "UnspoiledNodeLocation": "Kholusia",
+    "UnspoiledNodeCoordinate": "(x20,y27)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Ethereal Cocoon",
+    "UnspoiledNodeLocation": "Lakeland",
+    "UnspoiledNodeCoordinate": "(x27,y10)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Russet Popoto",
+    "UnspoiledNodeLocation": "Amh Araeng",
+    "UnspoiledNodeCoordinate": "(x19,y16)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "8:00 AM/PM",
+    "UnspoiledNodeName": "Merbau Log",
+    "UnspoiledNodeLocation": "Il Mheg",
+    "UnspoiledNodeCoordinate": "(x36,y27)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "Peppermint",
+    "UnspoiledNodeLocation": "Lakeland",
+    "UnspoiledNodeCoordinate": "(x26,y20)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  },
+  {
+    "UnspoiledNodeTime": "10:00 AM/PM",
+    "UnspoiledNodeName": "White Oak Branch",
+    "UnspoiledNodeLocation": "Kholusia",
+    "UnspoiledNodeCoordinate": "(x12,y29)",
+    "UnspoiledNodeXpac": "Shadowbringers"
+  }
+]
