@@ -83,6 +83,7 @@ namespace MiqoCraft
             _nghqTextBox.Text = options.NQHQPreset;
             _teleportTextBox.Text = options.CustomTeleport;
             _collectableCheckBox.Checked = options.Collectable;
+            _RMenderEulmoreCheckBox.Checked = options.RMenderEulmore;
             _quantityPerNodeNumericUpDown.Value = options.NbPerNode;
             _miqoPathTextBox.Text = options.MiqoPresetPath;
         }
@@ -313,6 +314,7 @@ namespace MiqoCraft
             options.NQHQPreset = _nghqTextBox.Text;
             options.CustomTeleport = _teleportTextBox.Text;
             options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
+            options.RMenderEulmore = VPThreading.GetChecked(_RMenderEulmoreCheckBox);
             options.NbPerNode = (int)VPThreading.GetValue(_quantityPerNodeNumericUpDown);
             options.MiqoPresetPath = VPThreading.GetText(_miqoPathTextBox);
             options.Save();
@@ -338,6 +340,7 @@ namespace MiqoCraft
                 options.CustomTeleport = VPThreading.GetText(_teleportTextBox);
                 options.IgnoreCatalysts = VPThreading.GetChecked(_ignoreShardCheckBox);
                 options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
+                options.RMenderEulmore = VPThreading.GetChecked(_RMenderEulmoreCheckBox);
                 options.NbPerNode = (int)VPThreading.GetValue(_quantityPerNodeNumericUpDown);
                 options.MiqoPresetPath = VPThreading.GetText(_miqoPathTextBox);
                 options.CustomQuantities = _itemsQuantity;
@@ -634,6 +637,11 @@ namespace MiqoCraft
                 }
             }
             UpdateList();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
