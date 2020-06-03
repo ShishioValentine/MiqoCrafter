@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnspoiledNodes.cs" />
     <Compile Include="ConsoleGamesWiki.cs" />
     <Compile Include="FFXIVAetheryte.cs" />
     <Compile Include="FFXIVCraftedItem.cs" />

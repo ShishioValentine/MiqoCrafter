@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MiqoCraftCore
 {
@@ -21,7 +19,7 @@ namespace MiqoCraftCore
             try
             {
                 Content = iLine;
-                if(iLine.Contains(Environment.NewLine)) iLine = iLine.Split(new string[] { Environment.NewLine }, StringSplitOptions.None)[1];
+                if (iLine.Contains(Environment.NewLine)) iLine = iLine.Split(new string[] { Environment.NewLine }, StringSplitOptions.None)[1];
                 string jsonContent = iLine;
                 List<string> listTest = jsonContent.Split('}').ToList();
                 if (listTest[listTest.Count - 1] != "")
@@ -30,7 +28,7 @@ namespace MiqoCraftCore
                 }
 
                 JToken mainToken = JObject.Parse(jsonContent);
-                if (null == mainToken)  return;
+                if (null == mainToken) return;
 
                 Description = mainToken["description"].Value<string>();
                 string maxDistance = mainToken["maxaway"].Value<string>();
@@ -45,7 +43,7 @@ namespace MiqoCraftCore
                     Points.Add(pointGrid);
                 }
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 Console.WriteLine(exc.Message);
             }

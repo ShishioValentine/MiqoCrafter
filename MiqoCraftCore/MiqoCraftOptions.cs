@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using VPL.Application.Data;
 
 namespace MiqoCraftCore
@@ -11,6 +6,7 @@ namespace MiqoCraftCore
     public class MiqoCraftOptions : VPOptions
     {
         public bool Collectable = false;
+        public bool RMenderEulmore = false;
         public bool IgnoreCatalysts = false;
         public string GatheringRotation = "HQ +10%";
         public string CraftPreset = "recommended";
@@ -33,6 +29,7 @@ namespace MiqoCraftCore
             if (null == options) return;
 
             Collectable = options.Collectable;
+            RMenderEulmore = options.RMenderEulmore;
             IgnoreCatalysts = options.IgnoreCatalysts;
             GatheringRotation = options.GatheringRotation;
             CraftPreset = options.CraftPreset;

@@ -1,15 +1,11 @@
 ﻿using MiqoCraftCore;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VPL.Application.Data;
 using VPL.Threading.Modeler;
@@ -214,9 +210,9 @@ namespace MiqoCraft
                 int nbOK = 0;
                 string OKList = "";
                 string KOList = "";
-                foreach(string item in options.ListGatherableItems)
+                foreach (string item in options.ListGatherableItems)
                 {
-                    if(options.ListGridOKItems.Contains(item))
+                    if (options.ListGridOKItems.Contains(item))
                     {
                         nbOK++;
                         OKList += item + Environment.NewLine;
@@ -385,12 +381,12 @@ namespace MiqoCraft
 
         private void _quantityNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void _quantityNumericUpDown_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 ListView.SelectedListViewItemCollection iItems = _resultListView.SelectedItems;
 
@@ -449,7 +445,7 @@ namespace MiqoCraft
         {
             _craftingListPanel.Controls.Clear();
 
-            foreach(FFXIVSearchItem item in _itemsToCraft)
+            foreach (FFXIVSearchItem item in _itemsToCraft)
             {
                 FFXIVCraftingListItem control = new FFXIVCraftingListItem();
                 control.Item = item;

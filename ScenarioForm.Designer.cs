@@ -49,13 +49,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this._validQuantityButton = new System.Windows.Forms.Button();
             this._craftTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this._quantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this._nbSelectedItemLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this._validQuantityButton = new System.Windows.Forms.Button();
+            this._RMenderEulmoreCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this._quantityPerNodeNumericUpDown)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,7 +69,7 @@
             this._openMiqoPresetButton.BackgroundImage = global::MiqoCraft.Properties.Resources.folder_open_document_text;
             this._openMiqoPresetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this._openMiqoPresetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 319);
+            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 342);
             this._openMiqoPresetButton.Name = "_openMiqoPresetButton";
             this._openMiqoPresetButton.Size = new System.Drawing.Size(22, 22);
             this._openMiqoPresetButton.TabIndex = 44;
@@ -79,7 +80,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(4, 297);
+            this.label6.Location = new System.Drawing.Point(4, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(186, 19);
             this.label6.TabIndex = 43;
@@ -90,7 +91,7 @@
             // 
             this._miqoPathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._miqoPathTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._miqoPathTextBox.Location = new System.Drawing.Point(7, 320);
+            this._miqoPathTextBox.Location = new System.Drawing.Point(7, 343);
             this._miqoPathTextBox.Name = "_miqoPathTextBox";
             this._miqoPathTextBox.Size = new System.Drawing.Size(155, 20);
             this._miqoPathTextBox.TabIndex = 42;
@@ -99,7 +100,7 @@
             // 
             this._quantityPerNodeNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._quantityPerNodeNumericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._quantityPerNodeNumericUpDown.Location = new System.Drawing.Point(8, 277);
+            this._quantityPerNodeNumericUpDown.Location = new System.Drawing.Point(8, 300);
             this._quantityPerNodeNumericUpDown.Name = "_quantityPerNodeNumericUpDown";
             this._quantityPerNodeNumericUpDown.Size = new System.Drawing.Size(182, 20);
             this._quantityPerNodeNumericUpDown.TabIndex = 40;
@@ -114,7 +115,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label5.Location = new System.Drawing.Point(4, 255);
+            this.label5.Location = new System.Drawing.Point(4, 278);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 19);
             this.label5.TabIndex = 39;
@@ -125,7 +126,7 @@
             // 
             this._collectableCheckBox.AutoSize = true;
             this._collectableCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._collectableCheckBox.Location = new System.Drawing.Point(7, 235);
+            this._collectableCheckBox.Location = new System.Drawing.Point(8, 235);
             this._collectableCheckBox.Name = "_collectableCheckBox";
             this._collectableCheckBox.Size = new System.Drawing.Size(117, 17);
             this._collectableCheckBox.TabIndex = 38;
@@ -273,7 +274,7 @@
             this._ingredientsListView.LargeImageList = this._prerequisiteImageList;
             this._ingredientsListView.Location = new System.Drawing.Point(17, 43);
             this._ingredientsListView.Name = "_ingredientsListView";
-            this._ingredientsListView.Size = new System.Drawing.Size(1105, 553);
+            this._ingredientsListView.Size = new System.Drawing.Size(1105, 547);
             this._ingredientsListView.SmallImageList = this._prerequisiteImageList;
             this._ingredientsListView.TabIndex = 0;
             this._ingredientsListView.UseCompatibleStateImageBehavior = false;
@@ -293,7 +294,7 @@
             this._generateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._generateButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._generateButton.Location = new System.Drawing.Point(35, 354);
+            this._generateButton.Location = new System.Drawing.Point(35, 377);
             this._generateButton.Name = "_generateButton";
             this._generateButton.Size = new System.Drawing.Size(124, 30);
             this._generateButton.TabIndex = 46;
@@ -304,6 +305,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.panel5.Controls.Add(this._RMenderEulmoreCheckBox);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this._craftingpresetTextBox);
@@ -323,17 +325,17 @@
             this.panel5.Controls.Add(this._ignoreShardCheckBox);
             this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 390);
+            this.panel5.Size = new System.Drawing.Size(196, 421);
             this.panel5.TabIndex = 47;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.label12.Location = new System.Drawing.Point(3, 3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 26);
+            this.label12.Size = new System.Drawing.Size(215, 29);
             this.label12.TabIndex = 6;
             this.label12.Text = "Scenario Options";
             // 
@@ -343,7 +345,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this._statusLabel);
             this.panel1.Controls.Add(this._progressBar);
-            this.panel1.Location = new System.Drawing.Point(12, 415);
+            this.panel1.Location = new System.Drawing.Point(12, 446);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 75);
             this.panel1.TabIndex = 48;
@@ -351,11 +353,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 26);
+            this.label7.Size = new System.Drawing.Size(85, 29);
             this.label7.TabIndex = 6;
             this.label7.Text = "Status";
             // 
@@ -383,7 +385,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))));
-            this.panel4.Location = new System.Drawing.Point(12, 408);
+            this.panel4.Location = new System.Drawing.Point(12, 439);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(196, 1);
             this.panel4.TabIndex = 50;
@@ -406,6 +408,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1125, 625);
             this.panel3.TabIndex = 51;
+            // 
+            // _validQuantityButton
+            // 
+            this._validQuantityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this._validQuantityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._validQuantityButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._validQuantityButton.Location = new System.Drawing.Point(904, 596);
+            this._validQuantityButton.Name = "_validQuantityButton";
+            this._validQuantityButton.Size = new System.Drawing.Size(75, 23);
+            this._validQuantityButton.TabIndex = 32;
+            this._validQuantityButton.Text = "Apply";
+            this._validQuantityButton.UseVisualStyleBackColor = false;
+            this._validQuantityButton.Click += new System.EventHandler(this._validQuantityButton_Click);
             // 
             // _craftTextBox
             // 
@@ -478,26 +493,26 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.label9.Location = new System.Drawing.Point(3, 3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 26);
+            this.label9.Size = new System.Drawing.Size(167, 29);
             this.label9.TabIndex = 6;
             this.label9.Text = "Crafting Tree";
             // 
-            // _validQuantityButton
+            // _RMenderEumoreCheckBox
             // 
-            this._validQuantityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this._validQuantityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._validQuantityButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._validQuantityButton.Location = new System.Drawing.Point(904, 596);
-            this._validQuantityButton.Name = "_validQuantityButton";
-            this._validQuantityButton.Size = new System.Drawing.Size(75, 23);
-            this._validQuantityButton.TabIndex = 32;
-            this._validQuantityButton.Text = "Apply";
-            this._validQuantityButton.UseVisualStyleBackColor = false;
-            this._validQuantityButton.Click += new System.EventHandler(this._validQuantityButton_Click);
+            this._RMenderEulmoreCheckBox.AutoSize = true;
+            this._RMenderEulmoreCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._RMenderEulmoreCheckBox.Location = new System.Drawing.Point(8, 258);
+            this._RMenderEulmoreCheckBox.Name = "_RMenderEumoreCheckBox";
+            this._RMenderEulmoreCheckBox.Size = new System.Drawing.Size(181, 17);
+            this._RMenderEulmoreCheckBox.TabIndex = 47;
+            this._RMenderEulmoreCheckBox.Text = "Use Return and Mender Eulmore";
+            this._toolTip.SetToolTip(this._RMenderEulmoreCheckBox, "Last item will be crafted as collectable.");
+            this._RMenderEulmoreCheckBox.UseVisualStyleBackColor = false;
+            this._RMenderEulmoreCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // ScenarioForm
             // 
@@ -534,6 +549,7 @@
         private System.Windows.Forms.NumericUpDown _quantityPerNodeNumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox _collectableCheckBox;
+        private System.Windows.Forms.CheckBox _RMenderEulmoreCheckBox;
         private System.Windows.Forms.CheckBox _ignoreShardCheckBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox _nghqTextBox;
@@ -565,6 +581,6 @@
         private System.Windows.Forms.Label _nbSelectedItemLabel;
         private System.Windows.Forms.TextBox _craftTextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button _validQuantityButton;
+        private System.Windows.Forms.Button _validQuantityButton;  
     }
 }

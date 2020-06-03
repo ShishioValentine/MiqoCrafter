@@ -1,13 +1,10 @@
 ﻿using HtmlAgilityPack;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MiqoCraftCore
 {
@@ -367,7 +364,7 @@ namespace MiqoCraftCore
                 if (aNode.Name != "dd") continue;
                 string text = aNode.InnerText;
                 List<string> listAetherytes = text.Split(')').ToList();
-                foreach(string aetheryteText in listAetherytes)
+                foreach (string aetheryteText in listAetherytes)
                 {
                     if (aetheryteText.Contains("(X:") && aetheryteText.Contains("Y:"))
                     {
@@ -387,7 +384,7 @@ namespace MiqoCraftCore
                         double offsetX = 0;
                         double offsetY = 0;
                         FileInfo metadataFile = new FileInfo(Path.Combine(metadataDirectory.FullName, aetheryte.Zone + ".txt"));
-                        if(!metadataFile.Exists)
+                        if (!metadataFile.Exists)
                         {
                             offsetX = 0;
                             offsetY = 0;

@@ -2,18 +2,12 @@
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-using HtmlAgilityPack;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using VPL.Application.Data;
 
 namespace MiqoCraftCore
@@ -226,6 +220,26 @@ namespace MiqoCraftCore
             return result;
         }
 
+        public static List<UnspoiledNodes> GetAllUnspoiledNodes()
+        {
+            List<UnspoiledNodes> result = new List<UnspoiledNodes>();
+            string stream = File.ReadAllText("UnspoiledNodes.json");
+            result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<UnspoiledNodes>>(stream);
+            return result;
+        }
+
+        public static UnspoiledNodes IsUnspoiledNode(string name, List<UnspoiledNodes> Nodes)
+        {
+            for (int i = 0; i < Nodes.Count; i++)
+            {
+                if (Nodes[i].UnspoiledNodeName.Equals(name))
+                {
+                    return Nodes[i];
+                }
+            }
+            return null;
+        }
+
         public class MiqobotScenarioOption
         {
             public int Quantity = 1;
@@ -235,6 +249,7 @@ namespace MiqoCraftCore
             public string CustomTeleport = "";
             public bool IgnoreCatalysts = false;
             public bool Collectable = false;
+            public bool RMenderEulmore = false;
             public int NbPerNode = 1;
             public string MiqoPresetPath = "";
             public Dictionary<string, int> CustomQuantities = new Dictionary<string, int>();
@@ -288,6 +303,7 @@ namespace MiqoCraftCore
 
             List<string> catalysts = GetCatalysts();
             List<string> Namedcatalysts = GetCatalysts();
+            List<UnspoiledNodes> AllUnspoiledNodes = GetAllUnspoiledNodes();
             if (!iOptions.IgnoreCatalysts)
             {
                 catalysts.Clear();
@@ -405,7 +421,6 @@ namespace MiqoCraftCore
             }
 
             //Gathering stuff
-            string lastTeleport = "";
             string errorContent = "";
             Service_Misc.LogText(iLogBox, "Creating gathering grids...");
             fullScenario += "\"";
@@ -550,16 +565,22 @@ namespace MiqoCraftCore
                                 //Add gathering rotation to scenario
                                 //teleportIf(Black Brush Station)\r\nunstealth()\r\nchangeJob(Miner)\r\nselectGrid(Min5-Copper Ore)\r\nselectGatherPreset(Metal Worm Jar- Copper Ore)\r\nstartGathering(4)
                                 //teleportIfNotThere
-                                fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
-                                if (lastTeleport == "" || lastTeleport == teleportTo)
+                                UnspoiledNodes compare = IsUnspoiledNode(iItem.Name, AllUnspoiledNodes);
+                                if (compare != null)
                                 {
-                                    fullScenario += "teleport(" + teleportTo + ")" + Environment.NewLine;
+                                    fullScenario += "// Gathering Unspoiled Node: " + compare.UnspoiledNodeName + Environment.NewLine;
+                                    fullScenario += "// Expansion: " + compare.UnspoiledNodeXpac + Environment.NewLine;
+                                    fullScenario += "// Time(ET): " + compare.UnspoiledNodeTime + Environment.NewLine;
+                                    fullScenario += "// Location: " + compare.UnspoiledNodeLocation + Environment.NewLine;
+                                    fullScenario += "// Coordinate: " + compare.UnspoiledNodeCoordinate + Environment.NewLine;
                                 }
                                 else
                                 {
-                                    fullScenario += "teleportIfNotThere(" + teleportTo + ")" + Environment.NewLine;
+                                    fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
                                 }
-                                lastTeleport = teleportTo;
+
+                                fullScenario += "teleport(" + teleportTo + ")" + Environment.NewLine;
+
 
                                 //Adding custom scenario after teleport
                                 DirectoryInfo customDirectory = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
@@ -572,7 +593,6 @@ namespace MiqoCraftCore
                                 {
                                     fullScenario += File.ReadAllText(customTeleportScenarioFile.FullName) + Environment.NewLine;
                                 }
-
                                 FileInfo customTeleportGridFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportTo + " Grid.txt"));
                                 if (customTeleportGridFile.Exists)
                                 {
@@ -614,6 +634,26 @@ namespace MiqoCraftCore
                         errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
                         fullScenario += "// Failed to log into miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
                     }
+                }
+            }
+            //Return to Eulmore load grid, and stay in front repair(reparing after each craft)
+            if (iOptions.RMenderEulmore)
+            {
+                fullScenario += "return()" + Environment.NewLine;
+                DirectoryInfo customDirectoryRepair = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
+                if (!customDirectoryRepair.Exists)
+                {
+                    customDirectoryRepair.Create();
+                }
+                FileInfo customTeleportEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore Grid.txt"));
+                FileInfo customScenarioEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore Scenario.txt"));
+                if (customScenarioEulmore.Exists)
+                {
+                    fullScenario += File.ReadAllText(customScenarioEulmore.FullName) + Environment.NewLine;
+                }
+                if (customTeleportEulmore.Exists)
+                {
+                    allGrids += File.ReadAllText(customTeleportEulmore.FullName) + Environment.NewLine;
                 }
             }
             fullScenario += "\",";
@@ -693,10 +733,13 @@ namespace MiqoCraftCore
                     {
                         fullScenario += "setCraftCollect(off)" + Environment.NewLine;
                     }
-
                     if (null != itemOptions && itemOptions.CustomCraftingMacro != "")
                     {
                         fullScenario += "solverPreset(" + iOptions.CraftPreset + ")" + Environment.NewLine;
+                    }
+                    if (iOptions.RMenderEulmore)
+                    {
+                        fullScenario += "repairNpc()" + Environment.NewLine;
                     }
                     fullScenario += Environment.NewLine;
                 }

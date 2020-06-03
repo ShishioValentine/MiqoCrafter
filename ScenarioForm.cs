@@ -1,18 +1,11 @@
-﻿using System;
+﻿using MiqoCraftCore;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using VPL.Threading.Modeler;
 using System.Threading;
-using System.Net;
+using System.Windows.Forms;
 using VPL.Application.Data;
-using System.IO;
-using MiqoCraftCore;
+using VPL.Threading.Modeler;
 
 namespace MiqoCraft
 {
@@ -90,6 +83,7 @@ namespace MiqoCraft
             _nghqTextBox.Text = options.NQHQPreset;
             _teleportTextBox.Text = options.CustomTeleport;
             _collectableCheckBox.Checked = options.Collectable;
+            _RMenderEulmoreCheckBox.Checked = options.RMenderEulmore;
             _quantityPerNodeNumericUpDown.Value = options.NbPerNode;
             _miqoPathTextBox.Text = options.MiqoPresetPath;
         }
@@ -147,7 +141,7 @@ namespace MiqoCraft
                     if (null != itemOption)
                     {
                         string detailsOption = itemOption.ToString();
-                        if(detailsOption != "") VPThreading.SetText(listViewItem, VPThreading.GetText(listViewItem).Split('{')[0] + Environment.NewLine + "{" + detailsOption + "}" );
+                        if (detailsOption != "") VPThreading.SetText(listViewItem, VPThreading.GetText(listViewItem).Split('{')[0] + Environment.NewLine + "{" + detailsOption + "}");
                     }
                 }
             }
@@ -204,9 +198,9 @@ namespace MiqoCraft
         }
 
         private void DisplayListResultThread()
-        { 
+        {
             try
-            { 
+            {
                 //Display
                 VPThreading.ClearItems(_ingredientsListView);
                 SetProgressStatus(-1, "Updating Quantities..");
@@ -246,7 +240,7 @@ namespace MiqoCraft
                     }
                     if (null != craftedItem)
                     {
-                        if(craftedItem.RecipeQuantity == 1) listViewItem.Text = "[" + craftedItem.Class + " lvl" + craftedItem.Level + "]" + Environment.NewLine + listViewItem.Text;
+                        if (craftedItem.RecipeQuantity == 1) listViewItem.Text = "[" + craftedItem.Class + " lvl" + craftedItem.Level + "]" + Environment.NewLine + listViewItem.Text;
                         else listViewItem.Text = "[" + craftedItem.Class + " lvl" + craftedItem.Level + "]" + Environment.NewLine + listViewItem.Text + "[x" + craftedItem.RecipeQuantity + "]";
 
                         listViewItem.ToolTipText = craftedItem.Class + " lvl" + craftedItem.Level;
@@ -320,6 +314,7 @@ namespace MiqoCraft
             options.NQHQPreset = _nghqTextBox.Text;
             options.CustomTeleport = _teleportTextBox.Text;
             options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
+            options.RMenderEulmore = VPThreading.GetChecked(_RMenderEulmoreCheckBox);
             options.NbPerNode = (int)VPThreading.GetValue(_quantityPerNodeNumericUpDown);
             options.MiqoPresetPath = VPThreading.GetText(_miqoPathTextBox);
             options.Save();
@@ -345,6 +340,7 @@ namespace MiqoCraft
                 options.CustomTeleport = VPThreading.GetText(_teleportTextBox);
                 options.IgnoreCatalysts = VPThreading.GetChecked(_ignoreShardCheckBox);
                 options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
+                options.RMenderEulmore = VPThreading.GetChecked(_RMenderEulmoreCheckBox);
                 options.NbPerNode = (int)VPThreading.GetValue(_quantityPerNodeNumericUpDown);
                 options.MiqoPresetPath = VPThreading.GetText(_miqoPathTextBox);
                 options.CustomQuantities = _itemsQuantity;
@@ -390,7 +386,7 @@ namespace MiqoCraft
         /// <returns></returns>
         private int GetItemQuantity(FFXIVItem iItem, int iDefaultValue)
         {
-            if(null != iItem && _itemsQuantity.ContainsKey(iItem.ID))
+            if (null != iItem && _itemsQuantity.ContainsKey(iItem.ID))
             {
                 return _itemsQuantity[iItem.ID];
             }
@@ -432,6 +428,8 @@ namespace MiqoCraft
             }
 
             List<string> catalysts = MiqoCraftCore.MiqoCraftCore.GetCatalysts();
+            List<UnspoiledNodes> AllUnspoiledNodes = MiqoCraftCore.MiqoCraftCore.GetAllUnspoiledNodes();
+
             if (null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower()))
             {
                 groupName = "Catalysts";
@@ -448,11 +446,23 @@ namespace MiqoCraft
             }
             else if (null != gatheredItem)
             {
-                groupName = "Gathered";
-                if(!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
+                if (MiqoCraftCore.MiqoCraftCore.IsUnspoiledNode(gatheredItem.Name, AllUnspoiledNodes) != null)
                 {
-                    groupName = "Gathered - No Grid";
+                    groupName = "Gathered Unspoiled Nodes";
+                    if (!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
+                    {
+                        groupName = "Unspoiled Nodes - No Grid";
+                    }
                 }
+                else
+                {
+                    groupName = "Gathered";
+                    if (!MiqoCraftCore.MiqoCraftCore.HasGrid(gatheredItem.Name))
+                    {
+                        groupName = "Gathered - No Grid";
+                    }
+                }
+
             }
 
             foreach (ListViewGroup group in groups)
@@ -497,7 +507,7 @@ namespace MiqoCraft
                 }
             }
 
-            if(null == firstItem)
+            if (null == firstItem)
             {
                 _quantityNumericUpDown.Enabled = false;
                 //_ignoreCheckBox.Enabled = false;
@@ -535,7 +545,7 @@ namespace MiqoCraft
 
         private void _quantityNumericUpDown_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 ListView.SelectedListViewItemCollection iItems = _ingredientsListView.SelectedItems;
 
@@ -600,7 +610,7 @@ namespace MiqoCraft
 
         private void _craftTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 _ignoreCheckBox_CheckedChanged(sender, e);
             }
@@ -627,6 +637,11 @@ namespace MiqoCraft
                 }
             }
             UpdateList();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

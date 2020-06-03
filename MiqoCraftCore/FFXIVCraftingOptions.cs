@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiqoCraftCore
+﻿namespace MiqoCraftCore
 {
     public class FFXIVCraftingOptions
     {
@@ -19,7 +13,7 @@ namespace MiqoCraftCore
             if (IgnoreItem) result += "Ignored";
             else
             {
-                if(CustomCraftingMacro != "")
+                if (CustomCraftingMacro != "")
                 {
                     if (result != "") result += ";";
                     result += "Crafting Macro : " + CustomCraftingMacro + ".";
