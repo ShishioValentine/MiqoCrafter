@@ -71,6 +71,20 @@ namespace MiqoCraftTestUnit
         }
 
         [TestMethod]
+        public void TestTitaniumLanceWithEulmoreMending()
+        {
+            VPOptions.OptionsForUnitTest = null;
+            _dumpSuffix = "_withEulmore";
+            MiqoCraftOptions customOptions = new MiqoCraftOptions();
+
+            customOptions.RMenderEulmore = true;
+
+            VPOptions.OptionsForUnitTest = customOptions;
+
+            TestFullScenarioImpl("Titanium Lance", FFXIVItem.TypeItem.Crafted);
+        }
+
+        [TestMethod]
         public void TestLignumVitaeGrindingWheel()
         {
             VPOptions.OptionsForUnitTest = null;

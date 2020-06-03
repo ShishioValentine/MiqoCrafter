@@ -1,0 +1,8 @@
+selectGrid(Eulmore Grid)
+waypoint(12)
+changeJob(min)
+repairNpc()
+changeJob(btn)
+repairNpc()
+changeJob(fsh)
+repairNpc()

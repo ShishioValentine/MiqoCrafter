@@ -283,6 +283,12 @@ namespace MiqoCraftCore
             MiqoCraftOptions options = new MiqoCraftOptions();
             options.Load(OptionLocation.UserOption);
 
+            //Forcing some options values for test units
+            if(null != VPOptions.OptionsForUnitTest)
+            {
+                iOptions.RMenderEulmore = options.RMenderEulmore;
+            }
+
             //Login to miqobot forums
             CookieCollection logMiqobotCookies = Miqobot.LogInForum();
             if (null != logMiqobotCookies) Service_Misc.LogText(iLogBox, "I'm logged into miqobot forum !");
@@ -653,8 +659,8 @@ namespace MiqoCraftCore
                 {
                     customDirectoryRepair.Create();
                 }
-                FileInfo customTeleportEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore Grid.txt"));
-                FileInfo customScenarioEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore Scenario.txt"));
+                FileInfo customTeleportEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore.Grid.txt"));
+                FileInfo customScenarioEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore.Scenario.txt"));
                 if (customScenarioEulmore.Exists)
                 {
                     fullScenario += File.ReadAllText(customScenarioEulmore.FullName) + Environment.NewLine;
