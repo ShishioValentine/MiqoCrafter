@@ -223,8 +223,16 @@ namespace MiqoCraftCore
         public static List<UnspoiledNodes> GetAllUnspoiledNodes()
         {
             List<UnspoiledNodes> result = new List<UnspoiledNodes>();
-            string stream = File.ReadAllText("UnspoiledNodes.json");
-            result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<UnspoiledNodes>>(stream);
+            //Adding a try/catch - to avoid a core dump when file is not there
+            try
+            {
+                string stream = File.ReadAllText("UnspoiledNodes.json");
+                result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<UnspoiledNodes>>(stream);
+            }
+            catch
+            {
+
+            }
             return result;
         }
 
@@ -639,7 +647,7 @@ namespace MiqoCraftCore
             //Return to Eulmore load grid, and stay in front repair(reparing after each craft)
             if (iOptions.RMenderEulmore)
             {
-                fullScenario += "return()" + Environment.NewLine;
+                fullScenario += "teleport(Eulmore)" + Environment.NewLine;
                 DirectoryInfo customDirectoryRepair = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
                 if (!customDirectoryRepair.Exists)
                 {

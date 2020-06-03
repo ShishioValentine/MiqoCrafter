@@ -37,7 +37,7 @@ gatherRotation(HQ +10%)
 startGathering(21)
 
 // Gathering Dimythrite Ore
-teleportIfNotThere(Fort Jobb)
+teleport(Fort Jobb)
 changeJob(MIN)
 selectGrid(Dimythrite Ore Grid)
 selectGatherPreset(Dimythrite Ore preset)
@@ -45,7 +45,7 @@ gatherRotation(HQ +10%)
 startGathering(11)
 
 // Gathering Mythrite Ore
-teleportIfNotThere(Falcon's Nest)
+teleport(Falcon's Nest)
 changeJob(MIN)
 selectGrid(Mythrite Ore Grid)
 selectGatherPreset(Mythrite Ore preset)
@@ -53,7 +53,7 @@ gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Volcanic Tuff
-teleportIfNotThere(Tomra)
+teleport(Tomra)
 changeJob(MIN)
 selectGrid(Volcanic Tuff Grid)
 selectGatherPreset(Volcanic Tuff preset)

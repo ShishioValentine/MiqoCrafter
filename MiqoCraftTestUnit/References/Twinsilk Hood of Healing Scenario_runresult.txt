@@ -35,7 +35,7 @@ gatherRotation(HQ +10%)
 startGathering(13)
 
 // Gathering Effervescent Water
-teleportIfNotThere(Camp Tranquil)
+teleport(Camp Tranquil)
 changeJob(MIN)
 selectGrid(Effervescent Water Grid)
 selectGatherPreset(Effervescent Water preset)
@@ -43,7 +43,7 @@ gatherRotation(HQ +10%)
 startGathering(4)
 
 // Gathering Lightning Crystal
-teleportIfNotThere(Little Ala Mhigo)
+teleport(Little Ala Mhigo)
 changeJob(MIN)
 selectGrid(Lightning Crystal Grid)
 selectGatherPreset(Lightning Crystal preset)
@@ -52,7 +52,7 @@ rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(18)
 
 // Gathering Persimmon
-teleportIfNotThere(Castrum Oriens)
+teleport(Castrum Oriens)
 changeJob(BTN)
 selectGrid(Persimmon Grid)
 selectGatherPreset(Persimmon preset)
@@ -60,7 +60,7 @@ gatherRotation(HQ +10%)
 startGathering(6)
 
 // Gathering Crescent Spring Water
-teleportIfNotThere(Namai)
+teleport(Namai)
 changeJob(MIN)
 selectGrid(Crescent Spring Water Grid)
 selectGatherPreset(Crescent Spring Water preset)
@@ -68,7 +68,7 @@ gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Water Crystal
-teleportIfNotThere(Camp Cloudtop)
+teleport(Camp Cloudtop)
 changeJob(BTN)
 selectGrid(Water Crystal Grid)
 selectGatherPreset(Water Crystal preset)
@@ -77,7 +77,7 @@ rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(10)
 
 // Gathering Earth Crystal
-teleportIfNotThere(Moraby Drydocks)
+teleport(Moraby Drydocks)
 changeJob(MIN)
 selectGrid(Earth Crystal Grid)
 selectGatherPreset(Earth Crystal preset)
@@ -86,7 +86,7 @@ rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(6)
 
 // Gathering Durium Ore
-teleportIfNotThere(Namai)
+teleport(Namai)
 changeJob(MIN)
 selectGrid(Durium Ore Grid)
 selectGatherPreset(Durium Ore preset)
@@ -94,7 +94,7 @@ gatherRotation(HQ +10%)
 startGathering(5)
 
 // Gathering Durium Sand
-teleportIfNotThere(Reunion)
+teleport(Reunion)
 changeJob(MIN)
 selectGrid(Durium Sand Grid)
 selectGatherPreset(Durium Sand preset)
@@ -102,7 +102,7 @@ gatherRotation(HQ +10%)
 startGathering(5)
 
 // Gathering Silver Ore
-teleportIfNotThere(Camp Tranquil)
+teleport(Camp Tranquil)
 changeJob(MIN)
 selectGrid(Silver Ore Grid)
 selectGatherPreset(Silver Ore preset)
@@ -110,7 +110,7 @@ gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Wind Crystal
-teleportIfNotThere(The Hawthorne Hut)
+teleport(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid)
 selectGatherPreset(Wind Crystal preset)
@@ -119,7 +119,7 @@ rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(15)
 
 // Gathering Gyr Abanian Mineral Water
-teleportIfNotThere(The Peering Stones)
+teleport(The Peering Stones)
 changeJob(MIN)
 selectGrid(Gyr Abanian Mineral Water Grid)
 selectGatherPreset(Gyr Abanian Mineral Water preset)
@@ -127,7 +127,7 @@ gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Holy Basil
-teleportIfNotThere(Castrum Oriens)
+teleport(Castrum Oriens)
 changeJob(BTN)
 selectGrid(Holy Basil Grid)
 selectGatherPreset(Holy Basil preset)
@@ -135,7 +135,7 @@ gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Dandelion
-teleportIfNotThere(Zenith)
+teleport(Zenith)
 changeJob(BTN)
 selectGrid(Dandelion Grid)
 selectGatherPreset(Dandelion preset)
@@ -143,7 +143,7 @@ gatherRotation(HQ +10%)
 startGathering(3)
 
 // Gathering Diatomite
-teleportIfNotThere(Onokoro)
+teleport(Onokoro)
 changeJob(MIN)
 selectGrid(Diatomite Grid)
 selectGatherPreset(Diatomite preset)

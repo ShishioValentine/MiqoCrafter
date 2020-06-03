@@ -35,7 +35,7 @@ gatherRotation(HQ +10%)
 startGathering(13)
 
 // Gathering Lightning Crystal
-teleportIfNotThere(Little Ala Mhigo)
+teleport(Little Ala Mhigo)
 changeJob(MIN)
 selectGrid(Lightning Crystal Grid)
 selectGatherPreset(Lightning Crystal preset)
@@ -44,7 +44,7 @@ rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(25)
 
 // Gathering Yellow Alumen
-teleportIfNotThere(Mord Souq)
+teleport(Mord Souq)
 changeJob(MIN)
 selectGrid(Yellow Alumen Grid)
 selectGatherPreset(Yellow Alumen preset)
@@ -52,7 +52,7 @@ gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Earth Crystal
-teleportIfNotThere(Moraby Drydocks)
+teleport(Moraby Drydocks)
 changeJob(MIN)
 selectGrid(Earth Crystal Grid)
 selectGatherPreset(Earth Crystal preset)
@@ -61,15 +61,19 @@ rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(8)
 
 // Gathering Truegold Sand
-teleportIfNotThere(Wright)
+teleport(Wright)
 changeJob(MIN)
 selectGrid(Truegold Sand Grid)
 selectGatherPreset(Truegold Sand preset)
 gatherRotation(HQ +10%)
 startGathering(5)
 
-// Gathering Gold Ore
-teleportIfNotThere(Camp Drybone)
+// Gathering Unspoiled Node: Gold Ore
+// Expansion: ARR
+// Time(ET): 09:00
+// Location: Eastern Thanalan
+// Coordinate: (x28,y22)
+teleport(Camp Drybone)
 changeJob(MIN)
 selectGrid(Gold Ore Grid)
 selectGatherPreset(Gold Ore preset)
@@ -77,7 +81,7 @@ gatherRotation(HQ +10%)
 startGathering(2)
 
 // Gathering Wind Crystal
-teleportIfNotThere(The Hawthorne Hut)
+teleport(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid)
 selectGatherPreset(Wind Crystal preset)
