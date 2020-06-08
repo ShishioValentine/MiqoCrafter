@@ -6,7 +6,7 @@ namespace MiqoCraftCore
     public class MiqoCraftOptions : VPOptions
     {
         public bool Collectable = false;
-        public bool RMenderEulmore = false;
+        public MiqoCraftCore.RepairMode RepairMoveValue = MiqoCraftCore.RepairMode.None;
         public bool IgnoreCatalysts = false;
         public string GatheringRotation = "HQ +10%";
         public string CraftPreset = "recommended";
@@ -29,7 +29,7 @@ namespace MiqoCraftCore
             if (null == options) return;
 
             Collectable = options.Collectable;
-            RMenderEulmore = options.RMenderEulmore;
+            RepairMoveValue = options.RepairMoveValue;
             IgnoreCatalysts = options.IgnoreCatalysts;
             GatheringRotation = options.GatheringRotation;
             CraftPreset = options.CraftPreset;

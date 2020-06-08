@@ -126,6 +126,19 @@
   <metadata name="_prerequisiteImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>286, 17</value>
   </metadata>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value>Defines the mending mode.
+- None : No repair done
+- Eulmore : Teleport and repair with NPC in Eulmore at the end of the gathering chapter, and after each craft.
+- Repair : Use repair action after each gathering node and each craft.</value>
+  </data>
+  <data name="_repairModeComboBox.ToolTip" xml:space="preserve">
+    <value>Defines the mending mode.
+- None : No repair done
+- Eulmore : Teleport and repair with NPC in Eulmore at the end of the gathering chapter, and after each craft.
+- Repair : Use repair action after each gathering node and each craft.
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

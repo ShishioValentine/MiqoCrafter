@@ -77,7 +77,21 @@ namespace MiqoCraftTestUnit
             _dumpSuffix = "_withEulmore";
             MiqoCraftOptions customOptions = new MiqoCraftOptions();
 
-            customOptions.RMenderEulmore = true;
+            customOptions.RepairMoveValue = MiqoCraftCore.MiqoCraftCore.RepairMode.Eulmore;
+
+            VPOptions.OptionsForUnitTest = customOptions;
+
+            TestFullScenarioImpl("Titanium Lance", FFXIVItem.TypeItem.Crafted);
+        }
+
+        [TestMethod]
+        public void TestTitaniumLanceWithManualMending()
+        {
+            VPOptions.OptionsForUnitTest = null;
+            _dumpSuffix = "_withManualMending";
+            MiqoCraftOptions customOptions = new MiqoCraftOptions();
+
+            customOptions.RepairMoveValue = MiqoCraftCore.MiqoCraftCore.RepairMode.Repair;
 
             VPOptions.OptionsForUnitTest = customOptions;
 

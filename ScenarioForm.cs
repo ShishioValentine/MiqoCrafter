@@ -73,6 +73,13 @@ namespace MiqoCraft
         {
             InitializeComponent();
 
+            if (null != _repairModeComboBox)
+            {
+                _repairModeComboBox.Items.Add(MiqoCraftCore.MiqoCraftCore.RepairMode.None);
+                _repairModeComboBox.Items.Add(MiqoCraftCore.MiqoCraftCore.RepairMode.Eulmore);
+                _repairModeComboBox.Items.Add(MiqoCraftCore.MiqoCraftCore.RepairMode.Repair);
+            }
+
             //Load default options
             MiqoCraftOptions options = new MiqoCraftOptions();
             options.Load(OptionLocation.UserOption);
@@ -83,7 +90,7 @@ namespace MiqoCraft
             _nghqTextBox.Text = options.NQHQPreset;
             _teleportTextBox.Text = options.CustomTeleport;
             _collectableCheckBox.Checked = options.Collectable;
-            _RMenderEulmoreCheckBox.Checked = options.RMenderEulmore;
+            _repairModeComboBox.SelectedItem = options.RepairMoveValue;
             _quantityPerNodeNumericUpDown.Value = options.NbPerNode;
             _miqoPathTextBox.Text = options.MiqoPresetPath;
         }
@@ -314,7 +321,11 @@ namespace MiqoCraft
             options.NQHQPreset = _nghqTextBox.Text;
             options.CustomTeleport = _teleportTextBox.Text;
             options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
-            options.RMenderEulmore = VPThreading.GetChecked(_RMenderEulmoreCheckBox);
+            object seletedRepairMode = VPThreading.GetSelectedItem(_repairModeComboBox);
+            if (null != seletedRepairMode && seletedRepairMode is MiqoCraftCore.MiqoCraftCore.RepairMode)
+            {
+                options.RepairMoveValue = (MiqoCraftCore.MiqoCraftCore.RepairMode)seletedRepairMode;
+            }
             options.NbPerNode = (int)VPThreading.GetValue(_quantityPerNodeNumericUpDown);
             options.MiqoPresetPath = VPThreading.GetText(_miqoPathTextBox);
             options.Save();
@@ -340,7 +351,11 @@ namespace MiqoCraft
                 options.CustomTeleport = VPThreading.GetText(_teleportTextBox);
                 options.IgnoreCatalysts = VPThreading.GetChecked(_ignoreShardCheckBox);
                 options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
-                options.RMenderEulmore = VPThreading.GetChecked(_RMenderEulmoreCheckBox);
+                object seletedRepairMode = VPThreading.GetSelectedItem(_repairModeComboBox);
+                if (null != seletedRepairMode && seletedRepairMode is MiqoCraftCore.MiqoCraftCore.RepairMode)
+                {
+                    options.RepairModeValue = (MiqoCraftCore.MiqoCraftCore.RepairMode)seletedRepairMode;
+                }
                 options.NbPerNode = (int)VPThreading.GetValue(_quantityPerNodeNumericUpDown);
                 options.MiqoPresetPath = VPThreading.GetText(_miqoPathTextBox);
                 options.CustomQuantities = _itemsQuantity;
@@ -637,11 +652,6 @@ namespace MiqoCraft
                 }
             }
             UpdateList();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this._prerequisiteImageList = new System.Windows.Forms.ImageList(this.components);
             this._toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.label11 = new System.Windows.Forms.Label();
             this._nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this._levelColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this._quantityColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,6 +43,7 @@
             this._progressBar = new System.Windows.Forms.ProgressBar();
             this._generateButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this._repairModeComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,7 +58,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this._nbSelectedItemLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this._RMenderEulmoreCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this._quantityPerNodeNumericUpDown)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,7 +70,7 @@
             this._openMiqoPresetButton.BackgroundImage = global::MiqoCraft.Properties.Resources.folder_open_document_text;
             this._openMiqoPresetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this._openMiqoPresetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 342);
+            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 320);
             this._openMiqoPresetButton.Name = "_openMiqoPresetButton";
             this._openMiqoPresetButton.Size = new System.Drawing.Size(22, 22);
             this._openMiqoPresetButton.TabIndex = 44;
@@ -80,7 +81,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(4, 320);
+            this.label6.Location = new System.Drawing.Point(4, 342);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(186, 19);
             this.label6.TabIndex = 43;
@@ -91,7 +92,7 @@
             // 
             this._miqoPathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._miqoPathTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._miqoPathTextBox.Location = new System.Drawing.Point(7, 343);
+            this._miqoPathTextBox.Location = new System.Drawing.Point(7, 365);
             this._miqoPathTextBox.Name = "_miqoPathTextBox";
             this._miqoPathTextBox.Size = new System.Drawing.Size(155, 20);
             this._miqoPathTextBox.TabIndex = 42;
@@ -100,7 +101,7 @@
             // 
             this._quantityPerNodeNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._quantityPerNodeNumericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._quantityPerNodeNumericUpDown.Location = new System.Drawing.Point(8, 300);
+            this._quantityPerNodeNumericUpDown.Location = new System.Drawing.Point(8, 322);
             this._quantityPerNodeNumericUpDown.Name = "_quantityPerNodeNumericUpDown";
             this._quantityPerNodeNumericUpDown.Size = new System.Drawing.Size(182, 20);
             this._quantityPerNodeNumericUpDown.TabIndex = 40;
@@ -115,7 +116,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label5.Location = new System.Drawing.Point(4, 278);
+            this.label5.Location = new System.Drawing.Point(4, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 19);
             this.label5.TabIndex = 39;
@@ -237,6 +238,18 @@
             this._prerequisiteImageList.ImageSize = new System.Drawing.Size(64, 64);
             this._prerequisiteImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this.label11.Location = new System.Drawing.Point(4, 255);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 19);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Repair Mode :";
+            this._toolTip.SetToolTip(this.label11, resources.GetString("label11.ToolTip"));
+            // 
             // _nameColumnHeader
             // 
             this._nameColumnHeader.Text = "Item Name";
@@ -294,7 +307,7 @@
             this._generateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._generateButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._generateButton.Location = new System.Drawing.Point(35, 377);
+            this._generateButton.Location = new System.Drawing.Point(35, 421);
             this._generateButton.Name = "_generateButton";
             this._generateButton.Size = new System.Drawing.Size(124, 30);
             this._generateButton.TabIndex = 46;
@@ -305,7 +318,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
-            this.panel5.Controls.Add(this._RMenderEulmoreCheckBox);
+            this.panel5.Controls.Add(this._repairModeComboBox);
+            this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this._craftingpresetTextBox);
@@ -325,17 +339,28 @@
             this.panel5.Controls.Add(this._ignoreShardCheckBox);
             this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 421);
+            this.panel5.Size = new System.Drawing.Size(196, 465);
             this.panel5.TabIndex = 47;
+            // 
+            // _repairModeComboBox
+            // 
+            this._repairModeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this._repairModeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._repairModeComboBox.FormattingEnabled = true;
+            this._repairModeComboBox.Location = new System.Drawing.Point(8, 277);
+            this._repairModeComboBox.Name = "_repairModeComboBox";
+            this._repairModeComboBox.Size = new System.Drawing.Size(182, 21);
+            this._repairModeComboBox.TabIndex = 49;
+            this._toolTip.SetToolTip(this._repairModeComboBox, resources.GetString("_repairModeComboBox.ToolTip"));
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.label12.Location = new System.Drawing.Point(3, 3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(215, 29);
+            this.label12.Size = new System.Drawing.Size(129, 26);
             this.label12.TabIndex = 6;
             this.label12.Text = "Scenario Options";
             // 
@@ -345,7 +370,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this._statusLabel);
             this.panel1.Controls.Add(this._progressBar);
-            this.panel1.Location = new System.Drawing.Point(12, 446);
+            this.panel1.Location = new System.Drawing.Point(12, 490);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 75);
             this.panel1.TabIndex = 48;
@@ -353,11 +378,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 29);
+            this.label7.Size = new System.Drawing.Size(56, 26);
             this.label7.TabIndex = 6;
             this.label7.Text = "Status";
             // 
@@ -385,7 +410,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))));
-            this.panel4.Location = new System.Drawing.Point(12, 439);
+            this.panel4.Location = new System.Drawing.Point(12, 483);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(196, 1);
             this.panel4.TabIndex = 50;
@@ -493,26 +518,13 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.label9.Location = new System.Drawing.Point(3, 3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(167, 29);
+            this.label9.Size = new System.Drawing.Size(105, 26);
             this.label9.TabIndex = 6;
             this.label9.Text = "Crafting Tree";
-            // 
-            // _RMenderEumoreCheckBox
-            // 
-            this._RMenderEulmoreCheckBox.AutoSize = true;
-            this._RMenderEulmoreCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._RMenderEulmoreCheckBox.Location = new System.Drawing.Point(8, 258);
-            this._RMenderEulmoreCheckBox.Name = "_RMenderEumoreCheckBox";
-            this._RMenderEulmoreCheckBox.Size = new System.Drawing.Size(181, 17);
-            this._RMenderEulmoreCheckBox.TabIndex = 47;
-            this._RMenderEulmoreCheckBox.Text = "Use Return and Mender Eulmore";
-            this._toolTip.SetToolTip(this._RMenderEulmoreCheckBox, "Last item will be crafted as collectable.");
-            this._RMenderEulmoreCheckBox.UseVisualStyleBackColor = false;
-            this._RMenderEulmoreCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // ScenarioForm
             // 
@@ -549,7 +561,6 @@
         private System.Windows.Forms.NumericUpDown _quantityPerNodeNumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox _collectableCheckBox;
-        private System.Windows.Forms.CheckBox _RMenderEulmoreCheckBox;
         private System.Windows.Forms.CheckBox _ignoreShardCheckBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox _nghqTextBox;
@@ -581,6 +592,8 @@
         private System.Windows.Forms.Label _nbSelectedItemLabel;
         private System.Windows.Forms.TextBox _craftTextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button _validQuantityButton;  
+        private System.Windows.Forms.Button _validQuantityButton;
+        private System.Windows.Forms.ComboBox _repairModeComboBox;
+        private System.Windows.Forms.Label label11;
     }
 }

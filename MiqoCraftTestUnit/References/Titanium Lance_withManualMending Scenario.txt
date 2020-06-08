@@ -35,6 +35,7 @@ selectGrid(Dark Chestnut Log Grid)
 selectGatherPreset(Dark Chestnut Log preset)
 gatherRotation(HQ +10%)
 startGathering(7)
+repair()
 
 // Gathering Wind Crystal
 teleport(The Hawthorne Hut)
@@ -44,6 +45,7 @@ selectGatherPreset(Wind Crystal preset)
 gatherRotation(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(9)
+repair()
 
 // Gathering Titanium Ore
 teleport(Tailfeather)
@@ -52,6 +54,7 @@ selectGrid(Titanium Ore Grid)
 selectGatherPreset(Titanium Ore preset)
 gatherRotation(HQ +10%)
 startGathering(11)
+repair()
 
 // Gathering Iron Ore
 teleport(Horizon)
@@ -60,6 +63,7 @@ selectGrid(Iron Ore Grid)
 selectGatherPreset(Iron Ore preset)
 gatherRotation(HQ +10%)
 startGathering(3)
+repair()
 
 // Gathering Grenade Ash
 teleport(Camp Bluefog)
@@ -68,6 +72,7 @@ selectGrid(Grenade Ash Grid)
 selectGatherPreset(Grenade Ash preset)
 gatherRotation(HQ +10%)
 startGathering(3)
+repair()
 
 // Gathering Fire Crystal
 teleport(Tailfeather)
@@ -77,6 +82,7 @@ selectGatherPreset(Fire Crystal preset)
 gatherRotation(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(9)
+repair()
 
 // Gathering Earth Crystal
 teleport(Moraby Drydocks)
@@ -86,6 +92,7 @@ selectGatherPreset(Earth Crystal preset)
 gatherRotation(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(5)
+repair()
 
 // Gathering Water Crystal
 teleport(Camp Cloudtop)
@@ -95,6 +102,7 @@ selectGatherPreset(Water Crystal preset)
 gatherRotation(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(4)
+repair()
 
 // Gathering Ice Crystal
 teleport(Falcon's Nest)
@@ -104,16 +112,7 @@ selectGatherPreset(Ice Crystal preset)
 gatherRotation(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(4)
-
-teleport(Eulmore)
-selectGrid(Eulmore Grid)
-waypoint(12)
-changeJob(min)
-repairNpc()
-changeJob(btn)
-repairNpc()
-changeJob(fsh)
-repairNpc()
+repair()
 
 ","
 
@@ -128,34 +127,34 @@ setCraftCollect(off)
 job(CRP)
 recipe(Dark Chestnut Lumber)
 craft(1)
-repairNpc()
+repair()
 
 // Titanium Nugget [Crafted] - BSM - Level 54
 setCraftCollect(off)
 job(BSM)
 recipe(Titanium Nugget)
 craft(2)
-repairNpc()
+repair()
 
 // Dhalmel Leather [Crafted] - LTW - Level 54
 setCraftCollect(off)
 job(LTW)
 recipe(Dhalmel Leather)
 craft(1)
-repairNpc()
+repair()
 
 // Void Glue [Crafted] - ALC - Level 51
 setCraftCollect(off)
 job(ALC)
 recipe(Void Glue)
 craft(1)
-repairNpc()
+repair()
 
 // Titanium Lance [Crafted] - CRP - Level 54
 setCraftCollect(off)
 job(CRP)
 recipe(Titanium Lance)
 craft(1)
-repairNpc()
+repair()
 
 "

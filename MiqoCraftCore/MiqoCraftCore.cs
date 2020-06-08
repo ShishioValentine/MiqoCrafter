@@ -248,6 +248,13 @@ namespace MiqoCraftCore
             return null;
         }
 
+        public enum RepairMode
+        {
+            None,
+            Eulmore,
+            Repair
+        }
+
         public class MiqobotScenarioOption
         {
             public int Quantity = 1;
@@ -257,7 +264,7 @@ namespace MiqoCraftCore
             public string CustomTeleport = "";
             public bool IgnoreCatalysts = false;
             public bool Collectable = false;
-            public bool RMenderEulmore = false;
+            public RepairMode RepairModeValue = RepairMode.None;
             public int NbPerNode = 1;
             public string MiqoPresetPath = "";
             public Dictionary<string, int> CustomQuantities = new Dictionary<string, int>();
@@ -286,7 +293,7 @@ namespace MiqoCraftCore
             //Forcing some options values for test units
             if(null != VPOptions.OptionsForUnitTest)
             {
-                iOptions.RMenderEulmore = options.RMenderEulmore;
+                iOptions.RepairModeValue = options.RepairMoveValue;
             }
 
             //Login to miqobot forums
@@ -634,6 +641,10 @@ namespace MiqoCraftCore
                                     fullScenario += "gatherRotation(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
                                 }
                                 fullScenario += "startGathering(" + quantity + ")" + Environment.NewLine;
+                                if (iOptions.RepairModeValue == RepairMode.Repair)
+                                {
+                                    fullScenario += "repair()" + Environment.NewLine;
+                                }
                                 fullScenario += Environment.NewLine;
                             }
                             else
@@ -651,7 +662,7 @@ namespace MiqoCraftCore
                 }
             }
             //Return to Eulmore load grid, and stay in front repair(reparing after each craft)
-            if (iOptions.RMenderEulmore)
+            if (iOptions.RepairModeValue == RepairMode.Eulmore)
             {
                 fullScenario += "teleport(Eulmore)" + Environment.NewLine;
                 DirectoryInfo customDirectoryRepair = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
@@ -751,9 +762,13 @@ namespace MiqoCraftCore
                     {
                         fullScenario += "solverPreset(" + iOptions.CraftPreset + ")" + Environment.NewLine;
                     }
-                    if (iOptions.RMenderEulmore)
+                    if (iOptions.RepairModeValue == RepairMode.Eulmore)
                     {
                         fullScenario += "repairNpc()" + Environment.NewLine;
+                    }
+                    else if (iOptions.RepairModeValue == RepairMode.Repair)
+                    {
+                        fullScenario += "repair()" + Environment.NewLine;
                     }
                     fullScenario += Environment.NewLine;
                 }
