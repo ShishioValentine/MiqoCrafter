@@ -2,6 +2,8 @@
 
 Welcome to the MiqoCrafter GitHub!
 
+If you like the software, <a href="https://www.patreon.com/miqocrafter?fan_landing=true">Become a Patron!</a>
+
 ### What is MiqoCrafter ?
 
 I just wanted to share with you all a tool I made.
