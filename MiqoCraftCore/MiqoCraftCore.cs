@@ -690,12 +690,13 @@ namespace MiqoCraftCore
                 {
                     allGrids += File.ReadAllText(customTeleportEulmore.FullName) + Environment.NewLine;
                 }
+                fullScenario += "\",";
+                fullScenario += "\"";
             }
-            fullScenario += "\",";
+            
 
             //Crafting stuff
-            Service_Misc.LogText(iLogBox, "Generating craft scenario...");
-            fullScenario += "\"";
+            Service_Misc.LogText(iLogBox, "Generating craft scenario...");       
             fullScenario += Environment.NewLine;
             fullScenario += Environment.NewLine;
             fullScenario += "// Crafted Items" + Environment.NewLine;
