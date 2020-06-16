@@ -80,14 +80,15 @@ namespace MiqoCraftCore
             }
             else
             {
+                // commented gatheringType for now, as we always want to use compass1 and not compass2. Remove Cordial (we are using manually in most scripts)
                 string useCompass = "true";
-                if (gatheringType == "1" || gatheringType == "3") useCompass = "false";
+                //if (gatheringType == "1" || gatheringType == "3") useCompass = "false";
                 string useCompass2 = "false";
-                if (gatheringType == "1" || gatheringType == "3") useCompass2 = "true";
+                //if (gatheringType == "1" || gatheringType == "3") useCompass2 = "true";
                 rawPreset = "gatherpreset." + presetItemName + Environment.NewLine;
                 string nodeName = "";
                 string slot = "";
-                string useTruth = "false";
+                string useTruth = "true";
                 if (iTime != "")
                 {
                     useTruth = "true";
@@ -101,8 +102,7 @@ namespace MiqoCraftCore
                         nodeName = "{" + nodeName + "}\",\"" + nodeName + "\",\"Cluster\",\"Crystal\",\"Shard\",\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z";
                     }
                 }
-                rawPreset += "{\"owntab\":0,\"assistmode\":false,\"nodename\":\"\",\"slot\":" + slot + ",\"maxcount\":32,\"usecompass\":" + useCompass + ",\"usecompass2\":" + useCompass2 + ",\"usetruth\":" + useTruth + ",\"userotation\":true,\"usemacro\":false,\"macro\":\"\",\"speargig\":0,\"spearshadows\":0,\"usecordials\":true,\"usefavors\":false,\"spearcollect\":true,\"spearcollectability\":1,\"byname\":[\"" + nodeName + "\"],\"veterantradebyname\":[],\"gridname\":\"" + iGridName + "\",\"rotationname\":\"" + "" + "\"}" + Environment.NewLine;
-
+                rawPreset += "{\"owntab\":0,\"assistmode\":false,\"nodename\":\"\",\"slot\":" + slot + ",\"maxcount\":32,\"usecompass\":" + useCompass + ",\"usecompass2\":" + useCompass2 + ",\"usetruth\":" + useTruth + ",\"userotation\":true,\"usemacro\":false,\"macro\":\"\",\"speargig\":0,\"spearshadows\":0,\"usecordials\":false,\"usefavors\":false,\"spearcollect\":true,\"spearcollectability\":1,\"byname\":[\"" + nodeName + "\"],\"veterantradebyname\":[],\"gridname\":\"" + iGridName + "\",\"rotationname\":\"" + "" + "\"}" + Environment.NewLine;
             }
 
             //System.IO.File.WriteAllText(cacheGridFile.FullName, rawPreset);
@@ -628,17 +628,24 @@ namespace MiqoCraftCore
                                 //Special Rotation for Shards Crystal Clusters
                                 if (Namedcatalysts.Contains(iItem.Name))
                                 {
-                                    fullScenario += "gatherRotation(MinFarmShardCrystalCluster)" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(MinFarmShardCrystalCluster)" + Environment.NewLine;
                                     fullScenario += "rotationIfGP(MaxFarmShardCrystalCluster)" + Environment.NewLine;
                                 }
                                 else if (null != gatheredItem && gatheredItem.AsCollectable)
                                 {
-                                    fullScenario += "gatherRotation(470 Collect 5% Gathering)" + Environment.NewLine;
-                                    fullScenario += "gatherRotation(470 Collect 15% Gathering)" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(470 Collect 5% Gathering)" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(470 Collect 15% Gathering)" + Environment.NewLine;
+                                }
+                                //Maximize Rotation for Unspoiled Nodes
+                                else if (compare != null)
+                                {
+                                    fullScenario += "rotationIfGP(EfficiencyMinGP700)" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(EfficiencyMinGP600)" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(EfficiencyMinGP500)" + Environment.NewLine;
                                 }
                                 else
                                 {
-                                    fullScenario += "gatherRotation(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
+                                    fullScenario += "rotationIfGP(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
                                 }
                                 fullScenario += "startGathering(" + quantity + ")" + Environment.NewLine;
                                 if (iOptions.RepairModeValue == RepairMode.Repair)
@@ -660,6 +667,9 @@ namespace MiqoCraftCore
                         fullScenario += "// Failed to log into miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
                     }
                 }
+                //Split each gathering stage into your own chapter (reset rotationifgp)
+                fullScenario += "\",";
+                fullScenario += "\"";
             }
             //Return to Eulmore load grid, and stay in front repair(reparing after each craft)
             if (iOptions.RepairModeValue == RepairMode.Eulmore)
