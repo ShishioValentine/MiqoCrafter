@@ -33,79 +33,79 @@ teleport(Tailfeather)
 changeJob(BTN)
 selectGrid(Dark Chestnut Log Grid)
 selectGatherPreset(Dark Chestnut Log preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(7)
 
-// Gathering Wind Crystal
+","// Gathering Wind Crystal
 teleport(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid)
 selectGatherPreset(Wind Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(9)
 
-// Gathering Titanium Ore
+","// Gathering Titanium Ore
 teleport(Tailfeather)
 changeJob(MIN)
 selectGrid(Titanium Ore Grid)
 selectGatherPreset(Titanium Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(11)
 
-// Gathering Iron Ore
+","// Gathering Iron Ore
 teleport(Horizon)
 changeJob(MIN)
 selectGrid(Iron Ore Grid)
 selectGatherPreset(Iron Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(3)
 
-// Gathering Grenade Ash
+","// Gathering Grenade Ash
 teleport(Camp Bluefog)
 changeJob(MIN)
 selectGrid(Grenade Ash Grid)
 selectGatherPreset(Grenade Ash preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(3)
 
-// Gathering Fire Crystal
+","// Gathering Fire Crystal
 teleport(Tailfeather)
 changeJob(MIN)
 selectGrid(Fire Crystal Grid)
 selectGatherPreset(Fire Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(9)
 
-// Gathering Earth Crystal
+","// Gathering Earth Crystal
 teleport(Moraby Drydocks)
 changeJob(MIN)
 selectGrid(Earth Crystal Grid)
 selectGatherPreset(Earth Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(5)
 
-// Gathering Water Crystal
+","// Gathering Water Crystal
 teleport(Camp Cloudtop)
 changeJob(BTN)
 selectGrid(Water Crystal Grid)
 selectGatherPreset(Water Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(4)
 
-// Gathering Ice Crystal
+","// Gathering Ice Crystal
 teleport(Falcon's Nest)
 changeJob(MIN)
 selectGrid(Ice Crystal Grid)
 selectGatherPreset(Ice Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(4)
 
-teleport(Eulmore)
+","teleport(Eulmore)
 selectGrid(Eulmore Grid)
 waypoint(12)
 changeJob(min)

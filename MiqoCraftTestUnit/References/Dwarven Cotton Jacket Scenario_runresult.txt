@@ -31,44 +31,44 @@ teleport(Tomra)
 changeJob(BTN)
 selectGrid(Dwarven Cotton Boll Grid)
 selectGatherPreset(Dwarven Cotton Boll preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(13)
 
-// Gathering Lightning Crystal
+","// Gathering Lightning Crystal
 teleport(Little Ala Mhigo)
 changeJob(MIN)
 selectGrid(Lightning Crystal Grid)
 selectGatherPreset(Lightning Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(25)
 
-// Gathering Yellow Alumen
+","// Gathering Yellow Alumen
 teleport(Mord Souq)
 changeJob(MIN)
 selectGrid(Yellow Alumen Grid)
 selectGatherPreset(Yellow Alumen preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(2)
 
-// Gathering Earth Crystal
+","// Gathering Earth Crystal
 teleport(Moraby Drydocks)
 changeJob(MIN)
 selectGrid(Earth Crystal Grid)
 selectGatherPreset(Earth Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(8)
 
-// Gathering Truegold Sand
+","// Gathering Truegold Sand
 teleport(Wright)
 changeJob(MIN)
 selectGrid(Truegold Sand Grid)
 selectGatherPreset(Truegold Sand preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(5)
 
-// Gathering Unspoiled Node: Gold Ore
+","// Gathering Unspoiled Node: Gold Ore
 // Expansion: ARR
 // Time(ET): 09:00
 // Location: Eastern Thanalan
@@ -77,15 +77,17 @@ teleport(Camp Drybone)
 changeJob(MIN)
 selectGrid(Gold Ore Grid)
 selectGatherPreset(Gold Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(EfficiencyMinGP700)
+rotationIfGP(EfficiencyMinGP600)
+rotationIfGP(EfficiencyMinGP500)
 startGathering(2)
 
-// Gathering Wind Crystal
+","// Gathering Wind Crystal
 teleport(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid)
 selectGatherPreset(Wind Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(14)
 

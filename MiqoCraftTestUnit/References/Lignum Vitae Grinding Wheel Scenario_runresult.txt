@@ -33,31 +33,31 @@ teleport(The Ostall Imperative)
 changeJob(BTN)
 selectGrid(Lignum Vitae Log Grid)
 selectGatherPreset(Lignum Vitae Log preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(21)
 
-// Gathering Dimythrite Ore
+","// Gathering Dimythrite Ore
 teleport(Fort Jobb)
 changeJob(MIN)
 selectGrid(Dimythrite Ore Grid)
 selectGatherPreset(Dimythrite Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(11)
 
-// Gathering Mythrite Ore
+","// Gathering Mythrite Ore
 teleport(Falcon's Nest)
 changeJob(MIN)
 selectGrid(Mythrite Ore Grid)
 selectGatherPreset(Mythrite Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(3)
 
-// Gathering Volcanic Tuff
+","// Gathering Volcanic Tuff
 teleport(Tomra)
 changeJob(MIN)
 selectGrid(Volcanic Tuff Grid)
 selectGatherPreset(Volcanic Tuff preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(8)
 
 ","

@@ -39,95 +39,95 @@ teleport(Ala Ghiri)
 changeJob(BTN)
 selectGrid(Twincoon Grid)
 selectGatherPreset(Twincoon preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(13)
 
-// Gathering Effervescent Water
+","// Gathering Effervescent Water
 teleport(Camp Tranquil)
 changeJob(MIN)
 selectGrid(Effervescent Water Grid)
 selectGatherPreset(Effervescent Water preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(5)
 
-// Gathering Persimmon
+","// Gathering Persimmon
 teleport(Castrum Oriens)
 changeJob(BTN)
 selectGrid(Persimmon Grid)
 selectGatherPreset(Persimmon preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(6)
 
-// Gathering Crescent Spring Water
+","// Gathering Crescent Spring Water
 teleport(Namai)
 changeJob(MIN)
 selectGrid(Crescent Spring Water Grid)
 selectGatherPreset(Crescent Spring Water preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(2)
 
-// Gathering Rock Salt
+","// Gathering Rock Salt
 teleport(Black Brush Station)
 changeJob(MIN)
 selectGrid(Rock Salt Grid)
 selectGatherPreset(Rock Salt preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(2)
 
-// Gathering Doman Iron Sand
+","// Gathering Doman Iron Sand
 teleport(Reunion)
 changeJob(MIN)
 selectGrid(Doman Iron Sand Grid)
 selectGatherPreset(Doman Iron Sand preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(5)
 
-// Gathering Doman Iron Ore
+","// Gathering Doman Iron Ore
 teleport(Namai)
 changeJob(MIN)
 selectGrid(Doman Iron Ore Grid)
 selectGatherPreset(Doman Iron Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(5)
 
-// Gathering Iron Ore
+","// Gathering Iron Ore
 teleport(Horizon)
 changeJob(MIN)
 selectGrid(Iron Ore Grid)
 selectGatherPreset(Iron Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(2)
 
-// Gathering Gyr Abanian Mineral Water
+","// Gathering Gyr Abanian Mineral Water
 teleport(The Peering Stones)
 changeJob(MIN)
 selectGrid(Gyr Abanian Mineral Water Grid)
 selectGatherPreset(Gyr Abanian Mineral Water preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(2)
 
-// Gathering Holy Basil
+","// Gathering Holy Basil
 teleport(Castrum Oriens)
 changeJob(BTN)
 selectGrid(Holy Basil Grid)
 selectGatherPreset(Holy Basil preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(3)
 
-// Gathering Coneflower
+","// Gathering Coneflower
 teleport(Tailfeather)
 changeJob(BTN)
 selectGrid(Coneflower Grid)
 selectGatherPreset(Coneflower preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(3)
 
-// Gathering Diatomite
+","// Gathering Diatomite
 teleport(Onokoro)
 changeJob(MIN)
 selectGrid(Diatomite Grid)
 selectGatherPreset(Diatomite preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(2)
 
 ","

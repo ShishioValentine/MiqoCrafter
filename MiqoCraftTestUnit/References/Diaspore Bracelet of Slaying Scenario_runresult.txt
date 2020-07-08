@@ -38,10 +38,10 @@ teleport(Lydha Lran)
 changeJob(MIN)
 selectGrid(Truegold Ore Grid)
 selectGatherPreset(Truegold Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(54)
 
-// Gathering Unspoiled Node: Gold Ore
+","// Gathering Unspoiled Node: Gold Ore
 // Expansion: ARR
 // Time(ET): 09:00
 // Location: Eastern Thanalan
@@ -50,50 +50,52 @@ teleport(Camp Drybone)
 changeJob(MIN)
 selectGrid(Gold Ore Grid)
 selectGatherPreset(Gold Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(EfficiencyMinGP700)
+rotationIfGP(EfficiencyMinGP600)
+rotationIfGP(EfficiencyMinGP500)
 startGathering(14)
 
-// Gathering Wind Crystal
+","// Gathering Wind Crystal
 teleport(The Hawthorne Hut)
 changeJob(MIN)
 selectGrid(Wind Crystal Grid)
 selectGatherPreset(Wind Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(201)
 
-// Failed to retrieve item gathering scenario from miqobot forums, can't gather this item Raw Diaspore (see http://garlandtools.org/db/#item/27727)
-// Gathering Hard Mudstone
+","// Failed to retrieve item gathering scenario from miqobot forums, can't gather this item Raw Diaspore (see http://garlandtools.org/db/#item/27727)
+","// Gathering Hard Mudstone
 teleport(Wright)
 changeJob(MIN)
 selectGrid(Hard Mudstone Grid)
 selectGatherPreset(Hard Mudstone preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(21)
 
-// Gathering Electrum Ore
+","// Gathering Electrum Ore
 teleport(Camp Bronze Lake)
 changeJob(MIN)
 selectGrid(Electrum Ore Grid)
 selectGatherPreset(Electrum Ore preset)
-gatherRotation(HQ +10%)
+rotationIfGP(HQ +10%)
 startGathering(27)
 
-// Gathering Wind Shard
+","// Gathering Wind Shard
 teleport(Bentbranch Meadows)
 changeJob(BTN)
 selectGrid(Wind Shard Grid)
 selectGatherPreset(Wind Shard preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(34)
 
-// Gathering Fire Crystal
+","// Gathering Fire Crystal
 teleport(Tailfeather)
 changeJob(MIN)
 selectGrid(Fire Crystal Grid)
 selectGatherPreset(Fire Crystal preset)
-gatherRotation(MinFarmShardCrystalCluster)
+rotationIfGP(MinFarmShardCrystalCluster)
 rotationIfGP(MaxFarmShardCrystalCluster)
 startGathering(41)
 
