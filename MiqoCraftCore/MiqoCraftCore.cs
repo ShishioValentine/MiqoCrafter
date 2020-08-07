@@ -264,6 +264,7 @@ namespace MiqoCraftCore
             public string CustomTeleport = "";
             public bool IgnoreCatalysts = false;
             public bool Collectable = false;
+            public bool QuickCraft = false;
             public RepairMode RepairModeValue = RepairMode.None;
             public int NbPerNode = 1;
             public string MiqoPresetPath = "";
@@ -294,6 +295,7 @@ namespace MiqoCraftCore
             if(null != VPOptions.OptionsForUnitTest)
             {
                 iOptions.RepairModeValue = options.RepairMoveValue;
+                iOptions.QuickCraft = options.QuickCraft;
             }
 
             //Login to miqobot forums
@@ -702,9 +704,12 @@ namespace MiqoCraftCore
             fullScenario += "// Crafted Items" + Environment.NewLine;
             fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
             fullScenario += "//" + Environment.NewLine;
-            fullScenario += "solverPreset(" + iOptions.CraftPreset + ")" + Environment.NewLine;
-            fullScenario += "nqhq(" + iOptions.NQHQPreset + ")" + Environment.NewLine;
-            fullScenario += "reclaimOff()" + Environment.NewLine;
+            if(!iOptions.QuickCraft)
+            {
+                fullScenario += "solverPreset(" + iOptions.CraftPreset + ")" + Environment.NewLine;
+                fullScenario += "nqhq(" + iOptions.NQHQPreset + ")" + Environment.NewLine;
+                fullScenario += "reclaimOff()" + Environment.NewLine;
+            }
 
             string teleportCraft = iOptions.CustomTeleport;
             if (teleportCraft != "")
@@ -744,6 +749,23 @@ namespace MiqoCraftCore
                 if (null != craftedItem)
                 {
                     fullScenario += "// " + craftedItem + Environment.NewLine;
+
+                    if (iOptions.QuickCraft)
+                    {
+                        if(i < allItems.Count - 1)
+                        {
+                            fullScenario += "solverPreset(fastest)" + Environment.NewLine;
+                            fullScenario += "ignoreQuality(on)" + Environment.NewLine;
+                            fullScenario += "reclaimOff()" + Environment.NewLine;
+                        }
+                        else
+                        {
+                            fullScenario += "solverPreset(" + iOptions.CraftPreset + ")" + Environment.NewLine;
+                            fullScenario += "nqhq(" + iOptions.NQHQPreset + ")" + Environment.NewLine;
+                            fullScenario += "ignoreQuality(off)" + Environment.NewLine;
+                            fullScenario += "reclaimOff()" + Environment.NewLine;
+                        }
+                    }
 
                     int indexCraftedItem = listAllCraftedItems.IndexOf(craftedItem);
                     if (listAllCraftedItems.IndexOf(craftedItem) >= listAllCraftedItems.Count - 1 && iOptions.Collectable)

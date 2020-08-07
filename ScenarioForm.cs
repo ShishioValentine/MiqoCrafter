@@ -85,6 +85,7 @@ namespace MiqoCraft
             options.Load(OptionLocation.UserOption);
 
             _ignoreShardCheckBox.Checked = options.IgnoreCatalysts;
+            _quickCraftCheckBox.Checked = options.QuickCraft;
             _rotationTextBox.Text = options.GatheringRotation;
             _craftingpresetTextBox.Text = options.CraftPreset;
             _nghqTextBox.Text = options.NQHQPreset;
@@ -315,6 +316,7 @@ namespace MiqoCraft
             MiqoCraftOptions options = new MiqoCraftOptions();
             options.Load(OptionLocation.UserOption);
 
+            options.QuickCraft = _quickCraftCheckBox.Checked;
             options.IgnoreCatalysts = _ignoreShardCheckBox.Checked;
             options.GatheringRotation = _rotationTextBox.Text;
             options.CraftPreset = _craftingpresetTextBox.Text;
@@ -350,6 +352,7 @@ namespace MiqoCraft
                 options.NQHQPreset = VPThreading.GetText(_nghqTextBox);
                 options.CustomTeleport = VPThreading.GetText(_teleportTextBox);
                 options.IgnoreCatalysts = VPThreading.GetChecked(_ignoreShardCheckBox);
+                options.QuickCraft = VPThreading.GetChecked(_quickCraftCheckBox);
                 options.Collectable = VPThreading.GetChecked(_collectableCheckBox);
                 object seletedRepairMode = VPThreading.GetSelectedItem(_repairModeComboBox);
                 if (null != seletedRepairMode && seletedRepairMode is MiqoCraftCore.MiqoCraftCore.RepairMode)

@@ -157,6 +157,8 @@ namespace MiqoCraftTestUnit
                     listAreas.Add("Il Mheg"); listTeleports.Add("Wolekdorf");
                     listAreas.Add("The Rak'tika Greatwood"); listTeleports.Add("Slitherbough");
                     listAreas.Add("The Rak'tika Greatwood"); listTeleports.Add("Fanow");
+                    listAreas.Add("The Tempest"); listTeleports.Add("The Ondo Cups");
+                    listAreas.Add("The Tempest"); listTeleports.Add("The Macarenses Angle");
                     listAreas.Add("Mor Dhona"); listTeleports.Add("Revenant's Toll");
 
                     int indexTeleport = listTeleports.IndexOf(gridAetheryte);

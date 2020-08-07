@@ -71,6 +71,19 @@ namespace MiqoCraftTestUnit
         }
 
         [TestMethod]
+        public void TestTitaniumLanceWithQuickCraft()
+        {
+            VPOptions.OptionsForUnitTest = null;
+            _dumpSuffix = "_withquickcraft";
+            MiqoCraftOptions customOptions = new MiqoCraftOptions();
+            customOptions.QuickCraft = true;
+            VPOptions.OptionsForUnitTest = customOptions;
+
+            TestFullScenarioImpl("Titanium Lance", FFXIVItem.TypeItem.Crafted);
+        }
+
+
+        [TestMethod]
         public void TestTitaniumLanceWithEulmoreMending()
         {
             VPOptions.OptionsForUnitTest = null;

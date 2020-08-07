@@ -35,6 +35,7 @@
             this._prerequisiteImageList = new System.Windows.Forms.ImageList(this.components);
             this._toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.label11 = new System.Windows.Forms.Label();
+            this._repairModeComboBox = new System.Windows.Forms.ComboBox();
             this._nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this._levelColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this._quantityColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,7 +44,6 @@
             this._progressBar = new System.Windows.Forms.ProgressBar();
             this._generateButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this._repairModeComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this._nbSelectedItemLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this._quickCraftCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this._quantityPerNodeNumericUpDown)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,7 +71,7 @@
             this._openMiqoPresetButton.BackgroundImage = global::MiqoCraft.Properties.Resources.folder_open_document_text;
             this._openMiqoPresetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this._openMiqoPresetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 320);
+            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 340);
             this._openMiqoPresetButton.Name = "_openMiqoPresetButton";
             this._openMiqoPresetButton.Size = new System.Drawing.Size(22, 22);
             this._openMiqoPresetButton.TabIndex = 44;
@@ -81,7 +82,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(4, 342);
+            this.label6.Location = new System.Drawing.Point(4, 362);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(186, 19);
             this.label6.TabIndex = 43;
@@ -92,7 +93,7 @@
             // 
             this._miqoPathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._miqoPathTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._miqoPathTextBox.Location = new System.Drawing.Point(7, 365);
+            this._miqoPathTextBox.Location = new System.Drawing.Point(7, 385);
             this._miqoPathTextBox.Name = "_miqoPathTextBox";
             this._miqoPathTextBox.Size = new System.Drawing.Size(155, 20);
             this._miqoPathTextBox.TabIndex = 42;
@@ -101,7 +102,7 @@
             // 
             this._quantityPerNodeNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._quantityPerNodeNumericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._quantityPerNodeNumericUpDown.Location = new System.Drawing.Point(8, 322);
+            this._quantityPerNodeNumericUpDown.Location = new System.Drawing.Point(8, 342);
             this._quantityPerNodeNumericUpDown.Name = "_quantityPerNodeNumericUpDown";
             this._quantityPerNodeNumericUpDown.Size = new System.Drawing.Size(182, 20);
             this._quantityPerNodeNumericUpDown.TabIndex = 40;
@@ -116,7 +117,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label5.Location = new System.Drawing.Point(4, 300);
+            this.label5.Location = new System.Drawing.Point(4, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 19);
             this.label5.TabIndex = 39;
@@ -127,7 +128,7 @@
             // 
             this._collectableCheckBox.AutoSize = true;
             this._collectableCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._collectableCheckBox.Location = new System.Drawing.Point(8, 235);
+            this._collectableCheckBox.Location = new System.Drawing.Point(8, 255);
             this._collectableCheckBox.Name = "_collectableCheckBox";
             this._collectableCheckBox.Size = new System.Drawing.Size(117, 17);
             this._collectableCheckBox.TabIndex = 38;
@@ -139,7 +140,7 @@
             // 
             this._ignoreShardCheckBox.AutoSize = true;
             this._ignoreShardCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._ignoreShardCheckBox.Location = new System.Drawing.Point(8, 212);
+            this._ignoreShardCheckBox.Location = new System.Drawing.Point(8, 232);
             this._ignoreShardCheckBox.Name = "_ignoreShardCheckBox";
             this._ignoreShardCheckBox.Size = new System.Drawing.Size(101, 17);
             this._ignoreShardCheckBox.TabIndex = 37;
@@ -173,7 +174,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(4, 164);
+            this.label3.Location = new System.Drawing.Point(4, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 19);
             this.label3.TabIndex = 34;
@@ -185,7 +186,7 @@
             // 
             this._teleportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._teleportTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._teleportTextBox.Location = new System.Drawing.Point(7, 186);
+            this._teleportTextBox.Location = new System.Drawing.Point(7, 206);
             this._teleportTextBox.Name = "_teleportTextBox";
             this._teleportTextBox.Size = new System.Drawing.Size(183, 20);
             this._teleportTextBox.TabIndex = 33;
@@ -243,12 +244,23 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label11.Location = new System.Drawing.Point(4, 255);
+            this.label11.Location = new System.Drawing.Point(4, 275);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 19);
             this.label11.TabIndex = 48;
             this.label11.Text = "Repair Mode :";
             this._toolTip.SetToolTip(this.label11, resources.GetString("label11.ToolTip"));
+            // 
+            // _repairModeComboBox
+            // 
+            this._repairModeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
+            this._repairModeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._repairModeComboBox.FormattingEnabled = true;
+            this._repairModeComboBox.Location = new System.Drawing.Point(8, 297);
+            this._repairModeComboBox.Name = "_repairModeComboBox";
+            this._repairModeComboBox.Size = new System.Drawing.Size(182, 21);
+            this._repairModeComboBox.TabIndex = 49;
+            this._toolTip.SetToolTip(this._repairModeComboBox, resources.GetString("_repairModeComboBox.ToolTip"));
             // 
             // _nameColumnHeader
             // 
@@ -336,22 +348,12 @@
             this.panel5.Controls.Add(this._nghqTextBox);
             this.panel5.Controls.Add(this._collectableCheckBox);
             this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this._quickCraftCheckBox);
             this.panel5.Controls.Add(this._ignoreShardCheckBox);
             this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(196, 465);
             this.panel5.TabIndex = 47;
-            // 
-            // _repairModeComboBox
-            // 
-            this._repairModeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this._repairModeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._repairModeComboBox.FormattingEnabled = true;
-            this._repairModeComboBox.Location = new System.Drawing.Point(8, 277);
-            this._repairModeComboBox.Name = "_repairModeComboBox";
-            this._repairModeComboBox.Size = new System.Drawing.Size(182, 21);
-            this._repairModeComboBox.TabIndex = 49;
-            this._toolTip.SetToolTip(this._repairModeComboBox, resources.GetString("_repairModeComboBox.ToolTip"));
             // 
             // label12
             // 
@@ -526,6 +528,17 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Crafting Tree";
             // 
+            // _quickCraftCheckBox
+            // 
+            this._quickCraftCheckBox.AutoSize = true;
+            this._quickCraftCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._quickCraftCheckBox.Location = new System.Drawing.Point(8, 167);
+            this._quickCraftCheckBox.Name = "_quickCraftCheckBox";
+            this._quickCraftCheckBox.Size = new System.Drawing.Size(177, 17);
+            this._quickCraftCheckBox.TabIndex = 37;
+            this._quickCraftCheckBox.Text = "Quick craft intermediate material";
+            this._quickCraftCheckBox.UseVisualStyleBackColor = false;
+            // 
             // ScenarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,5 +608,6 @@
         private System.Windows.Forms.Button _validQuantityButton;
         private System.Windows.Forms.ComboBox _repairModeComboBox;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox _quickCraftCheckBox;
     }
 }
