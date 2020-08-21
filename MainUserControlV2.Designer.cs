@@ -509,6 +509,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._resultListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
             this._resultListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._resultListView.CheckBoxes = true;
             this._resultListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this._nameColumnHeader,
             this._levelColumnHeader});

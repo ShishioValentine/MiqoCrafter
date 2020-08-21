@@ -27,7 +27,7 @@ namespace MiqoCraftTestUnit
         {
             VPOptions.OptionsForUnitTest = null;
             _dumpSuffix = "";
-            TestFullScenarioImpl("Twinsilk", FFXIVItem.TypeItem.Crafted, 20, 8, "Twinsilk Robe of Aiming", true);
+            TestFullScenarioImpl("Twinsilk", FFXIVItem.TypeItem.Crafted, 21, 8, "Twinsilk Robe of Aiming", true);
         }
 
         [TestMethod]
@@ -82,6 +82,18 @@ namespace MiqoCraftTestUnit
             TestFullScenarioImpl("Titanium Lance", FFXIVItem.TypeItem.Crafted);
         }
 
+        [TestMethod]
+        public void TestTitaniumLanceWithCraftSectionOnly()
+        {
+            VPOptions.OptionsForUnitTest = null;
+            _dumpSuffix = "_withcraftonly";
+            MiqoCraftOptions customOptions = new MiqoCraftOptions();
+            customOptions.CraftSectionOnly = true;
+            VPOptions.OptionsForUnitTest = customOptions;
+
+            TestFullScenarioImpl("Titanium Lance", FFXIVItem.TypeItem.Crafted);
+        }
+
 
         [TestMethod]
         public void TestTitaniumLanceWithEulmoreMending()
@@ -116,7 +128,7 @@ namespace MiqoCraftTestUnit
         {
             VPOptions.OptionsForUnitTest = null;
             _dumpSuffix = "";
-            TestFullScenarioImpl("Lignum Vitae Grinding Wheel", FFXIVItem.TypeItem.Crafted, 1, 0, "", true, 10, true, 4, "Estate Hall");
+            TestFullScenarioImpl("Lignum Vitae Grinding Wheel", FFXIVItem.TypeItem.Crafted, 2, 0, "", true, 10, true, 4, "Estate Hall");
         }
 
         [TestMethod]

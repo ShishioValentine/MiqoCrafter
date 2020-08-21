@@ -45,6 +45,7 @@
             this._generateButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this._quickCraftCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this._statusLabel = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this._nbSelectedItemLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this._quickCraftCheckBox = new System.Windows.Forms.CheckBox();
+            this._craftOnlyCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this._quantityPerNodeNumericUpDown)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,7 +72,7 @@
             this._openMiqoPresetButton.BackgroundImage = global::MiqoCraft.Properties.Resources.folder_open_document_text;
             this._openMiqoPresetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this._openMiqoPresetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 340);
+            this._openMiqoPresetButton.Location = new System.Drawing.Point(168, 364);
             this._openMiqoPresetButton.Name = "_openMiqoPresetButton";
             this._openMiqoPresetButton.Size = new System.Drawing.Size(22, 22);
             this._openMiqoPresetButton.TabIndex = 44;
@@ -319,7 +320,7 @@
             this._generateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._generateButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._generateButton.Location = new System.Drawing.Point(35, 421);
+            this._generateButton.Location = new System.Drawing.Point(35, 445);
             this._generateButton.Name = "_generateButton";
             this._generateButton.Size = new System.Drawing.Size(124, 30);
             this._generateButton.TabIndex = 46;
@@ -346,13 +347,14 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this._nghqTextBox);
+            this.panel5.Controls.Add(this._craftOnlyCheckBox);
             this.panel5.Controls.Add(this._collectableCheckBox);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this._quickCraftCheckBox);
             this.panel5.Controls.Add(this._ignoreShardCheckBox);
             this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 465);
+            this.panel5.Size = new System.Drawing.Size(196, 485);
             this.panel5.TabIndex = 47;
             // 
             // label12
@@ -366,13 +368,24 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Scenario Options";
             // 
+            // _quickCraftCheckBox
+            // 
+            this._quickCraftCheckBox.AutoSize = true;
+            this._quickCraftCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._quickCraftCheckBox.Location = new System.Drawing.Point(8, 167);
+            this._quickCraftCheckBox.Name = "_quickCraftCheckBox";
+            this._quickCraftCheckBox.Size = new System.Drawing.Size(177, 17);
+            this._quickCraftCheckBox.TabIndex = 37;
+            this._quickCraftCheckBox.Text = "Quick craft intermediate material";
+            this._quickCraftCheckBox.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this._statusLabel);
             this.panel1.Controls.Add(this._progressBar);
-            this.panel1.Location = new System.Drawing.Point(12, 490);
+            this.panel1.Location = new System.Drawing.Point(12, 509);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 75);
             this.panel1.TabIndex = 48;
@@ -412,7 +425,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))));
-            this.panel4.Location = new System.Drawing.Point(12, 483);
+            this.panel4.Location = new System.Drawing.Point(12, 503);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(196, 1);
             this.panel4.TabIndex = 50;
@@ -528,16 +541,16 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Crafting Tree";
             // 
-            // _quickCraftCheckBox
+            // _craftOnlyCheckBox
             // 
-            this._quickCraftCheckBox.AutoSize = true;
-            this._quickCraftCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._quickCraftCheckBox.Location = new System.Drawing.Point(8, 167);
-            this._quickCraftCheckBox.Name = "_quickCraftCheckBox";
-            this._quickCraftCheckBox.Size = new System.Drawing.Size(177, 17);
-            this._quickCraftCheckBox.TabIndex = 37;
-            this._quickCraftCheckBox.Text = "Quick craft intermediate material";
-            this._quickCraftCheckBox.UseVisualStyleBackColor = false;
+            this._craftOnlyCheckBox.AutoSize = true;
+            this._craftOnlyCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._craftOnlyCheckBox.Location = new System.Drawing.Point(8, 422);
+            this._craftOnlyCheckBox.Name = "_craftOnlyCheckBox";
+            this._craftOnlyCheckBox.Size = new System.Drawing.Size(117, 17);
+            this._craftOnlyCheckBox.TabIndex = 38;
+            this._craftOnlyCheckBox.Text = "Craft Only Scenario";
+            this._craftOnlyCheckBox.UseVisualStyleBackColor = false;
             // 
             // ScenarioForm
             // 
@@ -609,5 +622,6 @@
         private System.Windows.Forms.ComboBox _repairModeComboBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox _quickCraftCheckBox;
+        private System.Windows.Forms.CheckBox _craftOnlyCheckBox;
     }
 }

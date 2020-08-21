@@ -9,6 +9,7 @@ namespace MiqoCraftCore
         public MiqoCraftCore.RepairMode RepairMoveValue = MiqoCraftCore.RepairMode.None;
         public bool QuickCraft = false;
         public bool IgnoreCatalysts = false;
+        public bool CraftSectionOnly = false;
         public string GatheringRotation = "HQ +10%";
         public string CraftPreset = "recommended";
         public string NQHQPreset = "balanced";
@@ -44,6 +45,7 @@ namespace MiqoCraftCore
             ListGatherableItems = options.ListGatherableItems;
             ListGridOKItems = options.ListGridOKItems;
             ListCraftableItems = options.ListCraftableItems;
+            CraftSectionOnly = options.CraftSectionOnly;
         }
 
         /// <summary>

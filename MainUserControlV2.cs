@@ -426,16 +426,41 @@ namespace MiqoCraft
 
         private void _addToCraftingListButton_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem listViewItem in _resultListView.SelectedItems)
+            bool checkedItems = false;
+            foreach (ListViewItem listViewItem in _resultListView.CheckedItems)
             {
                 try
                 {
                     FFXIVSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVSearchItem;
-                    if (null != item) _itemsToCraft.Add(item);
+                    if (null != item)
+                    {
+                        _itemsToCraft.Add(item);
+                        checkedItems = true;
+                    }
                 }
                 catch
                 {
 
+                }
+            }
+
+            if(!checkedItems)
+            {
+                foreach (ListViewItem listViewItem in _resultListView.SelectedItems)
+                {
+                    try
+                    {
+                        FFXIVSearchItem item = VPThreading.GetTag(listViewItem) as FFXIVSearchItem;
+                        if (null != item)
+                        {
+                            _itemsToCraft.Add(item);
+                            checkedItems = true;
+                        }
+                    }
+                    catch
+                    {
+
+                    }
                 }
             }
             UpdateCraftingList();

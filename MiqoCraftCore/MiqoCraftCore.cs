@@ -265,6 +265,7 @@ namespace MiqoCraftCore
             public bool IgnoreCatalysts = false;
             public bool Collectable = false;
             public bool QuickCraft = false;
+            public bool CraftSectionOnly = false;
             public RepairMode RepairModeValue = RepairMode.None;
             public int NbPerNode = 1;
             public string MiqoPresetPath = "";
@@ -296,6 +297,7 @@ namespace MiqoCraftCore
             {
                 iOptions.RepairModeValue = options.RepairMoveValue;
                 iOptions.QuickCraft = options.QuickCraft;
+                iOptions.CraftSectionOnly = options.CraftSectionOnly;
             }
 
             //Login to miqobot forums
@@ -332,26 +334,29 @@ namespace MiqoCraftCore
                 catalysts.Clear();
             }
             //Creating rotations
-            allRotations += "gatherrotation.EfficiencyMinGP500" + Environment.NewLine;
-            allRotations += "[31,6]" + Environment.NewLine;
-            allRotations += "gatherrotation.EfficiencyMinGP600" + Environment.NewLine;
-            allRotations += "[31,6,12]" + Environment.NewLine;
-            allRotations += "gatherrotation.EfficiencyMinGP700" + Environment.NewLine;
-            allRotations += "[31,6,12,37,12]" + Environment.NewLine;
-            allRotations += "gatherrotation.MinFarmShardCrystalCluster" + Environment.NewLine;
-            allRotations += "[31,38]" + Environment.NewLine;
-            allRotations += "gatherrotation.MaxFarmShardCrystalCluster" + Environment.NewLine;
-            allRotations += "[31,38,40]" + Environment.NewLine;
-            allRotations += "gatherrotation.Collect Gathering +15%" + Environment.NewLine;
-            allRotations += "[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,1,32]" + Environment.NewLine;
-            allRotations += "gatherrotation.Collect Gathering +5%" + Environment.NewLine;
-            allRotations += "[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,0]" + Environment.NewLine;
-            allRotations += "gatherrotation.Gathering +15%/HQ +10%" + Environment.NewLine;
-            allRotations += "[31,1,3]" + Environment.NewLine;
-            allRotations += "gatherrotation.HQ +10%" + Environment.NewLine;
-            allRotations += "[31,3]" + Environment.NewLine;
-            allRotations += "gatherrotation.Gathering +5%/HQ +10%" + Environment.NewLine;
-            allRotations += "[31,0,3]" + Environment.NewLine;
+            if(!iOptions.CraftSectionOnly)
+            {
+                allRotations += "gatherrotation.EfficiencyMinGP500" + Environment.NewLine;
+                allRotations += "[31,6]" + Environment.NewLine;
+                allRotations += "gatherrotation.EfficiencyMinGP600" + Environment.NewLine;
+                allRotations += "[31,6,12]" + Environment.NewLine;
+                allRotations += "gatherrotation.EfficiencyMinGP700" + Environment.NewLine;
+                allRotations += "[31,6,12,37,12]" + Environment.NewLine;
+                allRotations += "gatherrotation.MinFarmShardCrystalCluster" + Environment.NewLine;
+                allRotations += "[31,38]" + Environment.NewLine;
+                allRotations += "gatherrotation.MaxFarmShardCrystalCluster" + Environment.NewLine;
+                allRotations += "[31,38,40]" + Environment.NewLine;
+                allRotations += "gatherrotation.Collect Gathering +15%" + Environment.NewLine;
+                allRotations += "[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,1,32]" + Environment.NewLine;
+                allRotations += "gatherrotation.Collect Gathering +5%" + Environment.NewLine;
+                allRotations += "[31,9,22,26,25,[34,[35,29,36,26]],25,[34,[35,29,36,26]],23,0]" + Environment.NewLine;
+                allRotations += "gatherrotation.Gathering +15%/HQ +10%" + Environment.NewLine;
+                allRotations += "[31,1,3]" + Environment.NewLine;
+                allRotations += "gatherrotation.HQ +10%" + Environment.NewLine;
+                allRotations += "[31,3]" + Environment.NewLine;
+                allRotations += "gatherrotation.Gathering +5%/HQ +10%" + Environment.NewLine;
+                allRotations += "[31,0,3]" + Environment.NewLine;
+            }
 
             allRotations += MiqoCraftCore.GetCacheRotations() + Environment.NewLine; ;
 
@@ -372,328 +377,331 @@ namespace MiqoCraftCore
             fullScenario += "// http://patreon.com/miqocrafter" + Environment.NewLine;
             fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
 
-            //Prerequisite
-            fullScenario += Environment.NewLine;
-            fullScenario += Environment.NewLine;
-            fullScenario += "// Prerequisite" + Environment.NewLine;
-            fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
-            fullScenario += "//" + Environment.NewLine;
-            if (iOptions.IgnoreCatalysts) fullScenario += "// You will need to buy or obtain those items using external means, cause Miqocrafter can't automate it [Yet], or they are ignored catalysts" + Environment.NewLine;
-            else fullScenario += "// You will need to buy or obtain those items using external means, cause Miqocrafter can't automate it [Yet]" + Environment.NewLine;
-            for (int i = 0; i < allItems.Count && i < allItemsQuantity.Count; i++)
-            {
-                FFXIVItem iItem = allItems[i];
-                if (null == iItem) continue;
-                int quantity = allItemsQuantity[i];
-
-                FFXIVCraftingOptions itemOptions = options.GetOption(iItem);
-
-                if (iItem.Type == FFXIVItem.TypeItem.NPC || iItem.Type == FFXIVItem.TypeItem.Unkwown || null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower()) || (null != itemOptions && itemOptions.IgnoreItem))
-                {
-                    fullScenario += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                }
-            }
-
-            //Reduced
-            fullScenario += Environment.NewLine;
-            fullScenario += Environment.NewLine;
-            fullScenario += "// Reduced Items" + Environment.NewLine;
-            fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
-            fullScenario += "//" + Environment.NewLine;
-            fullScenario += "// You will need to manually reduce those items, cause Miqocrafter can't automate it [Yet]" + Environment.NewLine;
-            fullScenario += "// However Miqocrafter will try to gather/craft/retrieve the items that need to be reduced." + Environment.NewLine;
-            for (int i = 0; i < allItems.Count && i < allItemsQuantity.Count; i++)
-            {
-                FFXIVItem iItem = allItems[i];
-                if (null == iItem) continue;
-                int quantity = allItemsQuantity[i];
-                FFXIVReducedItem reducedItem = null;
-                if (iItem is FFXIVReducedItem)
-                {
-                    reducedItem = iItem as FFXIVReducedItem;
-                }
-                if (null != reducedItem)
-                {
-                    if (null != reducedItem.ReducedFrom) fullScenario += "//    - " + iItem.Name + " (Reduced from " + reducedItem.ReducedFrom + " - " + iItem.UrlGarland + ")" + Environment.NewLine;
-                    else fullScenario += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                }
-            }
-
-            //Errors
-            fullScenario += "ERRORS_ITEMS_DUMMY";
-
-            fullScenario += "\",";
-
-            //Getting miqo preset content
-            string miqoPresetContent = "";
-            if (null != iOptions.MiqoPresetPath && "" != iOptions.MiqoPresetPath)
-            {
-                FileInfo presetFile = new FileInfo(Path.Combine(iOptions.MiqoPresetPath, "presets.miqo"));
-                if (presetFile.Exists)
-                {
-                    miqoPresetContent = File.ReadAllText(presetFile.FullName);
-                }
-            }
-            if (miqoPresetContent == "" && null != options.MiqoPresetPath && "" != options.MiqoPresetPath)
-            {
-                FileInfo presetFile = new FileInfo(Path.Combine(options.MiqoPresetPath, "presets.miqo"));
-                if (presetFile.Exists)
-                {
-                    miqoPresetContent = File.ReadAllText(presetFile.FullName);
-                }
-            }
-
-            //Gathering stuff
             string errorContent = "";
-            Service_Misc.LogText(iLogBox, "Creating gathering grids...");
-            fullScenario += "\"";
-            fullScenario += Environment.NewLine;
-            fullScenario += Environment.NewLine;
-            fullScenario += "// Gathered Items" + Environment.NewLine;
-            fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
-            fullScenario += "//" + Environment.NewLine;
-            fullScenario += "// Miqocrafter will use the gathering scenario from https://miqobot.com/forum/forums/topic/index-gathering-grids/ to retrieve those." + Environment.NewLine;
-            for (int i = 0; i < allItems.Count && i < allItemsQuantity.Count; i++)
+            if (!iOptions.CraftSectionOnly)
             {
-                FFXIVItem iItem = allItems[i];
-                if (null == iItem) continue;
-                int quantity = allItemsQuantity[i] / iOptions.NbPerNode + 1;
-
-                if (!(iItem is FFXIVGatheredItem)) continue;
-                FFXIVGatheredItem gatheredItem = iItem as FFXIVGatheredItem;
-
-                if (null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower())) continue;
-                FFXIVCraftingOptions itemOptions = options.GetOption(iItem);
-                if (null != itemOptions && itemOptions.IgnoreItem) continue;
-
-                if (null != gatheredItem)
+                //Prerequisite
+                fullScenario += Environment.NewLine;
+                fullScenario += Environment.NewLine;
+                fullScenario += "// Prerequisite" + Environment.NewLine;
+                fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
+                fullScenario += "//" + Environment.NewLine;
+                if (iOptions.IgnoreCatalysts) fullScenario += "// You will need to buy or obtain those items using external means, cause Miqocrafter can't automate it [Yet], or they are ignored catalysts" + Environment.NewLine;
+                else fullScenario += "// You will need to buy or obtain those items using external means, cause Miqocrafter can't automate it [Yet]" + Environment.NewLine;
+                for (int i = 0; i < allItems.Count && i < allItemsQuantity.Count; i++)
                 {
-                    Service_Misc.LogText(iLogBox, "Searching for item grid : " + iItem + "");
-                    if (gatheredItem.Slot.Count <= 0)
+                    FFXIVItem iItem = allItems[i];
+                    if (null == iItem) continue;
+                    int quantity = allItemsQuantity[i];
+
+                    FFXIVCraftingOptions itemOptions = options.GetOption(iItem);
+
+                    if (iItem.Type == FFXIVItem.TypeItem.NPC || iItem.Type == FFXIVItem.TypeItem.Unkwown || null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower()) || (null != itemOptions && itemOptions.IgnoreItem))
                     {
-                        errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                        fullScenario += "// Failed to retrieve item gathering slot from FGarlandTool, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                        continue;
+                        fullScenario += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
                     }
-                    if (null != logMiqobotCookies)
+                }
+
+                //Reduced
+                fullScenario += Environment.NewLine;
+                fullScenario += Environment.NewLine;
+                fullScenario += "// Reduced Items" + Environment.NewLine;
+                fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
+                fullScenario += "//" + Environment.NewLine;
+                fullScenario += "// You will need to manually reduce those items, cause Miqocrafter can't automate it [Yet]" + Environment.NewLine;
+                fullScenario += "// However Miqocrafter will try to gather/craft/retrieve the items that need to be reduced." + Environment.NewLine;
+                for (int i = 0; i < allItems.Count && i < allItemsQuantity.Count; i++)
+                {
+                    FFXIVItem iItem = allItems[i];
+                    if (null == iItem) continue;
+                    int quantity = allItemsQuantity[i];
+                    FFXIVReducedItem reducedItem = null;
+                    if (iItem is FFXIVReducedItem)
                     {
-                        List<MiqoItemPage> listItemPage = Miqobot.GetURLItem(iItem.Name, logMiqobotCookies, null);
-                        if (listItemPage.Count <= 0)
+                        reducedItem = iItem as FFXIVReducedItem;
+                    }
+                    if (null != reducedItem)
+                    {
+                        if (null != reducedItem.ReducedFrom) fullScenario += "//    - " + iItem.Name + " (Reduced from " + reducedItem.ReducedFrom + " - " + iItem.UrlGarland + ")" + Environment.NewLine;
+                        else fullScenario += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                    }
+                }
+
+                //Errors
+                fullScenario += "ERRORS_ITEMS_DUMMY";
+
+                fullScenario += "\",";
+
+                //Getting miqo preset content
+                string miqoPresetContent = "";
+                if (null != iOptions.MiqoPresetPath && "" != iOptions.MiqoPresetPath)
+                {
+                    FileInfo presetFile = new FileInfo(Path.Combine(iOptions.MiqoPresetPath, "presets.miqo"));
+                    if (presetFile.Exists)
+                    {
+                        miqoPresetContent = File.ReadAllText(presetFile.FullName);
+                    }
+                }
+                if (miqoPresetContent == "" && null != options.MiqoPresetPath && "" != options.MiqoPresetPath)
+                {
+                    FileInfo presetFile = new FileInfo(Path.Combine(options.MiqoPresetPath, "presets.miqo"));
+                    if (presetFile.Exists)
+                    {
+                        miqoPresetContent = File.ReadAllText(presetFile.FullName);
+                    }
+                }
+
+                //Gathering stuff
+                Service_Misc.LogText(iLogBox, "Creating gathering grids...");
+                fullScenario += "\"";
+                fullScenario += Environment.NewLine;
+                fullScenario += Environment.NewLine;
+                fullScenario += "// Gathered Items" + Environment.NewLine;
+                fullScenario += "//--------------------------------------------------------------" + Environment.NewLine;
+                fullScenario += "//" + Environment.NewLine;
+                fullScenario += "// Miqocrafter will use the gathering scenario from https://miqobot.com/forum/forums/topic/index-gathering-grids/ to retrieve those." + Environment.NewLine;
+                for (int i = 0; i < allItems.Count && i < allItemsQuantity.Count; i++)
+                {
+                    FFXIVItem iItem = allItems[i];
+                    if (null == iItem) continue;
+                    int quantity = allItemsQuantity[i] / iOptions.NbPerNode + 1;
+
+                    if (!(iItem is FFXIVGatheredItem)) continue;
+                    FFXIVGatheredItem gatheredItem = iItem as FFXIVGatheredItem;
+
+                    if (null != catalysts.Find(x => x != null && x.ToLower() == iItem.Name.ToLower())) continue;
+                    FFXIVCraftingOptions itemOptions = options.GetOption(iItem);
+                    if (null != itemOptions && itemOptions.IgnoreItem) continue;
+
+                    if (null != gatheredItem)
+                    {
+                        Service_Misc.LogText(iLogBox, "Searching for item grid : " + iItem + "");
+                        if (gatheredItem.Slot.Count <= 0)
                         {
                             errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                            fullScenario += "// Failed to retrieve item gathering scenario from miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                            fullScenario += "// Failed to retrieve item gathering slot from FGarlandTool, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                            continue;
                         }
-                        else
+                        if (null != logMiqobotCookies)
                         {
-                            string initName = "";
-                            string grid = null;
-                            for (int j = 0; j < listItemPage.Count && null == grid; j++)
+                            List<MiqoItemPage> listItemPage = Miqobot.GetURLItem(iItem.Name, logMiqobotCookies, null);
+                            if (listItemPage.Count <= 0)
                             {
-                                grid = Miqobot.GetLastGrid(iItem.Name, logMiqobotCookies, listItemPage[j], out initName);
-                            }
-                            if (null != grid)
-                            {
-                                //Finding right zone
-                                string zone = "";
-                                string type = "";
-                                string slot = "";
-                                string time = "";
-                                string gatheringType = "";
-
-                                if (gatheredItem.Slot.Count == 1)
-                                {
-                                    //No ambiguity
-                                    zone = gatheredItem.Zones[0];
-                                    type = gatheredItem.Types[0];
-                                    slot = gatheredItem.Slot[0];
-                                    time = gatheredItem.Times[0];
-                                    gatheringType = gatheredItem.GatheringTypes[0];
-                                }
-                                else
-                                {
-                                    if (zone == "")
-                                    {
-                                        foreach (string zoneName in gatheredItem.Zones)
-                                        {
-                                            string initNameCorrected = initName.Replace(" ", "").ToLower();
-                                            string gridDataCorrected = grid.Replace(" ", "").ToLower();
-                                            string zoneNameCorrected = zoneName.ToLower().Replace("the ", "").Replace(" ", "").Trim();
-                                            if (initNameCorrected.Contains(zoneNameCorrected))
-                                            {
-                                                int index = gatheredItem.Zones.IndexOf(zoneName);
-
-                                                zone = gatheredItem.Zones[index];
-                                                type = gatheredItem.Types[index];
-                                                slot = gatheredItem.Slot[index];
-                                                time = gatheredItem.Times[index];
-                                                gatheringType = gatheredItem.GatheringTypes[index];
-                                                break;
-                                            }
-                                            if (gridDataCorrected.Contains(zoneNameCorrected))
-                                            {
-                                                int index = gatheredItem.Zones.IndexOf(zoneName);
-
-                                                zone = gatheredItem.Zones[index];
-                                                type = gatheredItem.Types[index];
-                                                slot = gatheredItem.Slot[index];
-                                                time = gatheredItem.Times[index];
-                                                gatheringType = gatheredItem.GatheringTypes[index];
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
-                                if (zone == "")
-                                {
-                                    errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                                    fullScenario += "// Failed to retrieve item gathering zone from miqobot grid, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                                    continue;
-                                }
-
-                                //Find teleport item
-                                string teleportTo = GarlandTool.GetTeleportName(zone, grid, gatheredItem);
-
-                                //Compute grid name from miqo presets, to avoid duplicates
-                                string gridName = iItem.Name + " Grid";
-                                int indexGrid = 1;
-                                while (miqoPresetContent.Contains("grid." + gridName + Environment.NewLine))
-                                {
-                                    string oldGridName = gridName;
-                                    gridName = iItem.Name + " Grid" + indexGrid;
-                                    grid = grid.Replace("grid." + oldGridName + Environment.NewLine, "grid." + gridName + Environment.NewLine);
-                                    indexGrid++;
-                                }
-
-                                //Embed grid
-                                allGrids += grid + Environment.NewLine;
-
-                                //Get preset
-                                string preset = MiqoCraftCore.GetCraftingPreset(gatheringType, slot, gatheredItem, iOptions.GatheringRotation, gridName, time);
-
-                                //Compute preset name from miqo presets, to avoid duplicates
-                                string presetName = iItem.Name + " preset";
-                                int indexpreset = 1;
-                                while (miqoPresetContent.Contains("gatherpreset." + presetName + Environment.NewLine))
-                                {
-                                    string oldpresetName = presetName;
-                                    presetName = iItem.Name + " preset" + indexpreset;
-                                    preset = preset.Replace("gatherpreset." + oldpresetName + Environment.NewLine, "gatherpreset." + presetName + Environment.NewLine);
-                                    indexpreset++;
-                                }
-
-                                //Embed a new preset
-                                allPreset += preset;
-
-                                //Add gathering rotation to scenario
-                                //Add gathering rotation to scenario
-                                //teleportIf(Black Brush Station)\r\nunstealth()\r\nchangeJob(Miner)\r\nselectGrid(Min5-Copper Ore)\r\nselectGatherPreset(Metal Worm Jar- Copper Ore)\r\nstartGathering(4)
-                                //teleportIfNotThere
-                                UnspoiledNodes compare = IsUnspoiledNode(iItem.Name, AllUnspoiledNodes);
-                                if (compare != null)
-                                {
-                                    fullScenario += "// Gathering Unspoiled Node: " + compare.UnspoiledNodeName + Environment.NewLine;
-                                    fullScenario += "// Expansion: " + compare.UnspoiledNodeXpac + Environment.NewLine;
-                                    fullScenario += "// Time(ET): " + compare.UnspoiledNodeTime + Environment.NewLine;
-                                    fullScenario += "// Location: " + compare.UnspoiledNodeLocation + Environment.NewLine;
-                                    fullScenario += "// Coordinate: " + compare.UnspoiledNodeCoordinate + Environment.NewLine;
-                                }
-                                else
-                                {
-                                    fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
-                                }
-
-                                fullScenario += "teleport(" + teleportTo + ")" + Environment.NewLine;
-
-
-                                //Adding custom scenario after teleport
-                                DirectoryInfo customDirectory = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
-                                if (!customDirectory.Exists)
-                                {
-                                    customDirectory.Create();
-                                }
-                                FileInfo customTeleportScenarioFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportTo + " Scenario.txt"));
-                                if (customTeleportScenarioFile.Exists)
-                                {
-                                    fullScenario += File.ReadAllText(customTeleportScenarioFile.FullName) + Environment.NewLine;
-                                }
-                                FileInfo customTeleportGridFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportTo + " Grid.txt"));
-                                if (customTeleportGridFile.Exists)
-                                {
-                                    allGrids += File.ReadAllText(customTeleportGridFile.FullName) + Environment.NewLine;
-                                }
-
-
-                                //fullScenario += "unstealth()" + Environment.NewLine;
-                                fullScenario += "changeJob(" + GarlandTool.GetGatheringJobName(gatheringType, iItem) + ")" + Environment.NewLine;
-                                fullScenario += "selectGrid(" + gridName + ")" + Environment.NewLine;
-                                fullScenario += "selectGatherPreset(" + presetName + ")" + Environment.NewLine;
-                                //Special Rotation for Shards Crystal Clusters
-                                if (Namedcatalysts.Contains(iItem.Name))
-                                {
-                                    fullScenario += "rotationIfGP(MinFarmShardCrystalCluster)" + Environment.NewLine;
-                                    fullScenario += "rotationIfGP(MaxFarmShardCrystalCluster)" + Environment.NewLine;
-                                }
-                                else if (null != gatheredItem && gatheredItem.AsCollectable)
-                                {
-                                    fullScenario += "rotationIfGP(470 Collect 5% Gathering)" + Environment.NewLine;
-                                    fullScenario += "rotationIfGP(470 Collect 15% Gathering)" + Environment.NewLine;
-                                }
-                                //Maximize Rotation for Unspoiled Nodes
-                                else if (compare != null)
-                                {
-                                    fullScenario += "rotationIfGP(EfficiencyMinGP700)" + Environment.NewLine;
-                                    fullScenario += "rotationIfGP(EfficiencyMinGP600)" + Environment.NewLine;
-                                    fullScenario += "rotationIfGP(EfficiencyMinGP500)" + Environment.NewLine;
-                                }
-                                else
-                                {
-                                    fullScenario += "rotationIfGP(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
-                                }
-                                fullScenario += "startGathering(" + quantity + ")" + Environment.NewLine;
-                                if (iOptions.RepairModeValue == RepairMode.Repair)
-                                {
-                                    fullScenario += "repair()" + Environment.NewLine;
-                                }
-                                fullScenario += Environment.NewLine;
+                                errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                                fullScenario += "// Failed to retrieve item gathering scenario from miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
                             }
                             else
                             {
-                                errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                                fullScenario += "// Failed to retrieve the grid from miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                                string initName = "";
+                                string grid = null;
+                                for (int j = 0; j < listItemPage.Count && null == grid; j++)
+                                {
+                                    grid = Miqobot.GetLastGrid(iItem.Name, logMiqobotCookies, listItemPage[j], out initName);
+                                }
+                                if (null != grid)
+                                {
+                                    //Finding right zone
+                                    string zone = "";
+                                    string type = "";
+                                    string slot = "";
+                                    string time = "";
+                                    string gatheringType = "";
+
+                                    if (gatheredItem.Slot.Count == 1)
+                                    {
+                                        //No ambiguity
+                                        zone = gatheredItem.Zones[0];
+                                        type = gatheredItem.Types[0];
+                                        slot = gatheredItem.Slot[0];
+                                        time = gatheredItem.Times[0];
+                                        gatheringType = gatheredItem.GatheringTypes[0];
+                                    }
+                                    else
+                                    {
+                                        if (zone == "")
+                                        {
+                                            foreach (string zoneName in gatheredItem.Zones)
+                                            {
+                                                string initNameCorrected = initName.Replace(" ", "").ToLower();
+                                                string gridDataCorrected = grid.Replace(" ", "").ToLower();
+                                                string zoneNameCorrected = zoneName.ToLower().Replace("the ", "").Replace(" ", "").Trim();
+                                                if (initNameCorrected.Contains(zoneNameCorrected))
+                                                {
+                                                    int index = gatheredItem.Zones.IndexOf(zoneName);
+
+                                                    zone = gatheredItem.Zones[index];
+                                                    type = gatheredItem.Types[index];
+                                                    slot = gatheredItem.Slot[index];
+                                                    time = gatheredItem.Times[index];
+                                                    gatheringType = gatheredItem.GatheringTypes[index];
+                                                    break;
+                                                }
+                                                if (gridDataCorrected.Contains(zoneNameCorrected))
+                                                {
+                                                    int index = gatheredItem.Zones.IndexOf(zoneName);
+
+                                                    zone = gatheredItem.Zones[index];
+                                                    type = gatheredItem.Types[index];
+                                                    slot = gatheredItem.Slot[index];
+                                                    time = gatheredItem.Times[index];
+                                                    gatheringType = gatheredItem.GatheringTypes[index];
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if (zone == "")
+                                    {
+                                        errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                                        fullScenario += "// Failed to retrieve item gathering zone from miqobot grid, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                                        continue;
+                                    }
+
+                                    //Find teleport item
+                                    string teleportTo = GarlandTool.GetTeleportName(zone, grid, gatheredItem);
+
+                                    //Compute grid name from miqo presets, to avoid duplicates
+                                    string gridName = iItem.Name + " Grid";
+                                    int indexGrid = 1;
+                                    while (miqoPresetContent.Contains("grid." + gridName + Environment.NewLine))
+                                    {
+                                        string oldGridName = gridName;
+                                        gridName = iItem.Name + " Grid" + indexGrid;
+                                        grid = grid.Replace("grid." + oldGridName + Environment.NewLine, "grid." + gridName + Environment.NewLine);
+                                        indexGrid++;
+                                    }
+
+                                    //Embed grid
+                                    allGrids += grid + Environment.NewLine;
+
+                                    //Get preset
+                                    string preset = MiqoCraftCore.GetCraftingPreset(gatheringType, slot, gatheredItem, iOptions.GatheringRotation, gridName, time);
+
+                                    //Compute preset name from miqo presets, to avoid duplicates
+                                    string presetName = iItem.Name + " preset";
+                                    int indexpreset = 1;
+                                    while (miqoPresetContent.Contains("gatherpreset." + presetName + Environment.NewLine))
+                                    {
+                                        string oldpresetName = presetName;
+                                        presetName = iItem.Name + " preset" + indexpreset;
+                                        preset = preset.Replace("gatherpreset." + oldpresetName + Environment.NewLine, "gatherpreset." + presetName + Environment.NewLine);
+                                        indexpreset++;
+                                    }
+
+                                    //Embed a new preset
+                                    allPreset += preset;
+
+                                    //Add gathering rotation to scenario
+                                    //Add gathering rotation to scenario
+                                    //teleportIf(Black Brush Station)\r\nunstealth()\r\nchangeJob(Miner)\r\nselectGrid(Min5-Copper Ore)\r\nselectGatherPreset(Metal Worm Jar- Copper Ore)\r\nstartGathering(4)
+                                    //teleportIfNotThere
+                                    UnspoiledNodes compare = IsUnspoiledNode(iItem.Name, AllUnspoiledNodes);
+                                    if (compare != null)
+                                    {
+                                        fullScenario += "// Gathering Unspoiled Node: " + compare.UnspoiledNodeName + Environment.NewLine;
+                                        fullScenario += "// Expansion: " + compare.UnspoiledNodeXpac + Environment.NewLine;
+                                        fullScenario += "// Time(ET): " + compare.UnspoiledNodeTime + Environment.NewLine;
+                                        fullScenario += "// Location: " + compare.UnspoiledNodeLocation + Environment.NewLine;
+                                        fullScenario += "// Coordinate: " + compare.UnspoiledNodeCoordinate + Environment.NewLine;
+                                    }
+                                    else
+                                    {
+                                        fullScenario += "// Gathering " + iItem.Name + Environment.NewLine;
+                                    }
+
+                                    fullScenario += "teleport(" + teleportTo + ")" + Environment.NewLine;
+
+
+                                    //Adding custom scenario after teleport
+                                    DirectoryInfo customDirectory = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
+                                    if (!customDirectory.Exists)
+                                    {
+                                        customDirectory.Create();
+                                    }
+                                    FileInfo customTeleportScenarioFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportTo + " Scenario.txt"));
+                                    if (customTeleportScenarioFile.Exists)
+                                    {
+                                        fullScenario += File.ReadAllText(customTeleportScenarioFile.FullName) + Environment.NewLine;
+                                    }
+                                    FileInfo customTeleportGridFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportTo + " Grid.txt"));
+                                    if (customTeleportGridFile.Exists)
+                                    {
+                                        allGrids += File.ReadAllText(customTeleportGridFile.FullName) + Environment.NewLine;
+                                    }
+
+
+                                    //fullScenario += "unstealth()" + Environment.NewLine;
+                                    fullScenario += "changeJob(" + GarlandTool.GetGatheringJobName(gatheringType, iItem) + ")" + Environment.NewLine;
+                                    fullScenario += "selectGrid(" + gridName + ")" + Environment.NewLine;
+                                    fullScenario += "selectGatherPreset(" + presetName + ")" + Environment.NewLine;
+                                    //Special Rotation for Shards Crystal Clusters
+                                    if (Namedcatalysts.Contains(iItem.Name))
+                                    {
+                                        fullScenario += "rotationIfGP(MinFarmShardCrystalCluster)" + Environment.NewLine;
+                                        fullScenario += "rotationIfGP(MaxFarmShardCrystalCluster)" + Environment.NewLine;
+                                    }
+                                    else if (null != gatheredItem && gatheredItem.AsCollectable)
+                                    {
+                                        fullScenario += "rotationIfGP(470 Collect 5% Gathering)" + Environment.NewLine;
+                                        fullScenario += "rotationIfGP(470 Collect 15% Gathering)" + Environment.NewLine;
+                                    }
+                                    //Maximize Rotation for Unspoiled Nodes
+                                    else if (compare != null)
+                                    {
+                                        fullScenario += "rotationIfGP(EfficiencyMinGP700)" + Environment.NewLine;
+                                        fullScenario += "rotationIfGP(EfficiencyMinGP600)" + Environment.NewLine;
+                                        fullScenario += "rotationIfGP(EfficiencyMinGP500)" + Environment.NewLine;
+                                    }
+                                    else
+                                    {
+                                        fullScenario += "rotationIfGP(" + iOptions.GatheringRotation + ")" + Environment.NewLine;
+                                    }
+                                    fullScenario += "startGathering(" + quantity + ")" + Environment.NewLine;
+                                    if (iOptions.RepairModeValue == RepairMode.Repair)
+                                    {
+                                        fullScenario += "repair()" + Environment.NewLine;
+                                    }
+                                    fullScenario += Environment.NewLine;
+                                }
+                                else
+                                {
+                                    errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                                    fullScenario += "// Failed to retrieve the grid from miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                                }
                             }
                         }
+                        else
+                        {
+                            errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                            fullScenario += "// Failed to log into miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                        }
                     }
-                    else
+                    //Split each gathering stage into your own chapter (reset rotationifgp)
+                    fullScenario += "\",";
+                    fullScenario += "\"";
+                }
+                //Return to Eulmore load grid, and stay in front repair(reparing after each craft)
+                if (iOptions.RepairModeValue == RepairMode.Eulmore)
+                {
+                    fullScenario += "teleport(Eulmore)" + Environment.NewLine;
+                    DirectoryInfo customDirectoryRepair = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
+                    if (!customDirectoryRepair.Exists)
                     {
-                        errorContent += "//    - " + quantity + "x " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
-                        fullScenario += "// Failed to log into miqobot forums, can't gather this item " + iItem.Name + " (see " + iItem.UrlGarland + ")" + Environment.NewLine;
+                        customDirectoryRepair.Create();
                     }
+                    FileInfo customTeleportEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore.Grid.txt"));
+                    FileInfo customScenarioEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore.Scenario.txt"));
+                    if (customScenarioEulmore.Exists)
+                    {
+                        fullScenario += File.ReadAllText(customScenarioEulmore.FullName) + Environment.NewLine;
+                    }
+                    if (customTeleportEulmore.Exists)
+                    {
+                        allGrids += File.ReadAllText(customTeleportEulmore.FullName) + Environment.NewLine;
+                    }
+                    fullScenario += "\",";
+                    fullScenario += "\"";
                 }
-                //Split each gathering stage into your own chapter (reset rotationifgp)
-                fullScenario += "\",";
-                fullScenario += "\"";
-            }
-            //Return to Eulmore load grid, and stay in front repair(reparing after each craft)
-            if (iOptions.RepairModeValue == RepairMode.Eulmore)
-            {
-                fullScenario += "teleport(Eulmore)" + Environment.NewLine;
-                DirectoryInfo customDirectoryRepair = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
-                if (!customDirectoryRepair.Exists)
-                {
-                    customDirectoryRepair.Create();
-                }
-                FileInfo customTeleportEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore.Grid.txt"));
-                FileInfo customScenarioEulmore = new FileInfo(Path.Combine(customDirectoryRepair.FullName, "Eulmore.Scenario.txt"));
-                if (customScenarioEulmore.Exists)
-                {
-                    fullScenario += File.ReadAllText(customScenarioEulmore.FullName) + Environment.NewLine;
-                }
-                if (customTeleportEulmore.Exists)
-                {
-                    allGrids += File.ReadAllText(customTeleportEulmore.FullName) + Environment.NewLine;
-                }
-                fullScenario += "\",";
-                fullScenario += "\"";
             }
             
 
