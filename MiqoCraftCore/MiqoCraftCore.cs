@@ -465,6 +465,7 @@ namespace MiqoCraftCore
                     FFXIVItem iItem = allItems[i];
                     if (null == iItem) continue;
                     int quantity = allItemsQuantity[i] / iOptions.NbPerNode + 1;
+                    if (allItemsQuantity[i] <= 0) continue;
 
                     if (!(iItem is FFXIVGatheredItem)) continue;
                     FFXIVGatheredItem gatheredItem = iItem as FFXIVGatheredItem;
@@ -746,6 +747,7 @@ namespace MiqoCraftCore
                 FFXIVItem iItem = allItems[i];
                 if (null == iItem) continue;
                 int quantity = allItemsQuantity[i];
+                if (quantity <= 0) continue;
                 FFXIVCraftedItem craftedItem = null;
                 if (iItem is FFXIVCraftedItem)
                 {
