@@ -16,9 +16,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this._searchButton = new System.Windows.Forms.Button();
@@ -38,12 +35,6 @@
             this._alcButton = new System.Windows.Forms.Button();
             this._searchTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this._gridStatusLabel = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this._logTextBox = new System.Windows.Forms.TextBox();
             this._resultPanel = new System.Windows.Forms.Panel();
             this._addToCraftingListButton = new System.Windows.Forms.Button();
@@ -63,61 +54,25 @@
             this._craftingListPanel = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this._miqoCrafterPictureBox = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._maxLevelNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._minLevelNumericUpDown)).BeginInit();
-            this.panel5.SuspendLayout();
             this._resultPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._miqoCrafterPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label1.Location = new System.Drawing.Point(108, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MiqoCrafter";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(110, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "V2.2.3";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))));
-            this.panel1.Location = new System.Drawing.Point(3, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1144, 1);
-            this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))));
-            this.panel2.Location = new System.Drawing.Point(205, 70);
+            this.panel2.Location = new System.Drawing.Point(205, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 629);
+            this.panel2.Size = new System.Drawing.Size(1, 684);
             this.panel2.TabIndex = 4;
             // 
             // panel3
@@ -140,9 +95,9 @@
             this.panel3.Controls.Add(this._alcButton);
             this.panel3.Controls.Add(this._searchTextBox);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(3, 70);
+            this.panel3.Location = new System.Drawing.Point(3, 15);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(196, 256);
+            this.panel3.Size = new System.Drawing.Size(196, 281);
             this.panel3.TabIndex = 5;
             // 
             // _searchButton
@@ -355,72 +310,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Recipe Search";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(79)))), ((int)(((byte)(83)))));
-            this.panel4.Location = new System.Drawing.Point(3, 332);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(196, 1);
-            this.panel4.TabIndex = 4;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this._gridStatusLabel);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(3, 339);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 119);
-            this.panel5.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.button1.Location = new System.Drawing.Point(34, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 30);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Update Grid List";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // _gridStatusLabel
-            // 
-            this._gridStatusLabel.AutoSize = true;
-            this._gridStatusLabel.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._gridStatusLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this._gridStatusLabel.Location = new System.Drawing.Point(13, 48);
-            this._gridStatusLabel.Name = "_gridStatusLabel";
-            this._gridStatusLabel.Size = new System.Drawing.Size(69, 19);
-            this._gridStatusLabel.TabIndex = 17;
-            this._gridStatusLabel.Text = "0% (0 / 0)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label11.Location = new System.Drawing.Point(5, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 19);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "% validated Grids :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Niagara Engraved", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.label12.Location = new System.Drawing.Point(3, 3);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 26);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Database Status";
-            // 
             // _logTextBox
             // 
             this._logTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -447,7 +336,7 @@
             this._resultPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this._resultPanel.Location = new System.Drawing.Point(0, 0);
             this._resultPanel.Name = "_resultPanel";
-            this._resultPanel.Size = new System.Drawing.Size(618, 531);
+            this._resultPanel.Size = new System.Drawing.Size(618, 586);
             this._resultPanel.TabIndex = 22;
             // 
             // _addToCraftingListButton
@@ -456,7 +345,7 @@
             this._addToCraftingListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._addToCraftingListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._addToCraftingListButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._addToCraftingListButton.Location = new System.Drawing.Point(491, 496);
+            this._addToCraftingListButton.Location = new System.Drawing.Point(491, 551);
             this._addToCraftingListButton.Name = "_addToCraftingListButton";
             this._addToCraftingListButton.Size = new System.Drawing.Size(124, 27);
             this._addToCraftingListButton.TabIndex = 25;
@@ -470,7 +359,7 @@
             this._nbSelectedItemLabel.AutoSize = true;
             this._nbSelectedItemLabel.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._nbSelectedItemLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._nbSelectedItemLabel.Location = new System.Drawing.Point(4, 500);
+            this._nbSelectedItemLabel.Location = new System.Drawing.Point(4, 555);
             this._nbSelectedItemLabel.Name = "_nbSelectedItemLabel";
             this._nbSelectedItemLabel.Size = new System.Drawing.Size(110, 19);
             this._nbSelectedItemLabel.TabIndex = 24;
@@ -494,7 +383,7 @@
             this._selectAllButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._selectAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._selectAllButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._selectAllButton.Location = new System.Drawing.Point(361, 496);
+            this._selectAllButton.Location = new System.Drawing.Point(361, 551);
             this._selectAllButton.Name = "_selectAllButton";
             this._selectAllButton.Size = new System.Drawing.Size(124, 27);
             this._selectAllButton.TabIndex = 22;
@@ -518,7 +407,7 @@
             this._resultListView.LargeImageList = this._prerequisiteImageList;
             this._resultListView.Location = new System.Drawing.Point(6, 40);
             this._resultListView.Name = "_resultListView";
-            this._resultListView.Size = new System.Drawing.Size(607, 450);
+            this._resultListView.Size = new System.Drawing.Size(607, 505);
             this._resultListView.SmallImageList = this._prerequisiteImageList;
             this._resultListView.TabIndex = 8;
             this._resultListView.UseCompatibleStateImageBehavior = false;
@@ -559,7 +448,7 @@
             this._craftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._craftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._craftButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._craftButton.Location = new System.Drawing.Point(179, 496);
+            this._craftButton.Location = new System.Drawing.Point(179, 551);
             this._craftButton.Name = "_craftButton";
             this._craftButton.Size = new System.Drawing.Size(126, 27);
             this._craftButton.TabIndex = 21;
@@ -573,7 +462,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this.label8.Location = new System.Drawing.Point(1052, 45);
+            this.label8.Location = new System.Drawing.Point(1057, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 12);
             this.label8.TabIndex = 25;
@@ -589,7 +478,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(308, 531);
+            this.panel6.Size = new System.Drawing.Size(308, 586);
             this.panel6.TabIndex = 21;
             // 
             // _clearButton
@@ -613,7 +502,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._craftingListPanel.Location = new System.Drawing.Point(3, 40);
             this._craftingListPanel.Name = "_craftingListPanel";
-            this._craftingListPanel.Size = new System.Drawing.Size(302, 450);
+            this._craftingListPanel.Size = new System.Drawing.Size(302, 505);
             this._craftingListPanel.TabIndex = 22;
             // 
             // label15
@@ -632,7 +521,7 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(212, 70);
+            this.splitContainer1.Location = new System.Drawing.Point(212, 15);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -642,20 +531,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel6);
-            this.splitContainer1.Size = new System.Drawing.Size(930, 531);
+            this.splitContainer1.Size = new System.Drawing.Size(930, 586);
             this.splitContainer1.SplitterDistance = 618;
             this.splitContainer1.TabIndex = 26;
-            // 
-            // _miqoCrafterPictureBox
-            // 
-            this._miqoCrafterPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
-            this._miqoCrafterPictureBox.BackgroundImage = global::MiqoCraft.Properties.Resources.MiqoCrafterSerious;
-            this._miqoCrafterPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this._miqoCrafterPictureBox.Location = new System.Drawing.Point(0, 0);
-            this._miqoCrafterPictureBox.Name = "_miqoCrafterPictureBox";
-            this._miqoCrafterPictureBox.Size = new System.Drawing.Size(104, 57);
-            this._miqoCrafterPictureBox.TabIndex = 1;
-            this._miqoCrafterPictureBox.TabStop = false;
             // 
             // MainUserControlV2
             // 
@@ -665,22 +543,14 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this._logTextBox);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this._miqoCrafterPictureBox);
-            this.Controls.Add(this.label1);
             this.Name = "MainUserControlV2";
             this.Size = new System.Drawing.Size(1150, 702);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._maxLevelNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._minLevelNumericUpDown)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this._resultPanel.ResumeLayout(false);
             this._resultPanel.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -689,18 +559,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._miqoCrafterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox _miqoCrafterPictureBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
@@ -713,17 +577,12 @@
         private System.Windows.Forms.Button _ltwButton;
         private System.Windows.Forms.Button _culButton;
         private System.Windows.Forms.Button _gsmButton;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown _maxLevelNumericUpDown;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown _minLevelNumericUpDown;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label _gridStatusLabel;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox _logTextBox;
         private System.Windows.Forms.Panel _resultPanel;
         private System.Windows.Forms.ListView _resultListView;
@@ -732,7 +591,6 @@
         private System.Windows.Forms.ColumnHeader _levelColumnHeader;
         private System.Windows.Forms.ImageList _prerequisiteImageList;
         private System.Windows.Forms.ToolTip _toolTip;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button _searchButton;
         private System.Windows.Forms.Button _selectAllButton;
         private System.Windows.Forms.Button _craftButton;

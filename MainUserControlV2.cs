@@ -127,6 +127,11 @@ namespace MiqoCraft
             ScenarioForm scenarioForm = new ScenarioForm();
 
             scenarioForm.ListItemsToCraft = _itemsToCraft;
+            if(scenarioForm.ListItemsToCraft.Count <= 0)
+            {
+                _addToCraftingListButton_Click(sender, e);
+                scenarioForm.ListItemsToCraft = _itemsToCraft;
+            }
             scenarioForm.ShowDialog();
         }
 
@@ -196,16 +201,12 @@ namespace MiqoCraft
 
         private void UpdateBDDStatusFromOptions()
         {
-            VPThreading.SetText(_gridStatusLabel, "-");
-
             try
             {
                 MiqoCraftOptions options = new MiqoCraftOptions();
                 options.Load(OptionLocation.GlobalOption);
 
                 int percentage = options.ListGridOKItems.Count * 100 / options.ListGatherableItems.Count;
-
-                VPThreading.SetText(_gridStatusLabel, percentage + " % (" + options.ListGridOKItems.Count + " / " + options.ListGatherableItems.Count + ")");
 
                 int nbOK = 0;
                 string OKList = "";
@@ -239,7 +240,6 @@ namespace MiqoCraft
             List<string> _gridOKItemNames = new List<string>();
 
             Service_Misc.LogText(_logTextBox, "Updating database...");
-            VPThreading.SetText(_gridStatusLabel, "-");
 
             MiqoCraftCore.MiqoCraftCore.DownloadGrids();
 

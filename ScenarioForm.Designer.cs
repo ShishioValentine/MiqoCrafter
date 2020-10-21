@@ -45,6 +45,7 @@
             this._generateButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this._craftOnlyCheckBox = new System.Windows.Forms.CheckBox();
             this._quickCraftCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this._nbSelectedItemLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this._craftOnlyCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this._quantityPerNodeNumericUpDown)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -368,6 +368,17 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Scenario Options";
             // 
+            // _craftOnlyCheckBox
+            // 
+            this._craftOnlyCheckBox.AutoSize = true;
+            this._craftOnlyCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._craftOnlyCheckBox.Location = new System.Drawing.Point(8, 422);
+            this._craftOnlyCheckBox.Name = "_craftOnlyCheckBox";
+            this._craftOnlyCheckBox.Size = new System.Drawing.Size(117, 17);
+            this._craftOnlyCheckBox.TabIndex = 38;
+            this._craftOnlyCheckBox.Text = "Craft Only Scenario";
+            this._craftOnlyCheckBox.UseVisualStyleBackColor = false;
+            // 
             // _quickCraftCheckBox
             // 
             this._quickCraftCheckBox.AutoSize = true;
@@ -451,6 +462,7 @@
             // 
             // _validQuantityButton
             // 
+            this._validQuantityButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._validQuantityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._validQuantityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._validQuantityButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
@@ -540,17 +552,6 @@
             this.label9.Size = new System.Drawing.Size(105, 26);
             this.label9.TabIndex = 6;
             this.label9.Text = "Crafting Tree";
-            // 
-            // _craftOnlyCheckBox
-            // 
-            this._craftOnlyCheckBox.AutoSize = true;
-            this._craftOnlyCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._craftOnlyCheckBox.Location = new System.Drawing.Point(8, 422);
-            this._craftOnlyCheckBox.Name = "_craftOnlyCheckBox";
-            this._craftOnlyCheckBox.Size = new System.Drawing.Size(117, 17);
-            this._craftOnlyCheckBox.TabIndex = 38;
-            this._craftOnlyCheckBox.Text = "Craft Only Scenario";
-            this._craftOnlyCheckBox.UseVisualStyleBackColor = false;
             // 
             // ScenarioForm
             // 

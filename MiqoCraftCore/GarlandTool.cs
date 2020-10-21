@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Windows.Forms;
 
 namespace MiqoCraftCore
 {
@@ -219,7 +220,7 @@ namespace MiqoCraftCore
             string dataResultContent = "";
             if (File.Exists(logName))
             {
-                dataResultContent = File.ReadAllText(logName);
+                dataResultContent = Service_Misc.RemoveIllegalCharacters(File.ReadAllText(logName));
             }
 
             if (dataResultContent == "")
@@ -253,9 +254,9 @@ namespace MiqoCraftCore
                     return ReadGatheredNodes(iCookies, ref oCookies, ref oCode, dataToken, itemToken, nodeToken);
                 }
             }
-            catch
+            catch(Exception exc)
             {
-
+                MessageBox.Show("Failed to parse garlandtools.org database. Please report this bug.");
             }
 
             return result;
@@ -328,7 +329,7 @@ namespace MiqoCraftCore
             string dataResultContent = "";
             if (File.Exists(logName))
             {
-                dataResultContent = File.ReadAllText(logName);
+                dataResultContent = Service_Misc.RemoveIllegalCharacters(File.ReadAllText(logName));
             }
 
             if (dataResultContent == "")
