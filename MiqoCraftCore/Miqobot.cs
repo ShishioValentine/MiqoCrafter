@@ -37,10 +37,11 @@ namespace MiqoCraftCore
                  iLogCookies, ref oCookies, ref oCode);
             if (null == answer) return result;
 
-            HtmlNode firstAnswerNode = Service_Misc.GetFirstChildNode(answer.DocumentNode, "div", "topic-tag-gathering");
+            HtmlNode firstAnswerNode = Service_Misc.GetChildNodeByID(answer.DocumentNode, "d4p-bbp-quote-1116");
+            if (null == firstAnswerNode) return new List<MiqoItemPage>();
 
             List<HtmlNode> listItemNodes = firstAnswerNode.Descendants("li").ToList();
-
+             
 
             foreach (HtmlNode node in listItemNodes)
             {

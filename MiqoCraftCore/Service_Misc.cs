@@ -540,6 +540,29 @@ namespace MiqoCraftCore
         }
 
         /// <summary>
+        /// Retrieve a child node by its ID. Recursive
+        /// </summary>
+        /// <param name="iNode"></param>
+        /// <param name="iTagName"></param>
+        /// <param name="iClassName"></param>
+        /// <param name="iInnerText"></param>
+        /// <returns></returns>
+        public static HtmlNode GetChildNodeByID(HtmlNode iNode, string iID)
+        {
+            if (null == iNode) return null;
+
+            List<HtmlNode> listChilds = iNode.Descendants().ToList();
+            foreach (HtmlNode node in listChilds)
+            {
+                if (node.Id == iID) return node;
+                HtmlNode childNodeByID = GetChildNodeByID(node, iID);
+                if (null != childNodeByID) return childNodeByID;
+            }
+
+            return null;
+        }
+
+        /// <summary>
         /// Convert time from unix to epoch
         /// </summary>
         /// <param name="unixTime"></param>
