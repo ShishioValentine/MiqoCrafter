@@ -605,6 +605,12 @@ namespace MiqoCraftCore
        .Replace("+3?}", "+3\"}")
        .Replace("+4?}", "+4\"}")
        .Replace("+5?}", "+5\"}")
+       .Replace("+1}", "+1\"}")
+       .Replace("+1}", "+1\"}")
+       .Replace("+2}", "+2\"}")
+       .Replace("+3}", "+3\"}")
+       .Replace("+4}", "+4\"}")
+       .Replace("+5}", "+5\"}")
        .Replace("・・", "\"");
         }
     }
