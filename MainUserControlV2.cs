@@ -85,7 +85,8 @@ namespace MiqoCraft
                 jobs = _jobFilter;
             }
             Service_Misc.LogText(_logTextBox, "Alright, let's look for " + elemToSearch);
-            List<FFXIVSearchItem> listResults = GarlandTool.Search(elemToSearch, _logTextBox, FFXIVItem.TypeItem.Crafted, jobs, minLevel, maxLevel);
+            bool searchForGathered = VPThreading.GetChecked(_gatherIemCheckBox);
+            List<FFXIVSearchItem> listResults = GarlandTool.Search(elemToSearch, _logTextBox, searchForGathered ? FFXIVItem.TypeItem.Gathered : FFXIVItem.TypeItem.Crafted, jobs, minLevel, maxLevel);
 
             //Storing in options
             MiqoCraftOptions options = new MiqoCraftOptions();
