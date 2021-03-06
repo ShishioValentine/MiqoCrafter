@@ -51,9 +51,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this._clearButton = new System.Windows.Forms.Button();
-            this._craftingListPanel = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this._craftingListPanel = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._maxLevelNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._minLevelNumericUpDown)).BeginInit();
@@ -495,16 +495,6 @@
             this._clearButton.UseVisualStyleBackColor = false;
             this._clearButton.Click += new System.EventHandler(this._clearButton_Click);
             // 
-            // _craftingListPanel
-            // 
-            this._craftingListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._craftingListPanel.Location = new System.Drawing.Point(3, 40);
-            this._craftingListPanel.Name = "_craftingListPanel";
-            this._craftingListPanel.Size = new System.Drawing.Size(302, 505);
-            this._craftingListPanel.TabIndex = 22;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -534,6 +524,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(930, 586);
             this.splitContainer1.SplitterDistance = 618;
             this.splitContainer1.TabIndex = 26;
+            // 
+            // _craftingListPanel
+            // 
+            this._craftingListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._craftingListPanel.AutoScroll = true;
+            this._craftingListPanel.Location = new System.Drawing.Point(3, 40);
+            this._craftingListPanel.Name = "_craftingListPanel";
+            this._craftingListPanel.Size = new System.Drawing.Size(302, 505);
+            this._craftingListPanel.TabIndex = 22;
             // 
             // MainUserControlV2
             // 
@@ -599,9 +600,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel _craftingListPanel;
         private System.Windows.Forms.Button _addToCraftingListButton;
         private System.Windows.Forms.Button _clearButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel _craftingListPanel;
     }
 }

@@ -724,6 +724,22 @@ namespace MiqoCraftCore
             if (teleportCraft != "")
             {
                 fullScenario += "teleport(" + teleportCraft + ")" + Environment.NewLine;
+
+                DirectoryInfo customDirectory = new DirectoryInfo(Path.Combine(Service_Misc.GetExecutionPath(), "CustomTeleport"));
+                if (!customDirectory.Exists)
+                {
+                    customDirectory.Create();
+                }
+                FileInfo customTeleportScenarioFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportCraft + ".Scenario.txt"));
+                if (customTeleportScenarioFile.Exists)
+                {
+                    fullScenario += File.ReadAllText(customTeleportScenarioFile.FullName) + Environment.NewLine;
+                }
+                FileInfo customTeleportGridFile = new FileInfo(Path.Combine(customDirectory.FullName, teleportCraft + ".Grid.txt"));
+                if (customTeleportGridFile.Exists)
+                {
+                    allGrids += File.ReadAllText(customTeleportGridFile.FullName) + Environment.NewLine;
+                }
             }
 
             List<FFXIVCraftedItem> listAllCraftedItems = new List<FFXIVCraftedItem>();
