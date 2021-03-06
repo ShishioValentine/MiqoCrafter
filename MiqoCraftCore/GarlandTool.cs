@@ -89,31 +89,38 @@ namespace MiqoCraftCore
                         item.UrlImage = "http://garlandtools.org/files/icons/item/" + dataToken["c"].Value<string>() + ".png";
                         item.UrlGarland = "http://garlandtools.org/db/#item/" + dataToken["i"].Value<string>();
 
-                        if (dataToken["f"] != null && iType == FFXIVItem.TypeItem.Crafted)
+                        if (dataToken["f"] != null)
                         {
-                            string jobID = dataToken["f"][0]["job"].Value<string>();
-                            string itemClass = GetJobName(jobID);
-                            string itemLevel = dataToken["f"][0]["lvl"].Value<string>();
-                            int level = 0;
-                            int.TryParse(itemLevel, out level);
-                            if (iMinLevel > 0 && level < iMinLevel)
+                            try
                             {
-                                Service_Misc.LogText(iLogBox, "Found something but its level is under the requested min level : " + itemName + " - Level : " + itemLevel);
-                                continue;
-                            }
-                            if (iMaxLevel > 0 && level > iMaxLevel)
-                            {
-                                Service_Misc.LogText(iLogBox, "Found something but its level is over the requested max level : " + itemName + " - Level : " + itemLevel);
-                                continue;
-                            }
+                                string itemLevel = dataToken["f"][0]["lvl"].Value<string>();
+                                int level = 0;
+                                int.TryParse(itemLevel, out level);
+                                if (iMinLevel > 0 && level < iMinLevel)
+                                {
+                                    Service_Misc.LogText(iLogBox, "Found something but its level is under the requested min level : " + itemName + " - Level : " + itemLevel);
+                                    continue;
+                                }
+                                if (iMaxLevel > 0 && level > iMaxLevel)
+                                {
+                                    Service_Misc.LogText(iLogBox, "Found something but its level is over the requested max level : " + itemName + " - Level : " + itemLevel);
+                                    continue;
+                                }
 
-                            if (null != iJobs && iJobs.Count > 0 && !iJobs.Contains(itemClass.ToUpper()) && !iJobs.Contains(itemClass.ToLower()))
-                            {
-                                Service_Misc.LogText(iLogBox, "Found something but its job is not in the requested list : " + itemName + " - Job : " + itemClass);
-                                continue;
+                                string jobID = dataToken["f"][0]["job"].Value<string>();
+                                string itemClass = GetJobName(jobID);
+                                if (null != iJobs && iJobs.Count > 0 && !iJobs.Contains(itemClass.ToUpper()) && !iJobs.Contains(itemClass.ToLower()))
+                                {
+                                    Service_Misc.LogText(iLogBox, "Found something but its job is not in the requested list : " + itemName + " - Job : " + itemClass);
+                                    continue;
+                                }
+                                item.Class = itemClass;
+                                item.Level = itemLevel;
                             }
-                            item.Class = itemClass;
-                            item.Level = itemLevel;
+                            catch
+                            {
+
+                            }
                         }
                         else if (iType == FFXIVItem.TypeItem.Crafted)
                         {

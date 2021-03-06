@@ -54,6 +54,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this._craftingListPanel = new System.Windows.Forms.Panel();
+            this._gatherIemCheckBox = new System.Windows.Forms.CheckBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._maxLevelNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._minLevelNumericUpDown)).BeginInit();
@@ -78,6 +79,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.panel3.Controls.Add(this._gatherIemCheckBox);
             this.panel3.Controls.Add(this._searchButton);
             this.panel3.Controls.Add(this._maxLevelNumericUpDown);
             this.panel3.Controls.Add(this.label7);
@@ -97,7 +99,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 15);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(196, 281);
+            this.panel3.Size = new System.Drawing.Size(196, 293);
             this.panel3.TabIndex = 5;
             // 
             // _searchButton
@@ -105,7 +107,7 @@
             this._searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._searchButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
-            this._searchButton.Location = new System.Drawing.Point(34, 223);
+            this._searchButton.Location = new System.Drawing.Point(34, 247);
             this._searchButton.Name = "_searchButton";
             this._searchButton.Size = new System.Drawing.Size(124, 30);
             this._searchButton.TabIndex = 20;
@@ -536,6 +538,17 @@
             this._craftingListPanel.Size = new System.Drawing.Size(302, 505);
             this._craftingListPanel.TabIndex = 22;
             // 
+            // _gatherIemCheckBox
+            // 
+            this._gatherIemCheckBox.AutoSize = true;
+            this._gatherIemCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            this._gatherIemCheckBox.Location = new System.Drawing.Point(9, 224);
+            this._gatherIemCheckBox.Name = "_gatherIemCheckBox";
+            this._gatherIemCheckBox.Size = new System.Drawing.Size(150, 17);
+            this._gatherIemCheckBox.TabIndex = 21;
+            this._gatherIemCheckBox.Text = "Search for all kind of items";
+            this._gatherIemCheckBox.UseVisualStyleBackColor = true;
+            // 
             // MainUserControlV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,5 +617,6 @@
         private System.Windows.Forms.Button _clearButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel _craftingListPanel;
+        private System.Windows.Forms.CheckBox _gatherIemCheckBox;
     }
 }
