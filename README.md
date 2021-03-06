@@ -51,7 +51,7 @@ Miqobot crafting solver balance between HQ and NQ output. Default is balanced.
 
 - *Custom Craft Teleport*
 Teleport location used right before starting the crafting chapter of the scenario. Use it if you want to teleport to a quiet place before crafting. You can also add a sub scenario right after this custom teleport if you add a custom scenario in the CustomTeleport directory.
-If your teleport location is "MyZone", you can add a "MyZone Scenario.txt" and a "MyZone Grid.txt" files in the CustomTeleport directory. The grid will be added to the scenario data, and the scenario file content will be added to the global scenario, right after the teleport line.
+If your teleport location is "MyZone", you can add a "MyZone.Scenario.txt" and a "MyZone.Grid.txt" files in the CustomTeleport directory. The grid will be added to the scenario data, and the scenario file content will be added to the global scenario, right after the teleport line.
 You can use this feature to actually enter your house for example.
 
 - *Ignore Catalysts*
