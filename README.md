@@ -26,6 +26,8 @@ The list of found item will be displayed on the right.
 
 ![Search Window](Images/SearchResult.PNG)
 
+Using the "Search for all kind of items" checkbox, you can also search for other items and create a gather only scenario for example.
+
 Select the item you want to craft in the list, and click “Add to Crafting List”.
 The crafting list will be filled with the selected item. You can edit the item quantities, and when you're done, click on Craft Items.
 
