@@ -139,4 +139,4 @@ C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.cs
 C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.csproj.CopyComplete
 C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.dll
 C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.pdb
-C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.csproj.AssemblyReference.cache
+C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftCore\obj\Debug\MiqoCraftCore.csprojAssemblyReference.cache
