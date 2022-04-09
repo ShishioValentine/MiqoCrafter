@@ -794,6 +794,24 @@ namespace MiqoCraftCore
             if (iZone == "Upper La Noscea") return "Camp Bronze Lake";
             if (iZone == "Middle La Noscea") return "Summerford Farms";
             if (iZone == "Coerthas Western Highlands") return "Falcon's Nest";
+            if (iZone == "Radz-at-Han") return "Radz-at-Han";
+            if (iZone == "Thavnair") return "Yedlihmad";
+            if (iZone == "Thavnair") return "The Great Work";
+            if (iZone == "Thavnair") return "Palaka's Stand";
+            if (iZone == "Garlemald") return "Camp Broken Glass";
+            if (iZone == "Garlemald") return "Tertium";
+            if (iZone == "Old Sharlayan") return "Old Sharlayan";
+            if (iZone == "Labyrinthos") return "The Archeion";
+            if (iZone == "Labyrinthos") return "Sharlayan Hamlet";
+            if (iZone == "Labyrinthos") return "Aporia";
+            if (iZone == "Mare Lamentorum") return "Sinus Lacrimarum";
+            if (iZone == "Mare Lamentorum") return "Bestways Burrow";
+            if (iZone == "Ultima Thule") return "Reah Tahra";
+            if (iZone == "Ultima Thule") return "Abode of the Ea";
+            if (iZone == "Ultima Thule") return "Base Omicron";
+            if (iZone == "Elpis") return "Anagnorisis";
+            if (iZone == "Elpis") return "The Twelve Wonders";
+            if (iZone == "Elpis") return "Poieten Oikos";
 
 
             return iZone;

@@ -27,7 +27,7 @@ namespace MiqoCraftTestUnit
         {
             VPOptions.OptionsForUnitTest = null;
             _dumpSuffix = "";
-            TestFullScenarioImpl("Twinsilk", FFXIVItem.TypeItem.Crafted, 21, 8, "Twinsilk Robe of Aiming", true);
+            TestFullScenarioImpl("Twinsilk", FFXIVItem.TypeItem.Crafted, 16, 5, "Twinsilk Robe of Aiming", true);
         }
 
         [TestMethod]

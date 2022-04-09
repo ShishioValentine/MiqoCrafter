@@ -310,8 +310,19 @@ namespace MiqoCraftCore
             HtmlNode contentNode = answer.GetElementbyId("mw-content-text");
             if (null == contentNode) return result;
 
-            string currentRegion = "Unknown";
+            HtmlNode divNode = null;
             foreach (HtmlNode childNode in contentNode.ChildNodes)
+            {
+                if (!childNode.Attributes.Contains("class")) continue;
+                if (childNode.Name == "div" && childNode.Attributes["class"].Value == "mw-parser-output")
+                {
+                    divNode = childNode;
+                    break;
+                }
+            }
+
+            string currentRegion = "Unknown";
+            foreach (HtmlNode childNode in divNode.ChildNodes)
             {
                 if (childNode.Name == "h3")
                 {
@@ -386,8 +397,8 @@ namespace MiqoCraftCore
                         FileInfo metadataFile = new FileInfo(Path.Combine(metadataDirectory.FullName, aetheryte.Zone + ".txt"));
                         if (!metadataFile.Exists)
                         {
-                            offsetX = 0;
-                            offsetY = 0;
+                            offsetX = 21.4;
+                            offsetY = 21.4;
                             File.WriteAllText(metadataFile.FullName, "21.4;21.4");
                         }
                         else
@@ -399,6 +410,59 @@ namespace MiqoCraftCore
                         }
 
                         aetheryte.Position = new FFXIVPosition((x - offsetX) * 50, (y - offsetY) * 50);
+                        aetheryte.OffsetX = offsetX;
+                        aetheryte.OffsetY = offsetY;
+
+                        //Retrieving map name
+                        FileInfo mapFile = new FileInfo(Path.Combine(metadataDirectory.FullName, aetheryte.GetMapName()));
+                        if(!mapFile.Exists)
+                        {
+                            HtmlNode imgPNode = null;
+                            List<HtmlNode> divNodes = nodeInfobox.Descendants("p").ToList();
+                            foreach(HtmlNode pChildNode in divNodes)
+                            {
+                                if(pChildNode.Attributes.Contains("class") && pChildNode.Attributes["class"].Value == "image_wrapper")
+                                {
+                                    imgPNode = pChildNode;
+                                    break;
+                                }
+                            }
+                            if (null != imgPNode)
+                            {
+                                string imgANode = "";
+                                List<HtmlNode> aNodes = imgPNode.Descendants("a").ToList();
+                                foreach (HtmlNode aChildNode in aNodes)
+                                {
+                                    if (aChildNode.Attributes.Contains("href"))
+                                    {
+                                        imgANode = "https://ffxiv.consolegameswiki.com" + aChildNode.Attributes["href"].Value;
+                                    }
+                                }
+
+
+                                HtmlNode imgDivNode = divNodes[0];
+                                using (var client = new WebClient())
+                                {
+                                    client.DownloadFile(imgANode, mapFile.FullName + ".html");
+                                }
+                                FileInfo mapFileURL = new FileInfo(mapFile.FullName + ".html");
+                                if(mapFileURL.Exists)
+                                {
+                                    string textContentImage = File.ReadAllText(mapFileURL.FullName);
+                                    List<string> listContent = textContentImage.Split(new string[] { "/mediawiki/images" }, StringSplitOptions.None).ToList();
+                                    if(listContent.Count > 1)
+                                    {
+                                        string imageURL = "https://ffxiv.consolegameswiki.com/mediawiki/images" + listContent[1].Split('\"')[0];
+                                        using (var client = new WebClient())
+                                        {
+                                            client.DownloadFile(imageURL, mapFile.FullName);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        aetheryte.BackgroundPicture = mapFile;
+
                         result.Add(aetheryte);
                     }
                 }

@@ -18,10 +18,17 @@ namespace MiqoCraftMapViewer
         {
             InitializeComponent();
 
+                MiqoGridFinderOptions options = new MiqoGridFinderOptions();
             try
             {
-                MiqoGridFinderOptions options = new MiqoGridFinderOptions();
-                options.Load(VPL.Application.Data.OptionLocation.GlobalOption);
+                if (options != null) options.Load(VPL.Application.Data.OptionLocation.GlobalOption);
+            }
+            catch
+            {
+
+            }
+            try
+            {
                 ListGatheringNodes = options.ListGatheringNodes;
                 if (ListGatheringNodes.Count <= 0)
                 {
@@ -63,13 +70,26 @@ namespace MiqoCraftMapViewer
                     List<MiqobotGrid> grids = Miqobot.GetAllGridsFromFile(file);
                     if (grids.Count <= 0) return;
 
+                    string area = grids[0].Description.Split('@')[0];
+                    if (area.Contains("[")) area = area.Split('[')[1].Trim();
+
                     Dictionary<string, double> dictionaryClosestAetherytes = new Dictionary<string, double>();
 
                     gridF = new FFXIVItemGridF();
                     gridF.GridFile = new FileInfo(file.FullName);
                     gridF.Analyze(ListAetherytes, ListGatheringNodes, ref dictionaryClosestAetherytes);
 
-                    gridF.BuildPicture();
+                    List<FFXIVAetheryte> zoneAetherytes = new List<FFXIVAetheryte>();
+                    foreach (FFXIVAetheryte aetherythe in ListAetherytes)
+                    {
+                        if (null == aetherythe) continue;
+
+                        if (aetherythe.GetMapName().Contains(area))
+                        {
+                            zoneAetherytes.Add(aetherythe);
+                        }
+                    }
+                    gridF.BuildPicture(zoneAetherytes);
 
                     pictureBox1.BackColor = Color.White;
                     pictureBox1.BackgroundImage = gridF.Picture;

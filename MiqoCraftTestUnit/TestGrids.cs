@@ -92,6 +92,8 @@ namespace MiqoCraftTestUnit
 
                     List<string> listAreas = new List<string>();
                     List<string> listTeleports = new List<string>();
+
+                    //La Noscea
                     listAreas.Add("Limsa Lominsa Lower Decks"); listTeleports.Add("Limsa Lominsa Lower Decks");
                     listAreas.Add("Middle La Noscea"); listTeleports.Add("Summerford Farms");
                     listAreas.Add("Lower La Noscea"); listTeleports.Add("Moraby Drydocks");
@@ -102,12 +104,16 @@ namespace MiqoCraftTestUnit
                     listAreas.Add("Upper La Noscea"); listTeleports.Add("Camp Bronze Lake");
                     listAreas.Add("Outer La Noscea"); listTeleports.Add("Camp Overlook");
                     listAreas.Add("Wolves' Den Pier"); listTeleports.Add("Wolves' Den Pier");
+
+                    //The Black Shroud
                     listAreas.Add("New Gridania"); listTeleports.Add("New Gridania");
                     listAreas.Add("Central Shroud"); listTeleports.Add("Bentbranch Meadows");
                     listAreas.Add("East Shroud"); listTeleports.Add("The Hawthorne Hut");
                     listAreas.Add("South Shroud"); listTeleports.Add("Quarrymill");
                     listAreas.Add("South Shroud"); listTeleports.Add("Camp Tranquil");
                     listAreas.Add("North Shroud"); listTeleports.Add("Fallgourd Float");
+
+                    //Thanalan
                     listAreas.Add("Ul'dah - Steps of Nald"); listTeleports.Add("Ul'dah - Steps of Nald");
                     listAreas.Add("Western Thanalan"); listTeleports.Add("Horizon");
                     listAreas.Add("Central Thanalan"); listTeleports.Add("Black Brush Station");
@@ -117,17 +123,25 @@ namespace MiqoCraftTestUnit
                     listAreas.Add("Northern Thanalan"); listTeleports.Add("Camp Bluefog");
                     listAreas.Add("Northern Thanalan"); listTeleports.Add("Ceruleum Processing Plant");
                     listAreas.Add("The Gold Saucer"); listTeleports.Add("The Gold Saucer");
+
+                    //Coerthas
                     listAreas.Add("Foundation"); listTeleports.Add("Foundation");
                     listAreas.Add("Coerthas Central Highlands"); listTeleports.Add("Camp Dragonhead");
                     listAreas.Add("Coerthas Western Highlands"); listTeleports.Add("Falcon's Nest");
+
+                    //Abalathia'sSpine
                     listAreas.Add("The Sea of Clouds"); listTeleports.Add("Camp Cloudtop");
                     listAreas.Add("The Sea of Clouds"); listTeleports.Add("Ok' Zundu");
                     listAreas.Add("Azys Lla"); listTeleports.Add("Helix");
+
+                    //Dravania
                     listAreas.Add("Idyllshire"); listTeleports.Add("Idyllshire");
                     listAreas.Add("The Dravanian Forelands"); listTeleports.Add("Tailfeather");
                     listAreas.Add("The Dravanian Forelands"); listTeleports.Add("Anyx Trine");
                     listAreas.Add("The Churning Mists"); listTeleports.Add("Moghome");
                     listAreas.Add("The Churning Mists"); listTeleports.Add("Zenith");
+
+                    //Gyr Abania
                     listAreas.Add("Rhalgr's Reach"); listTeleports.Add("Rhalgr's Reach");
                     listAreas.Add("The Fringes"); listTeleports.Add("Castrum Oriens");
                     listAreas.Add("The Fringes"); listTeleports.Add("The Peering Stones");
@@ -135,15 +149,31 @@ namespace MiqoCraftTestUnit
                     listAreas.Add("The Peaks"); listTeleports.Add("Ala Ghiri");
                     listAreas.Add("The Lochs"); listTeleports.Add("Porta Praetoria");
                     listAreas.Add("The Lochs"); listTeleports.Add("The Ala Mhigan Quarter");
+
+                    //Hingashi
                     listAreas.Add("Kugane"); listTeleports.Add("Kugane");
+
+                    //Othard
                     listAreas.Add("The Ruby Sea"); listTeleports.Add("Tamamizu");
                     listAreas.Add("The Ruby Sea"); listTeleports.Add("Onokoro");
                     listAreas.Add("Yanxia"); listTeleports.Add("Namai");
                     listAreas.Add("Yanxia"); listTeleports.Add("The House of the Fierce");
                     listAreas.Add("The Azim Steppe"); listTeleports.Add("Reunion");
                     listAreas.Add("The Azim Steppe"); listTeleports.Add("The Dawn Throne");
+                    listAreas.Add("The Azim Steppe"); listTeleports.Add("Dhoro Iloh");
                     listAreas.Add("The Doman Enclave"); listTeleports.Add("The Doman Enclave");
+
+                    //Ilsabard
+                    listAreas.Add("Radz-at-Han"); listTeleports.Add("Radz-at-Han");
+                    listAreas.Add("Thavnair"); listTeleports.Add("Yedlihmad");
+                    listAreas.Add("Thavnair"); listTeleports.Add("The Great Work");
+                    listAreas.Add("Thavnair"); listTeleports.Add("Palaka's Stand");
+                    listAreas.Add("Garlemald"); listTeleports.Add("Camp Broken Glass");
+                    listAreas.Add("Garlemald"); listTeleports.Add("Tertium");
+
+                    //Norvrandt
                     listAreas.Add("The Crystarium"); listTeleports.Add("The Crystarium");
+                    listAreas.Add("Eulmore"); listTeleports.Add("Eulmore");
                     listAreas.Add("Lakeland"); listTeleports.Add("Fort Jobb");
                     listAreas.Add("Lakeland"); listTeleports.Add("The Ostall Imperative");
                     listAreas.Add("Kholusia"); listTeleports.Add("Stilltide");
@@ -159,7 +189,27 @@ namespace MiqoCraftTestUnit
                     listAreas.Add("The Rak'tika Greatwood"); listTeleports.Add("Fanow");
                     listAreas.Add("The Tempest"); listTeleports.Add("The Ondo Cups");
                     listAreas.Add("The Tempest"); listTeleports.Add("The Macarenses Angle");
+
+                    //Mor Dhona
                     listAreas.Add("Mor Dhona"); listTeleports.Add("Revenant's Toll");
+
+                    //The Northern Empty
+                    listAreas.Add("Old Sharlayan"); listTeleports.Add("Old Sharlayan");
+                    listAreas.Add("Labyrinthos"); listTeleports.Add("The Archeion");
+                    listAreas.Add("Labyrinthos"); listTeleports.Add("Sharlayan Hamlet");
+                    listAreas.Add("Labyrinthos"); listTeleports.Add("Aporia");
+
+                    //The Sea of Stars
+                    listAreas.Add("Mare Lamentorum"); listTeleports.Add("Sinus Lacrimarum");
+                    listAreas.Add("Mare Lamentorum"); listTeleports.Add("Bestways Burrow");
+                    listAreas.Add("Ultima Thule"); listTeleports.Add("Reah Tahra");
+                    listAreas.Add("Ultima Thule"); listTeleports.Add("Abode of the Ea");
+                    listAreas.Add("Ultima Thule"); listTeleports.Add("Base Omicron");
+
+                    //The World Unsundered
+                    listAreas.Add("Elpis"); listTeleports.Add("Anagnorisis");
+                    listAreas.Add("Elpis"); listTeleports.Add("The Twelve Wonders");
+                    listAreas.Add("Elpis"); listTeleports.Add("Poieten Oikos");
 
                     int indexTeleport = listTeleports.IndexOf(gridAetheryte);
                     if (indexTeleport < 0) throw new Exception("Aetheryte unknown : " + gridAetheryte + ": " + file.FullName);

@@ -112,4 +112,4 @@ C:\Users\voiri\source\repos\MiqoCrafter\MiqoCraftMapViewer\obj\Debug\MiqoCraftMa
 C:\Users\voiri\source\repos\MiqoCrafter\MiqoCraftMapViewer\obj\Debug\MiqoCraftMapViewer.csproj.CopyComplete
 C:\Users\voiri\source\repos\MiqoCrafter\MiqoCraftMapViewer\obj\Debug\MiqoCraftMapViewer.exe
 C:\Users\voiri\source\repos\MiqoCrafter\MiqoCraftMapViewer\obj\Debug\MiqoCraftMapViewer.pdb
-C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftMapViewer\obj\Debug\MiqoCraftMapViewer.csproj.AssemblyReference.cache
+C:\Users\voiri\Source\Repos\MiqoCrafter\MiqoCraftMapViewer\obj\Debug\MiqoCraftMapViewer.csprojAssemblyReference.cache

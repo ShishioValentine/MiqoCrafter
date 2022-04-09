@@ -29,37 +29,82 @@ namespace MiqoCraftCore
 
         public Bitmap Picture;
 
-        public void BuildPicture()
+        public void BuildPicture(List<FFXIVAetheryte> listAetheryteToDraw = null)
         {
             //if (null != Picture) return;
             double minX = 0, minY = 0, maxX = 0, maxY = 0;
             int index = 0;
-            foreach (FFXIVPosition point in Points)
+            if (null == listAetheryteToDraw || listAetheryteToDraw.Count <= 0)
             {
-                if (point.X < minX || index == 0) minX = point.X;
-                if (point.X > maxX || index == 0) maxX = point.X;
-                if (point.Y < minY || index == 0) minY = point.Y;
-                if (point.Y > maxY || index == 0) maxY = point.Y;
-                index++;
-            }
-            foreach (FFXIVGatheringNode node in AllNodes)
-            {
-                if (null == node) continue;
-                if (null == node.Position) continue;
+                foreach (FFXIVPosition point in Points)
+                {
+                    if (point.X < minX || index == 0) minX = point.X;
+                    if (point.X > maxX || index == 0) maxX = point.X;
+                    if (point.Y < minY || index == 0) minY = point.Y;
+                    if (point.Y > maxY || index == 0) maxY = point.Y;
+                    index++;
+                }
+                foreach (FFXIVGatheringNode node in AllNodes)
+                {
+                    if (null == node) continue;
+                    if (null == node.Position) continue;
 
-                if (node.Position.X < minX) minX = node.Position.X;
-                if (node.Position.X > maxX) maxX = node.Position.X;
-                if (node.Position.Y < minY) minY = node.Position.Y;
-                if (node.Position.Y > maxY) maxY = node.Position.Y;
-            }
-            foreach (FFXIVAetheryte aetherythe in ZoneAetherytes)
-            {
-                if (null == aetherythe) continue;
+                    if (node.Position.X < minX) minX = node.Position.X;
+                    if (node.Position.X > maxX) maxX = node.Position.X;
+                    if (node.Position.Y < minY) minY = node.Position.Y;
+                    if (node.Position.Y > maxY) maxY = node.Position.Y;
+                }
+                foreach (FFXIVAetheryte aetherythe in ZoneAetherytes)
+                {
+                    if (null == aetherythe) continue;
 
-                if (aetherythe.Position.X < minX) minX = aetherythe.Position.X;
-                if (aetherythe.Position.X > maxX) maxX = aetherythe.Position.X;
-                if (aetherythe.Position.Y < minY) minY = aetherythe.Position.Y;
-                if (aetherythe.Position.Y > maxY) maxY = aetherythe.Position.Y;
+                    if (aetherythe.Position.X < minX) minX = aetherythe.Position.X;
+                    if (aetherythe.Position.X > maxX) maxX = aetherythe.Position.X;
+                    if (aetherythe.Position.Y < minY) minY = aetherythe.Position.Y;
+                    if (aetherythe.Position.Y > maxY) maxY = aetherythe.Position.Y;
+                }
+            }
+            else
+            {
+                foreach (FFXIVAetheryte aetherythe in listAetheryteToDraw)
+                {
+                    if (null == aetherythe) continue;
+
+                    {
+                        minX = -aetherythe.OffsetX * 50;
+                        minY = -aetherythe.OffsetY * 50;
+                        maxX = aetherythe.OffsetX * 50;
+                        maxY = aetherythe.OffsetY * 50;
+                    }
+                }
+
+                //Find Closest Aetheryte
+                double minDistanceAetheryte = -1;
+                List<FFXIVPosition> listAetheryteClosePoints = new List<FFXIVPosition>();
+                foreach (FFXIVAetheryte aetherythe in listAetheryteToDraw)
+                {
+                    if (null == aetherythe) continue;
+
+                    double distanceAetheryte = -1;
+                    foreach (FFXIVPosition point in Points)
+                    {
+                        double distance = aetherythe.Position.PlanarDistanceTo(point);
+                        if (minDistanceAetheryte < 0 || distance < minDistanceAetheryte)
+                        {
+                            minDistanceAetheryte = distance;
+                            ClosestAetheryte = aetherythe;
+                            ClosestAetheryteDistance = minDistanceAetheryte;
+                        }
+                        if (distanceAetheryte < 0 || distance < distanceAetheryte)
+                        {
+                            distanceAetheryte = distance;
+                        }
+                        if (distance < 50)
+                        {
+                            listAetheryteClosePoints.Add(point);
+                        }
+                    }
+                }
             }
 
             //Drawing Bitmap
@@ -83,6 +128,18 @@ namespace MiqoCraftCore
 
                     Rectangle rect = new Rectangle(0, 0, width, height);
                     gr.FillRectangle(Brushes.White, rect);
+
+                    try
+                    {
+                        if (listAetheryteToDraw.Count > 0 && null != listAetheryteToDraw[0])
+                        {
+                            gr.DrawImage(Image.FromFile(listAetheryteToDraw[0].BackgroundPicture.FullName), rect);
+                        }
+                    }
+                    catch
+                    {
+
+                    }
 
                     foreach (FFXIVPosition point in Points)
                     {
@@ -121,6 +178,18 @@ namespace MiqoCraftCore
                         gr.FillEllipse(Brushes.Blue, rectPoint);
                     }
 
+                    foreach (FFXIVAetheryte aetheryte in listAetheryteToDraw)
+                    {
+                        int coordX = (int)aetheryte.Position.X + (int)(-minX) - thickness / 2;
+                        int coordY = (int)aetheryte.Position.Y + (int)(-minY) - thickness / 2;
+
+                        Rectangle rectPoint = new Rectangle(coordX - thickness / 2, coordY - thickness / 2, thickness * 2, thickness * 2);
+                        gr.FillEllipse(Brushes.Red, rectPoint);
+
+                        rectPoint = new Rectangle(coordX, coordY, thickness * 1, thickness * 1);
+                        gr.FillEllipse(Brushes.White, rectPoint);
+                    }
+
                     if (null != ClosestNode && null != ClosestNode.Position)
                     {
                         int coordX = (int)ClosestNode.Position.X + (int)(-minX) - thickness / 2;
@@ -135,8 +204,11 @@ namespace MiqoCraftCore
                         int coordX = (int)ClosestAetheryte.Position.X + (int)(-minX) - thickness / 2;
                         int coordY = (int)ClosestAetheryte.Position.Y + (int)(-minY) - thickness / 2;
 
-                        Rectangle rectPoint = new Rectangle(coordX, coordY, thickness, thickness);
+                        Rectangle rectPoint = new Rectangle(coordX - thickness / 2, coordY - thickness / 2, thickness * 2, thickness * 2);
                         gr.FillEllipse(Brushes.Violet, rectPoint);
+
+                        rectPoint = new Rectangle(coordX, coordY, thickness * 1, thickness * 1);
+                        gr.FillEllipse(Brushes.White, rectPoint);
                     }
                 }
                 Picture = bm;

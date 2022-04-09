@@ -40,16 +40,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 399);
+            this.pictureBox1.Size = new System.Drawing.Size(582, 604);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // _aetheryteComboBox
             // 
+            this._aetheryteComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this._aetheryteComboBox.FormattingEnabled = true;
-            this._aetheryteComboBox.Location = new System.Drawing.Point(12, 417);
+            this._aetheryteComboBox.Location = new System.Drawing.Point(12, 622);
             this._aetheryteComboBox.Name = "_aetheryteComboBox";
-            this._aetheryteComboBox.Size = new System.Drawing.Size(776, 21);
+            this._aetheryteComboBox.Size = new System.Drawing.Size(582, 21);
             this._aetheryteComboBox.TabIndex = 1;
             this._aetheryteComboBox.SelectedIndexChanged += new System.EventHandler(this._aetheryteComboBox_SelectedIndexChanged);
             // 
@@ -58,7 +60,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(606, 655);
             this.Controls.Add(this._aetheryteComboBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormViewer";
