@@ -72,6 +72,11 @@
             this._quantityNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(46)))), ((int)(((byte)(49)))));
             this._quantityNumericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
             this._quantityNumericUpDown.Location = new System.Drawing.Point(149, 34);
+            this._quantityNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this._quantityNumericUpDown.Name = "_quantityNumericUpDown";
             this._quantityNumericUpDown.Size = new System.Drawing.Size(64, 20);
             this._quantityNumericUpDown.TabIndex = 19;
